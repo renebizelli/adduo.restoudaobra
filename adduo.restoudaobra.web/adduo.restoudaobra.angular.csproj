@@ -1,0 +1,145 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\roApp\src\app\app.configs.ts" />
+    <Content Remove="wwwroot\roApp\src\app\app.routes.ts" />
+    <Content Remove="wwwroot\roApp\src\app\base.component.ts" />
+    <Content Remove="wwwroot\roApp\src\app\guard\auth.guard.ts" />
+    <Content Remove="wwwroot\roApp\src\app\http.service.ts" />
+    <Content Remove="wwwroot\roApp\src\app\interceptor\auth.interceptor.ts" />
+    <Content Remove="wwwroot\roApp\src\app\mask\cellphone.mask.ts" />
+    <Content Remove="wwwroot\roApp\src\app\mask\cpf.mask.ts" />
+    <Content Remove="wwwroot\roApp\src\app\mask\mask.ts" />
+    <Content Remove="wwwroot\roApp\src\app\mask\phone.mask.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\ad-change-status.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\ad-detail.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\ad-image-register.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\ad-register-initial.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\ad-register.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\address-detail.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\address-register.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\authenticated.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\card-detail.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\card-register.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\confirmation.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\contact.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\item.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\myad.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\owner-detail.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\redefine-password-change.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\redefine-password-solicitation.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\summary-item.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\model\toke.model.ts" />
+    <Content Remove="wwwroot\roApp\src\app\service\contact.service.ts" />
+    <Content Remove="wwwroot\roApp\src\app\service\my-ad.service.ts" />
+    <Content Remove="wwwroot\roApp\src\app\shared\type.helper.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\adduo.restoudaobra.service\adduo.restoudaobra.service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\base.component.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\app.configs.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\guard\auth.guard.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\interceptor\auth.interceptor.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\mask\cpf.mask.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\mask\mask.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\mask\cellphone.mask.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\mask\phone.mask.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\ad-change-status.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\ad-detail.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\address-detail.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\ad-image-register.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\card-detail.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\card-register.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\address-register.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\contact.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\myad.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\owner-detail.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\redefine-password-change.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\redefine-password-solicitation.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\confirmation.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\ad-register.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\item.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\ad-register-initial.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\summary-item.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\service\contact.service.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\service\http.service.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\app.routes.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\authenticated.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\model\toke.model.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\service\my-ad.service.ts" />
+    <TypeScriptCompile Include="wwwroot\roApp\src\app\shared\type.helper.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Ad\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Home\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\AdCarousel.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\AdDetailInfo.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\AdGallery.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\AdMetaTag.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\AdRichCard.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\Footer.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\GoogleAnalytics.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\HomeCard.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\HomeRichCard.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\Menu.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_Masterpage.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_MasterpageSEO.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\SPA\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\_ViewStart.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\roApp\src\app\component\field-password\" />
+    <Folder Include="wwwroot\roApp\src\app\component\field-textarea\" />
+  </ItemGroup>
+
+</Project>

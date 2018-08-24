@@ -1,0 +1,14 @@
+
+<label>{{label}}</label>
+<input type="text"
+       [(ngModel)]="property.value"
+       maxlength="{{maxlength}}"
+       title="{{placeholder}}"
+       placeholder="{{placeholder}}">
+
+<app-review-field-container [property]="property"
+                            [invalidText]="invalidText"
+                            [emptyText]="emptyText"
+                            [differentText]="differentText"
+                            [notfoundText]="notfoundText"
+                            [alreadyText]="alreadyText"></app-review-field-container>

@@ -1,0 +1,41 @@
+﻿<section id="home" class="page page-bottom-color" ng-controller="homeController" ng-show="true">
+    <article>
+        <div id="home-content">
+            <img id="home-logo" src="/_img/logo/restou-da-obra-logo-1.png" title="Restou da Obra - Construa consciente, compartilhe" alt="Restou da Obra - Construa consciente, compartilhe" />
+            <p>Acreditamos que ajudar é o melhor caminho para construir o bem. Acreditamos no relacionamento entre pessoas, na ajuda mútua e que compartilhar coisas faz um bem danado pra gente! <span>:)</span></p>
+        </div>
+    </article>
+</section>
+
+<section id="search" class="page" ng-controller="searchController">
+
+    <div class="loader loader-style-1" ng-show="loaderActivity()"><span>carregando anúncios</span></div>
+
+    <article>
+
+        <div class="search-result-column" ng-repeat="column in result.columns">
+            
+        </div>
+
+    </article>
+</section>
+
+<div class="page-separator"></div>
+
+<section id="purpose" class="page" ng-controller="purposeController">
+    <article>
+        <h2 class="page-title">Nosso Propósito</h2>
+        <div class="text">
+            <p class="shape-bg">Em algum momento, todos passamos por uma obra ou reforma. </p>
+            <p>Seja grande ou pequena, sempre sobram revestimentos, tinta, fios e <br />tantos outros itens que não terão mais utilidade.</p>
+            <br />
+            <p>
+                E foi passando por isso que muitos questionamentos <br />surgiram:
+                <b>O que fazemos com isso? Será que <br />alguém se interessa? Onde está essa pessoa? <br />E se doarmos?</b>
+            </p>
+            <p>Com o objetivo de dar um fim útil às sobras de<br /> materiais, surgiu o <b>Restou da Obra</b>. Aqui você<br /> faz seu anúncio de venda ou doação e repassa <br />o que não tem mais serventia a outras obras<br /> e reformas Brasil afora.!</p>
+            <p><b>Junte-se a nós!</b></p>
+        </div>
+    </article>
+</section>
+

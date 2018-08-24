@@ -1,0 +1,19 @@
+<div class="break-point sc">
+  <section class="one my-ads">
+    <h1 title="Meus Anúncios">Meus Anúncios</h1>
+
+    <ul>
+      <li *ngFor="let status of listStatus">
+        <a [routerLink]="" class="active" (click)="selectStatus(status)" [class.active]="verifySelectedStatus(status)" title="{{status.name}}s">{{status.name}}s</a>
+      </li>
+    </ul>
+
+    <app-my-ad *ngFor="let card of filteredCards" [card]="card" (refresh)="filter($event)"></app-my-ad>
+
+    <app-loader [show]="isProcessRunning"></app-loader>
+
+    <div *ngIf="!hasAdsInStatus">Nenhum anúncio encontrado.</div>
+
+
+  </section>
+</div>

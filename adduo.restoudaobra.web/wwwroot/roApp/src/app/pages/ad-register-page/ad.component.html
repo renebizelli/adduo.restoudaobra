@@ -1,0 +1,58 @@
+
+<div class="break-point sc">
+
+
+  <section class="one ads label-fixed"
+           [class.ads-donation]="isAdTypeDonation()"
+           [class.ads-sale]="isAdTypeSale()">
+    <h1>Crie seu anúncio</h1>
+
+    <app-ad-type-title [type]="type"></app-ad-type-title>
+
+    <app-ad-images-register [images]="model.images" [initial]="initial"></app-ad-images-register>
+
+    <form novalidate (ngSubmit)="save()" #f="ngForm" *ngIf="isAlready">
+
+      <app-field-text [property]="model.ad.name"
+                      label="Qual o produto?"
+                      maxlength="128"
+                      placeholder="ex: rolo de conduite, tinta látex, azulejo, janela"></app-field-text>
+
+      <app-field-text [property]="model.ad.option"
+                      label="Fale mais sobre o produto"
+                      maxlength="255"
+                      placeholder="ex: produto novo, usado, cor, tamanho, tipo, etc"></app-field-text>
+
+      <app-field-text [property]="model.ad.brand"
+                      label="Marca"
+                      maxlength="32"
+                      placeholder="escreva somente a marca"></app-field-text>
+
+      <app-field-text [property]="model.ad.quantity"
+                      label="Quantidade"
+                      maxlength="32"
+                      placeholder="ex: meia lata, 50 metros, 1 caixa, 5 unidades"></app-field-text>
+
+      <app-field-currency [property]="model.ad.price"
+                      label="Preço"
+                      placeholder="Preço"
+                      *ngIf="isAdTypeSale()"></app-field-currency>
+
+      <app-address-register [address]="model.address"
+                            [addresses]="initial.addresses"></app-address-register>
+
+
+      <div class="button-area">
+        <input type="submit"
+               *ngIf="!isProcessRunning"
+               value="Adicionar anúncio"
+               title="Adicionar anúncio"/>
+
+        <app-loader [show]="isProcessRunning"></app-loader>
+      </div>
+
+    </form>
+
+  </section>
+
+</div>

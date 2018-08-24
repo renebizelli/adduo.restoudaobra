@@ -1,0 +1,12 @@
+<label>{{label}}</label>
+<textarea 
+       [(ngModel)]="property.value"
+       title="{{placeholder}}"
+       placeholder="{{placeholder}}"></textarea>
+
+<app-review-field-container [property]="property"
+                            [invalidText]="invalidText"
+                            [emptyText]="emptyText"
+                            [differentText]="differentText"
+                            [notfoundText]="notfoundText"
+                            [alreadyText]="alreadyText"></app-review-field-container>

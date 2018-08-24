@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\adduo.restoudaobra.ie.dal\adduo.restoudaobra.ie.dal.csproj" />
+    <ProjectReference Include="..\adduo.restoudaobra.parser\adduo.restoudaobra.parser.csproj" />
+  </ItemGroup>
+
+</Project>

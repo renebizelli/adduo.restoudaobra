@@ -1,0 +1,11 @@
+
+<app-address-register-exist *ngIf="isTypeExist()"
+                            (registerType)="receiverRegisterType($event)"
+                            [address]="address"
+                            [addresses]="addresses"></app-address-register-exist>
+
+<app-address-register-new *ngIf="isTypeNew()"
+                          (registerType)="receiverRegisterType($event)"
+                          [address]="address"></app-address-register-new>
+
+

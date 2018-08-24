@@ -1,0 +1,13 @@
+
+<div id="ad-title-register">
+  <div *ngIf="isAdTypeSale();else isDonation" title="{{sale}}">
+    <h2>{{sale}}</h2>
+    <span class="sale-header">Sale</span>
+  </div>
+  <ng-template #isDonation>
+    <div title="{{donation}}">
+      <h2>{{donation}}</h2>
+      <span class="donation-header">Donation</span>
+    </div>
+  </ng-template>
+</div>

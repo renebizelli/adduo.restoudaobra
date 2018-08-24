@@ -1,0 +1,82 @@
+﻿<section id="contact" class="page" ng-controller="contactController">
+
+    <article>
+
+        <div id="box-contact" class="box">
+
+            <div ng-hide="control.page.success">
+
+                <h1>Precisa de ajuda?</h1>
+                <h2>Conte com a gente!</h2>
+
+                <ul id="error" ng-show="error.has" class="message-show">
+                    <li ng-repeat="erro in error.messages">{{erro}}</li>
+                </ul>
+
+                <form ng-submit="event.send()">
+
+                    <div class="form-line label-float">
+                        <div class="form-line-item" ng-class="helper.form.statusClass(dto.name)">
+                            <input type="text" id="name" ng-model="dto.name.value" placeholder="Seu nome" title="Seu nome" />
+                            <label for="name">Nome</label>
+                            <div class="form-line-item-status">
+                                <img src="/_img/_icon/icon-valid-1.png" />
+                                <span>campo obrigatório</span>
+                            </div>
+                        </div>
+
+                        <div class="form-line-item" ng-class="helper.form.statusClass(dto.email)">
+                            <input type="text" id="email" ng-model="dto.email.value" placeholder="Seu e-mail" title="Seu e-mail" />
+                            <label for="email">E-mail</label>
+                            <div class="form-line-item-status">
+                                <img src="/_img/_icon/icon-valid-1.png" />
+                                <span ng-show="dto.email.code == 'EMPTY'">campo obrigatório</span>
+                                <span ng-show="dto.email.code == 'INVALID'">e-mail inválido</span>
+                            </div>
+                        </div>
+
+                        <div class="form-line-item" ng-class="helper.form.statusClass(dto.phone)">
+                            <input type="text" id="Telefone" ng-model="dto.phone.value" placeholder="Seu telefone" title="Seu telefone" mask="99 ?9999-9999" />
+                            <label for="phone">Telefone</label>
+                            <div class="form-line-item-status">
+                                <img src="/_img/_icon/icon-valid-1.png" />
+                                <span>campo obrigatório</span>
+                            </div>
+                        </div>
+
+                        <div class="form-line-item form-line-item-textarea" ng-class="helper.form.statusClass(dto.message)">
+                            <textarea id="message" ng-model="dto.message.value" placeholder="Sua mensagem" title="Sua mensagem" rows="4"></textarea>
+                            <label for="message">Deixe aqui sua mensagem</label>
+                            <div class="form-line-item-status">
+                                <img src="/_img/_icon/icon-valid-1.png" />
+                                <span>campo obrigatório</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loader loader-style-1" ng-show="loaderActivity()"><span>aguarde</span></div>
+
+                    <div class="form-area-button" ng-hide="loaderActivity()">
+                        <input type="submit" value="Enviar" />
+                    </div>
+                    <div id="contact-alternative" ng-hide="loaderActivity()">
+                        Se preferir, entre em contato pelo e-mail <a href="mailto:contato@restoudaobra.com.br" title="contato@restoudaobra.com.br">contato@restoudaobra.com.br</a>.
+                    </div>
+                </form>
+
+            </div>
+
+            <div id="contact-form-success" ng-show="control.page.success" class="message-show">
+                <h3>Seu contato foi enviado com sucesso.</h3>
+                <h4>Em breve a equipe do </h4>
+                <h4>Restou da Obra</h4>
+                <h4>entrará em contao :)</h4>
+            </div>
+
+        </div>
+
+
+
+    </article>
+</section>
+

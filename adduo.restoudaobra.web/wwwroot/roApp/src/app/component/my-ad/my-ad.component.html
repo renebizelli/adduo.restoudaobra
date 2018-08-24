@@ -1,0 +1,30 @@
+<section [class.my-ads-sale]="isAdTypeSale()"
+         [class.my-ads-donation]="isAdTypeDonation()">
+
+  <app-loader [show]="loader"
+              [absolute]="absolute"></app-loader>
+
+
+  <div class="tittle line">
+    <i [class.sale-header]="isAdTypeSale()"
+       [class.donation-header]="isAdTypeDonation()"></i>
+    <h4 title="{{card.ad.name}}">{{card.ad.name}}</h4>
+  </div>
+  <div class="min-photos line">
+    <img *ngFor="let image of card.images" [src]="image" title="{{card.ad.name}}" />
+  </div>
+  <div class="desc">
+    <span>{{card.ad.option}}</span>
+    <span>{{card.ad.brand}}</span>
+    <span>{{card.ad.quantity}}</span>
+    <span class="price" *ngIf="isAdTypeSale()">{{card.ad.price | currency : 'BRL'}}</span>
+  </div>
+  <div class="buttons" title="Editar {{card.ad.name}}" *ngIf="showEdit()">
+    <a [routerLink]="['/conta/meus-anuncios/', urlComplement, card.ad.guid]">
+      <div class="button-orange">Editar</div>
+    </a>
+    <div class="button-orange" title="Ocultar {{card.ad.name}}" (click)="paused(card)" *ngIf="showPaused()">Pausar</div>
+    <div class="button-orange" title="Publicar {{card.ad.name}}" (click)="published(card)" *ngIf="showPublished()">Publicar</div>
+    <div class="button-orange" title="Finalizar {{card.ad.name}}" (click)="finished(card)" *ngIf="showFinished()">Finalizar</div>
+  </div>
+</section>

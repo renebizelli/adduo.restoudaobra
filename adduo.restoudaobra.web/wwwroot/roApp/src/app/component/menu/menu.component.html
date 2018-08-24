@@ -1,0 +1,36 @@
+<header>
+  <div class="break-point">
+    <a href="/" title="Pagina inicial - Restou da Obra" class="logo">
+      <img src="/assets/img/restou-da-obra-logo-3.png" alt="Restou da Obra" title="Restou da Obra"  />
+    </a>
+    <span class="button-menu-mobile">Button</span>
+    <nav>
+      <ul>
+        <li>
+          <a *ngIf="isAuth" [title]="'Olá ' + name" [innerText]="'Olá ' + name"></a>
+        </li>
+        <li>
+          <a [routerLink]="['quero-doar']" title="Quero doar">QUERO DOAR</a>
+        </li>
+        <li>
+          <a [routerLink]="['quero-vender']" title="Quero vender">QUERO VENDER</a>
+        </li>
+        <li *ngIf="isAuth">
+          <a [routerLink]="['conta/meus-anuncios']" title="Meus anúncios">MEUS ANÚNCIOS</a>
+        </li>
+        <li *ngIf="isAuth">
+          <a [routerLink]="['/conta/meus-dados']" title="Meus dados">MEUS DADOS</a>
+        </li>
+        <li *ngIf="!isAuth">
+          <a [routerLink]="['conta']" title="Entrar">ENTRAR</a>
+        </li>
+        <li>
+          <a [routerLink]="['contato']" title="Contato">CONTATO</a>
+        </li>
+        <li *ngIf="isAuth">
+          <a *ngIf="isAuth" title="Sair" (click)="logout()">SAIR</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

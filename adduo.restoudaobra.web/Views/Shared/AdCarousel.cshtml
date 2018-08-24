@@ -1,0 +1,33 @@
+﻿@model CardDetailDTO
+
+@using adduo.restoudaobra.dto
+
+@{ 
+    var card = Model;
+}
+
+<div ng-controller="adCarouselController"  ng-show="visible">
+    <div class="overlay"></div>
+    <div id="ad-detail-carousel">
+        <div id="ad-detail-carousel-content" class="div-table">
+
+            <div class="div-table-heading">
+                <div class="div-table-row">
+                    <div class="div-table-cell"></div>
+                    <div class="div-table-cell"></div>
+                    <div class="div-table-cell adcc-command" style="height:50px;"><img class="center-img" src="/_img/_icon/icon-close-1.png" ng-click="close()" /></div>
+                </div>
+            </div>
+            <div class="div-table-body">
+                <div class="div-table-row">
+                    <div class="div-table-cell adcc-command adcc-command-previous"><img class="center-img" src="/_img/common/back.png" ng-click="previous()" title="Foto anterior" ng-show="previousShow()" /></div>
+                    <div class="div-table-cell div-table-cell-center">
+                        <img id="ad-detail-carousel-img" class="center-img" ng-src="{{selected()}}" title="@(card.Ad.Name)" alt="@(card.Ad.Name)" ng-click="teste()" />
+                    </div>
+                    <div class="div-table-cell adcc-command adcc-command-next"><img class="center-img" src="/_img/common/next.png" ng-click="next()" ng-show="nextShow()" title="Próxima foto" /></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

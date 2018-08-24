@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\adduo.restoudaobra.constants\adduo.restoudaobra.constants.csproj" />
+    <ProjectReference Include="..\adduo.restoudaobra.ie\adduo.restoudaobra.ie.csproj" />
+    <ProjectReference Include="..\adduo\adduo.csproj" />
+  </ItemGroup>
+
+</Project>

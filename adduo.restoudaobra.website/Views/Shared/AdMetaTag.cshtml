@@ -1,0 +1,31 @@
+﻿@model BaseViewModel<CardDetailDTO>
+
+@using adduo.restoudaobra.dto
+@using adduo.restoudaobra.website.model
+@using adduo.restoudaobra.website.helper
+
+@{
+    var card = Model.Value;
+
+    var type = AdTypeHelper.Get(card);
+}
+
+
+<meta property="og:locale" content="pt-BR" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="@string.Concat(card.Ad.Name, " - ", card.Ad.Brand)" />
+<meta property="og:url" content="http://www.restoudaobra.com.br@(Model.Helper.URL)/@(card.Ad.URL)/@(card.Ad.Guid.ToString())" />
+<meta property="og:site_name" content="Restou da Obra" />
+
+@foreach (var image in card.Images)
+{
+    <meta property="og:image" content="http://www.restoudaobra.com.br/@(image)" />
+    <meta property="og:image:alt" content="Restou da Obra - @string.Concat(card.Ad.Name, " - ", card.Ad.Brand)" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+
+}
+
+<meta name="description" content="@string.Concat(card.Ad.Name, ", ", card.Ad.Brand, " - ", card.Ad.Quantity, " - ",  type.Name)" />
+<meta property="og:description" content="@string.Concat(card.Ad.Name, ", ", card.Ad.Brand, " - ", card.Ad.Quantity, " - ",  type.Name)" />

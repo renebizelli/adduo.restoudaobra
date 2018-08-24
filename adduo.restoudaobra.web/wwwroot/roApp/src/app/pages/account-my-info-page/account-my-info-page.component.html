@@ -1,0 +1,66 @@
+<div class="break-point sc">
+  <section class="one one-min form-basic">
+    <div class="description">
+
+      <app-page-title title="Meus Dados"></app-page-title>
+
+
+      <form novalidate (ngSubmit)="update()" #f="ngForm" *ngIf="isAlready">
+
+          <div>
+            <span>{{model.cpf.formatted}}</span>
+            <label for="cpf">CPF</label>
+          </div>
+
+          <app-field-text [property]="model.firstname"
+                          name="firstname"
+                          label="Seu primeiro nome"
+                          maxlength="32"
+                          placeholder="Seu primeiro nome"></app-field-text>
+
+
+          <app-field-text [property]="model.lastname"
+                          name="lastname"
+                          label="Seu sobrenome"
+                          maxlength="64"
+                          placeholder="Seu sobrenome"></app-field-text>
+
+
+          <app-field-text [property]="model.email"
+                          name="email"
+                          label="E-mail"
+                          maxlength="128"
+                          placeholder="e-mail"
+                          invalidText="e-mail inválido"
+                          alreadyText="e-mail já cadastrado"></app-field-text>
+
+          <app-field-mask [property]="model.phone"
+                          name="phone"
+                          label="Telefone"
+                          placeholder="Telefone"
+                          mask="phone"
+                          invalidText="telefone inválido"></app-field-mask>
+
+          <app-field-mask [property]="model.cellphone"
+                          name="cellphone"
+                          label="Celular"
+                          placeholder="Celular"
+                          mask="cellphone"
+                          emptyText="Informe pelo menos um dos telefones"
+                          invalidText="celular inválido"></app-field-mask>
+
+        <div class="button-area">
+          <input type="submit"
+                 *ngIf="!showSuccessMessage && !isProcessRunning"
+                 value="Salvar" />
+
+          <span *ngIf="showSuccessMessage">Alterado com sucesso.</span>
+          <app-loader [show]="isProcessRunning"></app-loader>
+        </div>
+
+      </form>
+
+    </div>
+
+  </section>
+</div>

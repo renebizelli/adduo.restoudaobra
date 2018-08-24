@@ -1,0 +1,14 @@
+﻿#how {
+    background-image: url(/_img/how/how-bg-1370x800.png);
+}
+
+#how article {
+    height: 476px;
+    background-image: url(/_img/how/c.png);
+}
+
+    #how article div.text {
+        width: 70%;
+        float: left;
+    }
+

@@ -1,0 +1,23 @@
+<div class="description">
+
+  <label>Estado</label>
+  <select name="statex" id="statex" [(ngModel)]="address.state.value.id">
+    <option [ngValue]="state.id" *ngFor="let state of states">{{state.name}}</option>
+  </select>
+  <app-review-field-container [property]="address.state" emptyText="Selecione um Estado"></app-review-field-container>
+
+  <app-field-text [property]="address.city"
+                  label="Cidade"
+                  maxlength="128"
+                  title="Cidade"></app-field-text>
+
+  <app-field-text [property]="address.district"
+                  label="Bairro"
+                  maxlength="128"
+                  title="Bairro"></app-field-text>
+
+</div>
+
+<div class="pos-button-area">
+  <a (click)="changeType()" title="Quero utilizar algum endereço já cadastrado">Quero utilizar algum endereço já cadastrado</a>
+</div>

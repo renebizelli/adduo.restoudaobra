@@ -1,0 +1,30 @@
+﻿@model CardSearchDTO
+
+@using adduo.restoudaobra.dto;
+@using adduo.restoudaobra.website.helper
+
+@{
+    var helper = AdTypeHelper.Get(Model);
+
+}
+
+
+<a href="/@(helper.URL)/@Model.Ad.URL/@Model.Ad.Guid" class="ad-small product-type product-type-@(helper.Type)" title="@Model.Ad.Name">
+
+    <div class="ad-small-image" style="background-image:url(@Model.Image)">
+        <img src="/_img/_icon/icon-@(helper.Type)-2.png" />
+    </div>
+    <div class="ad-small-content">
+
+        <ul>
+            <li>@Model.Ad.Name </li>
+            <li>@Model.Ad.Quantity</li>
+            <li>@Model.Ad.Brand</li>
+        </ul>
+
+        <h3 class="product-type-style product-type-style-3">
+            <span class="product-type-title-donation">Estou Doando</span>
+            <span class="product-type-title-sale">Estou Vendendo</span>
+        </h3>
+    </div>
+</a>

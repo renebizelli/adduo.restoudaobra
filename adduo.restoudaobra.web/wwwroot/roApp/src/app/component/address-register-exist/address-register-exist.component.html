@@ -1,0 +1,17 @@
+<div class="description">
+
+
+  <label id="address-exists-label" title="Endereços que você usou outras vezes">Endereços que você usou outras vezes</label>
+  <app-review-field-container [property]="address.id" emptyText="Selecione um endereço"></app-review-field-container>
+
+  <ul id="address-exists">
+    <li *ngFor="let address of addresses" [class.address-selected]="selected(address)" (click)="select(address)" title="{{address.district + ', ' + address.city + ' - ' + address.state}}">
+      {{address.district + ', ' + address.city + ' - ' + address.state}}
+    </li>
+  </ul>
+
+</div>
+
+<div class="pos-button-area">
+  <a (click)="changeType()" title="Quero cadastrar um novo endereço">Quero cadastrar um novo endereço</a>
+</div>

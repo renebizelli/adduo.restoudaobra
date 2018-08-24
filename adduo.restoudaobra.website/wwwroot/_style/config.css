@@ -1,0 +1,67 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #212429;
+    font-family: 'raleway-regular';
+    outline: none;
+}
+
+body {
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+h1 {
+    font-size: 40.8px;
+    letter-spacing: -2px;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 31.5px;
+    color: #58595b;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-family: 'raleway-semibold';
+    width: 100%;
+    line-height: 100%;
+}
+
+h3, h4 {
+    font-family: 'raleway-semibold';
+    width: 100%;
+}
+
+form input[type='text'],
+form input[type='tel'],
+form input[type='email'],
+form input[type='password'] {
+    font-family: 'raleway-light';
+    font-size: 35.3px;
+}
+
+
+p {
+    font-size: 15px;
+    line-height: 180%;
+}

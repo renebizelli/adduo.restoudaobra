@@ -1,0 +1,6 @@
+﻿<div class="dropdown" >
+    <input type="text" ng-model="search" ng-keyup="filter()" ng-mousedown="displayOptions()" ng-change="unselectOption()" placeholder="Selecione" />
+    <ul ng-style="{'display' : display}"> 
+        <li ng-repeat="option in _options" ng-click="selectOption(option)" ng-class="{'selected' : checkSelected(option)}">{{option.name}}</li>
+    </ul>
+</div>

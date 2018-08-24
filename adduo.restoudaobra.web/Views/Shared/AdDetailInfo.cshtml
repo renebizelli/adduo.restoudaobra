@@ -1,0 +1,37 @@
+﻿@model CardDetailDTO
+
+@using adduo.restoudaobra.web.helper
+@using adduo.restoudaobra.web.model
+@using adduo.restoudaobra.dto
+
+@{
+    var card = Model;
+
+    var type = AdTypeHelper.Get(card);
+}
+
+<div id="ad-detail-info">
+
+    <div id="ad-detail-info-item">
+        <h1 title="@(card.Ad.Name)">@(card.Ad.Name)</h1>
+        <h2 title="@(card.Ad.Option)">@(card.Ad.Option)</h2>
+        <h2 title="@(card.Ad.Brand)">@(card.Ad.Brand)</h2>
+        <h2 title="@(card.Ad.Quantity)">@(card.Ad.Quantity)</h2>
+
+        @if (type.isSale)
+        {
+            <h2 class="text-color-type" title="@(card.Ad.Price.ToString("C"))"></h2>
+        }
+    </div>
+    <ul id="ad-detail-info-owner">
+        <li id="owner-name" title="@(card.Owner.FirstName)">@(card.Owner.FirstName)</li>
+        <li id="owner-email" ng-show="showContact">
+            <span ng-click="showContact()" ng-class="{'contact-hide': !contactVisible}"></span>
+        </li>
+        <li id="owner-phone">
+            <span ng-hide="contactVisible" ng-click="showContact()" class="contact-hide"></span>
+            <span ng-repeat="phone in phones" class="phone-separator" title="{{phone)">tel</span>
+        </li>
+        <li id="owner-address" title="@(card.Address.District), @(card.Address.City) - @(card.Address.State)">@(card.Address.District), @(card.Address.City) - @(card.Address.State)</li>
+    </ul>
+</div>

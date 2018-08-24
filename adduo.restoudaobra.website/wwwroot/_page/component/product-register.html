@@ -1,0 +1,124 @@
+﻿<section>
+    <div id="ad-box"
+         class="product-type"
+         ng-class="{
+                 'product-type-donation':productTypeDonation(),
+                 'product-type-sale' : productTypeSale()}">
+        <h1 ng-hide="isEdit()">Crie seu anúncio</h1>
+        <h1 ng-show="isEdit()">Edite seu anúncio</h1>
+        <h2 class="product-type-style product-type-style-1">
+            <span class="product-type-title-donation">quero doar</span>
+            <span class="product-type-title-sale">quero vender</span>
+        </h2>
+
+        <product-register-image fallback="fallback" dto="dto"></product-register-image>
+
+        <form ng-submit="registerProduct()">
+            <div class="form-line label-no-float ">
+                <div class="form-line-item" ng-class="statusClass(dto.product.name)">
+                    <label>Qual o produto?</label>
+                    <input type="text" id="productname" ng-model="dto.product.name.value"
+                           title="ex: rolo de conduíte, tinta látex, azulejo, janela"
+                           placeholder="ex: rolo de conduíte, tinta látex, azulejo, janela" />
+
+                    <div class="form-line-item-status">
+                        <img src="/_img/_icon/icon-valid-1.png" />
+                        <span>campo obrigatório</span>
+                    </div>
+                </div>
+                <div class="form-line-item" ng-class="statusClass(dto.product.option)">
+                    <label>Fale mais sobre o produto</label>
+                    <input type="text" id="productoption" ng-model="dto.product.option.value"
+                           title="ex: cor, tamanho, tipo, etc"
+                           placeholder="ex: cor, tamanho, tipo, etc" />
+                    <div class="form-line-item-status">
+                        <img src="/_img/_icon/icon-valid-1.png" />
+                        <span>campo obrigatório</span>
+                    </div>
+                </div>
+                <div class="form-line-item" ng-class="statusClass(dto.product.brand)">
+                    <label>Marca</label>
+                    <input type="text" id="productbrand" ng-model="dto.product.brand.value"
+                           title="Marca"
+                           placeholder="escreva somente a marca" />
+                    <div class="form-line-item-status">
+                        <img src="/_img/_icon/icon-valid-1.png" />
+                        <span>campo obrigatório</span>
+                    </div>
+                </div>
+                <div class="form-line-item" ng-class="statusClass(dto.product.quantity)">
+                    <label>Quantidade</label>
+                    <input type="text" id="productquantity" ng-model="dto.product.quantity.value"
+                           title="ex: meia lata de 18L, 50 metros, 1 caixa, 5 peças"
+                           placeholder="ex: meia lata, 50 metros, 1 caixa, 5 unidades" />
+                    <div class="form-line-item-status">
+                        <img src="/_img/_icon/icon-valid-1.png" />
+                        <span>campo obrigatório</span>
+                    </div>
+                </div>
+                <div class="form-line-item" ng-show="productTypeSale()" ng-class="statusClass(dto.product.price)">
+                    <label>Qual valor deseja vender?</label>
+                    <input type="text" id="productprice" ng-model="dto.product.price.value" money-mask money-mask-prepend="R$" title="Qual valor deseja vender?" />
+                    <div class="form-line-item-status">
+                        <img src="/_img/_icon/icon-valid-1.png" />
+                        <span>campo obrigatório</span>
+                    </div>
+                </div>
+                <div class="form-line-address">
+                    <div ng-show="addresseslist">
+                        <label>Endereços que você usou outras vezes:</label>
+                        <div class="form-line-item-address" ng-class="statusClass(dto.address.id)">
+                            <ul class="form-list-option">
+                                <li class="hand" ng-repeat="address in addresses" ng-click="addressSelect(address)" ng-class="{'selected': checkAddressSelect(address)}">
+                                    - {{address.state}}, {{address.city}}, {{address.district}}
+                                </li>
+                            </ul>
+                            <div class="form-line-item-status">
+                                <img src="/_img/_icon/icon-valid-1.png" />
+                                <span>campo obrigatório</span>
+                            </div>
+                            <a href="#" ng-click="newAddressSelect()">Quero informar um novo endereço</a>
+                        </div>
+                    </div>
+                    <div class="form-line-address" ng-hide="addresseslist">
+                        <div class="form-line-item" ng-class="statusClass(dto.address.state)">
+                            <div class="form-line-item-fl">
+                                <label>Estado</label>
+                                <div dropdown select="selectState(selected)" options="states" selected="dto.address.state"></div>
+                            </div>
+                            <div class="form-line-item-status">
+                                <img src="/_img/_icon/icon-valid-1.png" />
+                                <span>campo obrigatório</span>
+                            </div>
+                        </div>
+                        <div class="form-line-item" ng-class="statusClass(dto.address.city)">
+                            <label>Cidade</label>
+                            <input type="text" id="addresscity" ng-model="dto.address.city.value" title="Cidade" placeholder="" />
+                            <div class="form-line-item-status">
+                                <img src="/_img/_icon/icon-valid-1.png" />
+                                <span>campo obrigatório</span>
+                            </div>
+                        </div>
+                        <div class="form-line-item" ng-class="statusClass(dto.address.district)">
+                            <label>Bairro</label>
+                            <input type="text" id="addressdistrict" ng-model="dto.address.district.value" title="Bairro" placeholder="" />
+                            <div class="form-line-item-status">
+                                <img src="/_img/_icon/icon-valid-1.png" />
+                                <span>campo obrigatório</span>
+                            </div>
+                        </div>
+                        <a href="#" ng-click="listAddressSelect()" ng-show="haslistAddress()">Quero utilizar algum endereço já cadastrado</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loader loader-style-1" ng-show="loaderSaveActivity()"><span>aguarde</span></div>
+
+            <div class="form-area-button" ng-hide="loaderSaveActivity()">
+                <input type="submit" ng-hide="isEdit()" value="adicionar" />
+                <input type="submit" ng-show="isEdit()" value="salvar" />
+            </div>
+        </form>
+
+    </div>
+</section>

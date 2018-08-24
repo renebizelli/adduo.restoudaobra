@@ -1,0 +1,14 @@
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\bin\Debug\netcoreapp2.1\adduo.restoudaobra.html.deps.json
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\bin\Debug\netcoreapp2.1\adduo.restoudaobra.html.runtimeconfig.json
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\bin\Debug\netcoreapp2.1\adduo.restoudaobra.html.runtimeconfig.dev.json
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\bin\Debug\netcoreapp2.1\adduo.restoudaobra.html.dll
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\bin\Debug\netcoreapp2.1\adduo.restoudaobra.html.pdb
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.csprojAssemblyReference.cache
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.csproj.CoreCompileInputs.cache
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.RazorAssemblyInfo.cache
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.RazorAssemblyInfo.cs
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.AssemblyInfoInputs.cache
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.AssemblyInfo.cs
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.RazorTargetAssemblyInfo.cache
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.dll
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo.restoudaobra.html\obj\Debug\netcoreapp2.1\adduo.restoudaobra.html.pdb

@@ -1,0 +1,70 @@
+﻿<section id="basic" class="page" ng-controller="ownerUpdateController" height-body>
+
+
+    <article>
+
+        <div id="box-owner-info" class="box">
+            <h1>Meus Dados</h1>
+            <h2></h2>
+
+            <div class="loader loader-style-1" ng-show="loaderActivity()"><span>carregando</span></div>
+
+            <form ng-submit="event.update()" ng-hide="loaderActivity()">
+                <div class="form-line  label-float">
+                    <div class="form-line-item" ng-class="helper.form.statusClass(dto.firstname)">
+                        <input type="text" id="ownerfirstname" maxlength="32" ng-model="dto.firstname.value" placeholder="Seu primeiro nome" title="Seu primeiro nome" />
+                        <label for="ownerfirstname">Primeiro Nome</label>
+                        <div class="form-line-item-status">
+                            <img src="/_img/_icon/icon-valid-1.png" />
+                            <span>campo obrigatório</span>
+                        </div>
+                    </div>
+                    <div class="form-line-item" ng-class="helper.form.statusClass(dto.lastname)">
+                        <input type="text" id="ownerlastname" maxlength="64" ng-model="dto.lastname.value" placeholder="Seu sobrenome" title="Seu sobrenome" />
+                        <label for="ownerlastname">Sobrenome</label>
+                        <div class="form-line-item-status">
+                            <img src="/_img/_icon/icon-valid-1.png" />
+                            <span>campo obrigatório</span>
+                        </div>
+                    </div>
+                    <div class="form-line-item" ng-class="helper.form.statusClass(dto.email)">
+                        <input type="text" id="owneremail" maxlength="128" ng-model="dto.email.value" placeholder="Seu e-mail" title="Seu e-mail" />
+                        <label for="owneremail">E-mail</label>
+                        <div class="form-line-item-status">
+                            <img src="/_img/_icon/icon-valid-1.png" />
+                            <span ng-show="dto.email.code == 'ALREADY'">e-mail já cadastrado</span>
+                            <span ng-show="dto.email.code == 'EMPTY'">campo obrigatório</span>
+                            <span ng-show="dto.email.code == 'INVALID'">e-mail inválido</span>
+                        </div>
+                    </div>
+                    <div class="form-line-item" ng-class="helper.form.statusClass(dto.phone)">
+                        <input type="text" id="ownerphone" maxlength="13" ng-model="dto.phone.value" placeholder="Seu telefone" title="Seu telefone" mask="99 9999-9999" />
+                        <label for="ownerphone">Telefone</label>
+                        <div class="form-line-item-status">
+                            <img src="/_img/_icon/icon-valid-1.png" />
+                        </div>
+                    </div>
+                    <div class="form-line-item" ng-class="helper.form.statusClass(dto.cellphone)">
+                        <input type="text" id="ownercellphone" maxlength="13" ng-model="dto.cellphone.value" placeholder="Seu celular" title="Seu celular" mask="99 9?9999-9999" />
+                        <label for="ownercellphone">Celular</label>
+                        <div class="form-line-item-status">
+                            <img src="/_img/_icon/icon-valid-1.png" />
+                            <p class="form-summary-error" ng-show="dto.phone.code == 'INVALID'">
+                                Informe pelo menos um dos telefones
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loader loader-style-1" ng-show="loaderUpdateActivity()"><span>aguarde</span></div>
+
+                <div class="form-area-button" ng-hide="loaderUpdateActivity()">
+                    <input type="submit" value="Pronto!" />
+                </div>
+            </form>
+
+        </div>
+
+    </article>
+
+</section>

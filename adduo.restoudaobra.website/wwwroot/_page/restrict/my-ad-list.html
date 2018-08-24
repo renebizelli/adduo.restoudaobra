@@ -1,0 +1,64 @@
+﻿<section id="basic" class="page" ng-controller="myadController" height-body>
+
+
+    <article>
+
+        <section ng-controller="myadListController">
+
+            <div id="box-my-ad" class="box">
+
+                <h1>Meus Anúncios</h1>
+
+                <div class="loader loader-style-1" ng-show="loaderActivity()"><span>aguarde</span></div>
+
+                <ul id="menu-status">
+                    <li ng-repeat="status in dto.status" ng-click="event.filterProduct(status)" ng-class="helper.statusSelected(status, 'menu-status-selected')">{{status.name}}</li>
+                </ul>
+
+                <div class="loader loader-style-1" ng-show="loaderAbaStatusChangeActivity()"><span>aguarde</span></div>
+
+                <ul id="my-ad-collection" ng-hide="loaderAbaStatusChangeActivity()">
+                    <li ng-show="ads.length === 0" class="my-ad-item my-ad-empty">Nenhum anuncio</li>
+                    <li ng-repeat="ad in ads"
+                        class="product-type my-ad-item"
+                        ng-class="{
+                                'product-type-donation':helper.productTypeDonation(ad.product),
+                                'product-type-sale' : helper.productTypeSale(ad.product)}">
+
+                        <h4 class="product-type-style product-type-style-2">
+                            <span class="product-type-title-sale">{{ad.product.name}}</span>
+                            <span class="product-type-title-donation">{{ad.product.name}}</span>
+                        </h4>
+
+                        <ul id="my-ad-galley">
+                            <li ng-repeat="image in ad.images" ng-style="{'background-image' : 'url(' + image + ')'}" />
+                        </ul>
+
+                        <ul class="my-ad-item-info">
+                            <li title="{{ad.product.option}}">{{ad.product.option}}</li>
+                            <li title="{{ad.product.brand}}">{{ad.product.brand}}</li>
+                            <li title="{{ad.product.quantity}}">{{ad.product.quantity}}</li>
+                        </ul>
+
+                        <div class="text-color-type my-ad-item-info-price" ng-show="helper.productTypeSale(ad.product)" title="{{ad.product.price | currency : 'R$' : 2}}">{{ad.product.price | currency : 'R$' : 2}}</div>
+
+                        <div class="loader loader-style-1" ng-show="loaderCommandsActivity(ad)"><span>aguarde</span></div>
+
+                        <div class="form-area-button" ng-hide="loaderCommandsActivity(ad)">
+                            <input type="button" value="editar" ng-click="editRedirect('/meus-anuncios/anuncio/' + ad.product.guid)" ng-show="showEdit()" />
+                            <input type="button" value="ocultar" ng-click="changeStatusPaused(ad)" ng-show="showPaused()" />
+                            <input type="button" value="finalizar" ng-click="changeStatusFinished(ad)" ng-show="showFinished()" />
+                            <input type="button" value="publicar" ng-click="changeStatusPublished(ad)" ng-show="showPublished()" />
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+    </article>
+
+</section>
+

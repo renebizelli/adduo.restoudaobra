@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\adduo.restoudaobra.dal\adduo.restoudaobra.dal.csproj" />
+    <ProjectReference Include="..\adduo.restoudaobra.ie.dal\adduo.restoudaobra.ie.dal.csproj" />
+    <ProjectReference Include="..\adduo.restoudaobra.ie.service\adduo.restoudaobra.ie.service.csproj" />
+    <ProjectReference Include="..\adduo.restoudaobra.parser\adduo.restoudaobra.parser.csproj" />
+  </ItemGroup>
+
+</Project>

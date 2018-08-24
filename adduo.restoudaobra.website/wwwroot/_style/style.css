@@ -1,0 +1,254 @@
+﻿/* LOADER ***************************/
+
+.loader {
+    background-image: url(/_img/common/loader.gif);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.loader-style-1 {
+    position: relative;
+    height: 80px;
+}
+
+    .loader-style-1 span {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: #aaa;
+        text-align: center;
+    }
+
+
+.loader-style-2 {
+    position: absolute;
+    z-index: 100;
+}
+
+/* LOADER */
+
+
+/*  style common */
+
+.product-type-donation .text-color-type {
+    color: #547caf;
+}
+
+.product-type-sale .text-color-type {
+    color: #53ae8b;
+}
+
+.product-type .product-type-style {
+    padding: 0;
+    margin: 0;
+}
+
+    .product-type .product-type-style span {
+        background-repeat: no-repeat;
+        display: none;
+    }
+
+.product-type-donation .product-type-style span {
+    color: #547caf;
+}
+
+.product-type-sale .product-type-style span {
+    color: #53ae8b;
+}
+
+.product-type-sale .product-type-style .product-type-title-sale {
+    display: inline-block;
+    color: #53ae8b;
+}
+
+.product-type-donation .product-type-style .product-type-title-donation {
+    display: inline-block;
+    color: #547caf;
+}
+
+
+/*  style common */
+
+/*  style 1 */
+
+.product-type-donation .product-type-style-1 span {
+    background-image: url('/_img/_icon/icon-donation-3.png');
+}
+
+.product-type-sale .product-type-style-1 span {
+    background-image: url('/_img/_icon/icon-sale-3.png');
+}
+
+.product-type .product-type-style-1 span {
+    background-position-x: center;
+    background-position-y: bottom;
+    height: 80px;
+    font-size: 27.7px;
+}
+
+/*  style 1 */
+
+/*  style 2 */
+
+.product-type .product-type-style-2 {
+    overflow: visible;
+}
+
+    .product-type .product-type-style-2 span {
+        background-position-x: left;
+        background-position-y: center;
+        height: 44px;
+        padding: 7px 0 0 50px;
+        text-transform: capitalize;
+        min-width: 100px;
+        font-size: 25px;
+        color: #404040;
+    }
+
+.product-type-donation .product-type-style-2 span {
+    background-image: url('/_img/_icon/icon-donation-3.png');
+}
+
+.product-type-sale .product-type-style-2 span {
+    background-image: url('/_img/_icon/icon-sale-3.png');
+}
+
+/*  style 2 */
+
+
+/*  style 3 */
+
+.product-type .product-type-style-3 {
+    text-align: center;
+}
+
+    .product-type .product-type-style-3 span {
+        font-size: 18px;
+    }
+
+/*  style 3 */
+
+
+/*  style 4 */
+
+.product-type .product-type-style-4 {
+    background-repeat: no-repeat;
+    height: 91px;
+    background-position: center top;
+}
+
+
+.product-type-donation .product-type-style-4 {
+    background-image: url('/_img/_icon/icon-donation-4.png');
+}
+
+.product-type-sale .product-type-style-4 {
+    background-image: url('/_img/_icon/icon-sale-4.png');
+}
+
+
+/*  style 4 */
+
+
+
+/* div table */
+
+
+
+.div-table {
+    display: table;
+}
+
+.div-table-row {
+    display: table-row;
+}
+
+.div-table-heading {
+    display: table-header-group;
+}
+
+.div-table-cell, .div-table-Head {
+    display: table-cell;
+}
+
+.div-table-heading {
+    display: table-header-group;
+}
+
+.div-table-foot {
+    display: table-footer-group;
+}
+
+.div-table-body {
+    display: table-row-group;
+}
+/* div table */
+
+
+.hand {
+    cursor: pointer;
+}
+
+.overlay {
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400%;
+    z-index: 200;
+    opacity: 0.8;
+}
+
+img.center-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* SUCCESS ***************************/
+@keyframes message-show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes success-hide {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.message-show {
+    animation: 2s message-show;
+}
+
+.success-hide {
+    animation: 1s success-hide;
+}
+
+/* SUCCESS */
+
+
+/* ad ***************************/
+
+@keyframes ad-show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

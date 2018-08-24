@@ -1,0 +1,36 @@
+
+<div class="photos">
+
+  <ng-template #limitNotOk>
+
+    <div ngfDrop
+         multiple="1"
+         selectable="1"
+         [(validDrag)]="validComboDrag"
+         [(files)]="files"
+         accept="image/*"
+         [maxSize]="maxSize"
+         class="upload-drop-zone hand"
+         [class.upload-drag-invalid]="validComboDrag===false || isInvalid()"
+         [class.upload-drag-valid]="validComboDrag"
+         (filesChange)="upload()"
+         title="Arraste as fotos do anúncio para esta área ou clique aqui para selecionar.">
+      <app-loader [show]="loader"></app-loader>
+
+      <span *ngIf="isInvalid()">É preciso que você insira ao menos uma foto.</span>
+      <span>Arraste as fotos do anúncio para esta área ou clique aqui para selecionar.</span>
+
+    </div>
+    <div class="limit limit-not-ok">Você pode inserir até 6 fotos</div>
+  </ng-template>
+
+  <div class="limit limit-ok" *ngIf="limitOk();else limitNotOk">Pronto, a quantidade de fotos está ok.</div>
+
+  <div *ngFor="let image of uploaded" class="set-photo" [style.backgroundImage]="'url(' + image.full + ')'">
+    <div class="close" title="Excluir foto" (click)="delete(image)"></div>
+    <app-loader [show]="showLoaderDelete(image.id)"></app-loader>
+  </div>
+
+</div>
+
+

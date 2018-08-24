@@ -1,0 +1,95 @@
+<section class="two">
+
+  <app-page-title title="Crie seu cadastro"
+                  subtitleH3="É rapidinho"></app-page-title>
+
+
+  <app-summary-error [items]="summaryItens"></app-summary-error>
+
+  <div *ngIf="isAnyAlready()" class="data-already">
+    <span>Não lembra a senha que cadastrou?</span>
+    <span *ngIf="isCpfAlready() || isAllAlready()" class="hand" (click)="redefineByCPF()">clique aqui</span>
+    <span *ngIf="isEmailAlready()" class="hand" (click)="redefineByEmail()">clique aqui</span>
+  </div>
+
+  <form novalidate (ngSubmit)="register()" #f="ngForm">
+
+    <app-field-mask [property]="model.cpf"
+               name="cpf"
+               label="CPF"
+               maxlength="16"
+               placeholder="Seu CPF"
+               mask="cpf"
+               invalidText="cpf inválido"></app-field-mask>
+
+    <app-field-text [property]="model.firstname"
+               name="name"
+               label="Nome"
+               maxlength="32"
+               placeholder="Seu primeiro nome"></app-field-text>
+
+    <app-field-text [property]="model.lastname"
+               name="lastname"
+               label="Sobrenome"
+               maxlength="64"
+               placeholder="Seu sobrenome"></app-field-text>
+
+    <app-field-text [property]="model.email"
+               name="email"
+               label="E-mail"
+               maxlength="128"
+               placeholder="Seu e-mail"
+               invalidText="e-mail inválido"></app-field-text>
+
+    <app-field-text [property]="model.emailconfirm"
+               name="emailconfirm"
+               label="Confirme o e-mail"
+               maxlength="128"
+               placeholder="Confirme o e-mail"
+               invalidText="e-mail inválido"
+               differentText="os e-mail não estão iguais"></app-field-text>
+
+    <app-field-text [property]="model.phone"
+               name="phone"
+               label="Telefone"
+               maxlength="16"
+               mask="(99) 9999-9999"
+               placeholder="Seu telefone"
+               invalidText="telefone inválido"></app-field-text>
+
+    <app-field-text [property]="model.cellphone"
+               name="cellphone"
+               label="Celular"
+               maxlength="16"
+               mask="(99) 99999-9999"
+               placeholder="Seu celular"
+               invalidText="celular inválido"
+               emptyText="Informe pelo menos um dos telefones"></app-field-text>
+
+    <app-field-password [property]="model.password"
+               name="password"
+               label="Senha"
+               maxlength="8"
+               placeholder="Sua senha"></app-field-password>
+
+    <app-field-password [property]="model.passwordconfirm"
+               name="passwordconfirm"
+               label="Confirme sua senha"
+               maxlength="8"
+               placeholder="Confirme sua senha"
+               differentText="as senhas não estão iguais"></app-field-password>
+
+
+    <div class="button-area">
+
+      <input type="submit"
+             *ngIf="!isProcessRunning"
+             value="Pronto!" />
+
+      <app-loader [show]="isProcessRunning"></app-loader>
+
+    </div>
+
+  </form>
+
+</section>

@@ -1,0 +1,27 @@
+﻿@model CardDetailDTO
+
+@using adduo.restoudaobra.dto
+
+@{
+    var card = Model;
+}
+
+
+<script type="application/ld+json">
+    {
+    @Html.Raw("\"@context\" : \"http://schema.org/\""),
+    @Html.Raw("\"@type\": \"Product\""),
+    "name": "@(card.Ad.Name)",
+    "image": [ "http://www.restoudaobra.com.br@(card.Images.First())" ],
+    "brand": {
+    @Html.Raw("\"@type\": \"Thing\""),
+    "name": "@(card.Ad.Brand)"
+    },
+    "offers" : {
+    @Html.Raw("\"@type\": \"AggregateOffer\""),
+    "lowPrice": "@(card.Ad.Price)",
+    "highPrice": "@(card.Ad.Price)",
+    "priceCurrency": "BRL"
+    }
+    }
+</script>

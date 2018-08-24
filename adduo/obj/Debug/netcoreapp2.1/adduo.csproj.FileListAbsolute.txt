@@ -1,0 +1,17 @@
+C:\inetpub\wwwroot\adduo.restoudaobra.aspnetcore\adduo\bin\Debug\netcoreapp2.1\adduo.deps.json
+C:\inetpub\wwwroot\adduo.restoudaobra.aspnetcore\adduo\bin\Debug\netcoreapp2.1\adduo.dll
+C:\inetpub\wwwroot\adduo.restoudaobra.aspnetcore\adduo\bin\Debug\netcoreapp2.1\adduo.pdb
+C:\inetpub\wwwroot\adduo.restoudaobra.aspnetcore\adduo\obj\Debug\netcoreapp2.1\adduo.csproj.CoreCompileInputs.cache
+C:\inetpub\wwwroot\adduo.restoudaobra.aspnetcore\adduo\obj\Debug\netcoreapp2.1\adduo.AssemblyInfoInputs.cache
+C:\inetpub\wwwroot\adduo.restoudaobra.aspnetcore\adduo\obj\Debug\netcoreapp2.1\adduo.AssemblyInfo.cs
+C:\inetpub\wwwroot\adduo.restoudaobra.aspnetcore\adduo\obj\Debug\netcoreapp2.1\adduo.dll
+C:\inetpub\wwwroot\adduo.restoudaobra.aspnetcore\adduo\obj\Debug\netcoreapp2.1\adduo.pdb
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\bin\Debug\netcoreapp2.1\adduo.deps.json
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\bin\Debug\netcoreapp2.1\adduo.dll
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\bin\Debug\netcoreapp2.1\adduo.pdb
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\obj\Debug\netcoreapp2.1\adduo.csproj.CoreCompileInputs.cache
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\obj\Debug\netcoreapp2.1\adduo.AssemblyInfoInputs.cache
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\obj\Debug\netcoreapp2.1\adduo.AssemblyInfo.cs
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\obj\Debug\netcoreapp2.1\adduo.dll
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\obj\Debug\netcoreapp2.1\adduo.pdb
+C:\inetpub\wwwroot\adduo.restoudaobra\adduo\obj\Debug\netcoreapp2.1\adduo.csprojAssemblyReference.cache
