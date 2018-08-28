@@ -3,14 +3,9 @@
 }
 
 @section title {
-    @RenderSection("titlePrefix", false)
-    Restou da Obra
-    @RenderSection("titleSufix", false)
 }
 
 @section meta  {
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="1 days">
     @RenderSection("meta", false)
 }
 
@@ -19,21 +14,5 @@
 }
 
 @section script {
-    <script src="_script/seo/module.js?v=20180522"></script>
-    <script src="_script/seo/controller.js"></script>
-    <script src="_script/common/directive.js"></script>
 }
 
-    <body scroll>
-
-        <partial name="Menu" />
-
-        <main>
-            @RenderBody()
-        </main>
-
-        <partial name="Footer" />
-
-        <partial name="GoogleAnalytics" />
-
-    </body>

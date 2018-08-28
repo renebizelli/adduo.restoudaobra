@@ -38,6 +38,7 @@
     <Content Remove="wwwroot\roApp\src\app\service\contact.service.ts" />
     <Content Remove="wwwroot\roApp\src\app\service\my-ad.service.ts" />
     <Content Remove="wwwroot\roApp\src\app\shared\type.helper.ts" />
+    <Content Remove="Views\Shared\_MasterpageSEO.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -123,9 +124,6 @@
     <Content Update="Views\Shared\_Masterpage.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Shared\_MasterpageSEO.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
     <Content Update="Views\SPA\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
@@ -140,6 +138,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\roApp\src\app\component\field-password\" />
     <Folder Include="wwwroot\roApp\src\app\component\field-textarea\" />
+    <Folder Include="wwwroot\assets\css\" />
   </ItemGroup>
 
 </Project>

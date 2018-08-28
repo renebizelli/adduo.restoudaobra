@@ -681,30 +681,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rene\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/rene/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\inetpub\\wwwroot\\adduo.restoudaobra\\adduo.restoudaobra.constants\\adduo.restoudaobra.constants.csproj",
+      "projectUniqueName": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/adduo.restoudaobra.constants.csproj",
       "projectName": "adduo.restoudaobra.constants",
-      "projectPath": "C:\\inetpub\\wwwroot\\adduo.restoudaobra\\adduo.restoudaobra.constants\\adduo.restoudaobra.constants.csproj",
-      "packagesPath": "C:\\Users\\Rene\\.nuget\\packages\\",
-      "outputPath": "C:\\inetpub\\wwwroot\\adduo.restoudaobra\\adduo.restoudaobra.constants\\obj\\",
+      "projectPath": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/adduo.restoudaobra.constants.csproj",
+      "packagesPath": "/Users/rene/.nuget/packages/",
+      "outputPath": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rene\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/rene/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -724,7 +722,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.1.0, )",
+            "version": "2.1",
             "autoReferenced": true
           }
         },

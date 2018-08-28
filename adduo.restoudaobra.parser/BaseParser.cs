@@ -48,6 +48,7 @@ namespace adduo.restoudaobra.parser
 
         public void Set(BaseResult result)
         {
+            this.results = new List<BaseResult>();
             this.results.Add(result);
         }
 
