@@ -3,31 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo", "adduo\adduo.csproj", "{A8CD53E0-E691-45DB-B501-8ADE1164FA87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo", "adduo\adduo.csproj", "{A8CD53E0-E691-45DB-B501-8ADE1164FA87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.constants", "adduo.restoudaobra.constants\adduo.restoudaobra.constants.csproj", "{BC2C48A4-7CB6-434E-AA2F-530FA276F6E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.constants", "adduo.restoudaobra.constants\adduo.restoudaobra.constants.csproj", "{BC2C48A4-7CB6-434E-AA2F-530FA276F6E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.dto", "adduo.restoudaobra.dto\adduo.restoudaobra.dto.csproj", "{994945F0-7205-473C-937E-ACCA7B9587D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.dto", "adduo.restoudaobra.dto\adduo.restoudaobra.dto.csproj", "{994945F0-7205-473C-937E-ACCA7B9587D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.ie", "adduo.restoudaobra.ie\adduo.restoudaobra.ie.csproj", "{88DF044D-E140-48C5-BCCB-AEE7209C6429}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.ie", "adduo.restoudaobra.ie\adduo.restoudaobra.ie.csproj", "{88DF044D-E140-48C5-BCCB-AEE7209C6429}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.ie.dal", "adduo.restoudaobra.ie.dal\adduo.restoudaobra.ie.dal.csproj", "{61E3CD70-A6DF-4518-A487-666A0057D7D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.ie.dal", "adduo.restoudaobra.ie.dal\adduo.restoudaobra.ie.dal.csproj", "{61E3CD70-A6DF-4518-A487-666A0057D7D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.ie.service", "adduo.restoudaobra.ie.service\adduo.restoudaobra.ie.service.csproj", "{46A89D8D-6BB8-44AB-B969-0C1DA58FB3A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.ie.service", "adduo.restoudaobra.ie.service\adduo.restoudaobra.ie.service.csproj", "{46A89D8D-6BB8-44AB-B969-0C1DA58FB3A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.parser", "adduo.restoudaobra.parser\adduo.restoudaobra.parser.csproj", "{34A7DCF0-4233-4CC0-93FE-692E190A5B7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.parser", "adduo.restoudaobra.parser\adduo.restoudaobra.parser.csproj", "{34A7DCF0-4233-4CC0-93FE-692E190A5B7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.dal", "adduo.restoudaobra.dal\adduo.restoudaobra.dal.csproj", "{066E0844-B763-484D-AC74-44C5183AEC29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.dal", "adduo.restoudaobra.dal\adduo.restoudaobra.dal.csproj", "{066E0844-B763-484D-AC74-44C5183AEC29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.service", "adduo.restoudaobra.service\adduo.restoudaobra.service.csproj", "{8FCEDAC6-ED1E-4872-BB2A-9F8264EF9D3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.service", "adduo.restoudaobra.service\adduo.restoudaobra.service.csproj", "{8FCEDAC6-ED1E-4872-BB2A-9F8264EF9D3C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.api", "adduo.restoudaobra.api\adduo.restoudaobra.api.csproj", "{031AA1A7-9DC6-43E2-99FA-98B8419A3122}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.api", "adduo.restoudaobra.api\adduo.restoudaobra.api.csproj", "{031AA1A7-9DC6-43E2-99FA-98B8419A3122}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.website", "adduo.restoudaobra.website\adduo.restoudaobra.website.csproj", "{1261B7E5-7598-4BB3-8A53-E2576E98856B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.website", "adduo.restoudaobra.website\adduo.restoudaobra.website.csproj", "{1261B7E5-7598-4BB3-8A53-E2576E98856B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.angular", "adduo.restoudaobra.web\adduo.restoudaobra.angular.csproj", "{4301FCDB-CA01-433D-B00D-5F111A353310}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.angular", "adduo.restoudaobra.web\adduo.restoudaobra.angular.csproj", "{4301FCDB-CA01-433D-B00D-5F111A353310}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adduo.restoudaobra.html", "adduo.restoudaobra.html\adduo.restoudaobra.html.csproj", "{2168ADB9-8168-4ED6-855D-1C6C4C3F1FA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adduo.restoudaobra.html", "adduo.restoudaobra.html\adduo.restoudaobra.html.csproj", "{2168ADB9-8168-4ED6-855D-1C6C4C3F1FA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

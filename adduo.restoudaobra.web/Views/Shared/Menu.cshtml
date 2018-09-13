@@ -1,20 +1,21 @@
-﻿<header id="menu-principal">
+﻿<header>
+    <div class="break-point">
+        <a href="/" title="Pagina inicial - Restou da Obra" class="logo">
+            <img src="/assets/img/restou-da-obra-logo-3.png" alt="Restou da Obra" title="Restou da Obra" />
+        </a>
+        <span class="button-menu-mobile">Button</span>
+        <menu-element class="blue">
 
-    <div>
-        <a href="/" id="header-logo" scroll-action title="Pagina inicial - Restou da Obra"></a>
-        <div id="area-nav">
-            <nav>
-                <a ng-show="authenticated" title="Olá {{name}}" id="owner-name">Olá {{name}} :)</a>
-                <a href="/quero-doar" title="Quero doar">QUERO DOAR</a>
-                <a href="/quero-vender" title="Quero vender">QUERO VENDER</a>
-                <a href="/meus-anuncios" title="Meus anúncios" ng-show="authenticated">MEUS ANÚNCIOS</a>
-                <a href="/contato" title="Contato">CONTATO</a>
-                <a href="/meus-dados" ng-show="authenticated" title="Meus dados">MEUS DADOS</a>
-                <a ng-show="authenticated" ng-click="logout()" title="Sair" class="last">SAIR</a>
-                <a href="/identificacao" ng-hide="authenticated" title="Entrar" class="last">ENTRAR</a>
-            </nav>
-        </div>
 
+            <style>
+                :host(blue) {
+                            background-color: #ff0000 !important;
+                }
+
+
+            </style>
+
+        </menu-element>
     </div>
-
 </header>
+

@@ -21,26 +21,34 @@ header {
   padding: 0 20px;
 }
 
-nav {
-  float: right;
-  font-size: 12px;
-  margin-top: 22px;
-}
 
-  nav li {
-    float: left;
-  }
-
-    nav li a {
-      display: block;
-      color: white;
-      text-align: center;
-      
+    nav, menu-element {
+        float: right;
+        font-size: 12px;
+        margin-top: 22px;
     }
 
+    menu-element nav li,
+    nav li {
+        float: left;
+    }
+
+        menu-element nav li a,
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+        }
+
+        nav li a {
+            font-size: 30px!important;
+        }
+
+
+header menu-element nav li a,
 header nav li a {
-  text-transform: uppercase;
-  padding: 14px 16px;
+    text-transform: uppercase;
+    padding: 14px 16px;
 }
 
 .main,

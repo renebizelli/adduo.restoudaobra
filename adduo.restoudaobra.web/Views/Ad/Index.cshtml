@@ -1,10 +1,8 @@
 ﻿@model BaseViewModel<CardDetailDTO>
-
 @using adduo.restoudaobra.web.helper
 @using adduo.restoudaobra.web.model
 @using adduo.restoudaobra.dto
 @using adduo.restoudaobra.constants
-
 @{
     Layout = "~/Views/Shared/_Masterpage.cshtml";
 
@@ -14,33 +12,31 @@
 
     var type = AdTypeHelper.Get(card);
 }
-
 @section titlePrefix { @string.Concat(card.Ad.Name, " - ", card.Ad.Brand, " - ", type.Name, " - ")  }
-
 @section meta
     {
     <partial name="AdMetaTag" model="Model" />
 }
-
 @section richcards
     {
     <partial name="AdRichCard" model="card" />
 }
 
+@section script {
+    <script src="/assets/js/menu.js"></script>
+}
 
-    <section id="ad-detail" class="page" ng-controller="AdDetailController" ng-init="init([@(string.Join(',',  card.Images.Select(s => $"'{s}'")))])">
 
-        <div id="box-ad-detail"
-             class="box product-type @(type.ProductTypeClass)">
+<!-- partial name="AdCarousel" model="card" / -->
 
-            <h4 class="product-type-style product-type-style-4"></h4>
+<div class="break-point sc">
+    <section class="one ads">
+        <span class="close">Close</span>
+        <span class="@(type.ProductTypeClass)-header">Donation</span>
 
-            <partial name="AdGallery" model="card" />
-
-            <partial name="AdDetailInfo" model="card" />
-
-        </div>
-
-        <partial name="AdCarousel" model="card" />
+        <partial name="AdGallery" model="card" />
+        <partial name="AdDetailInfo" model="card" />
+        <partial name="AdDetailOwner" model="card" />
 
     </section>
+</div>

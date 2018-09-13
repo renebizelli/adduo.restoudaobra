@@ -39,10 +39,15 @@
     <Content Remove="wwwroot\roApp\src\app\service\my-ad.service.ts" />
     <Content Remove="wwwroot\roApp\src\app\shared\type.helper.ts" />
     <Content Remove="Views\Shared\_MasterpageSEO.cshtml" />
+    <Content Remove="wwwroot\roApp\projects\elements\src\app\app.component.css" />
+    <Content Remove="wwwroot\roApp\projects\elements\src\app\app.component.spec.ts" />
+    <Content Remove="wwwroot\assets\css\reset.css" />
+    <Content Remove="wwwroot\assets\.DS_Store" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,10 +59,6 @@
     <TypeScriptCompile Include="wwwroot\roApp\src\app\app.configs.ts" />
     <TypeScriptCompile Include="wwwroot\roApp\src\app\guard\auth.guard.ts" />
     <TypeScriptCompile Include="wwwroot\roApp\src\app\interceptor\auth.interceptor.ts" />
-    <TypeScriptCompile Include="wwwroot\roApp\src\app\mask\cpf.mask.ts" />
-    <TypeScriptCompile Include="wwwroot\roApp\src\app\mask\mask.ts" />
-    <TypeScriptCompile Include="wwwroot\roApp\src\app\mask\cellphone.mask.ts" />
-    <TypeScriptCompile Include="wwwroot\roApp\src\app\mask\phone.mask.ts" />
     <TypeScriptCompile Include="wwwroot\roApp\src\app\model\ad-change-status.model.ts" />
     <TypeScriptCompile Include="wwwroot\roApp\src\app\model\ad-detail.model.ts" />
     <TypeScriptCompile Include="wwwroot\roApp\src\app\model\address-detail.model.ts" />
@@ -133,12 +134,18 @@
     <Content Update="Views\_ViewStart.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Views\Shared\AdDetailInfo %28copy%29.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\AdDetailOwner.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\roApp\src\app\component\field-password\" />
     <Folder Include="wwwroot\roApp\src\app\component\field-textarea\" />
-    <Folder Include="wwwroot\assets\css\" />
+    <Folder Include="wwwroot\roApp\src\app\module\" />
   </ItemGroup>
 
 </Project>

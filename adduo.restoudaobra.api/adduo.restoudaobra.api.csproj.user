@@ -6,4 +6,9 @@
   <PropertyGroup>
     <ActiveDebugProfile>adduo.restoudaobra.api</ActiveDebugProfile>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <StartAction>Project</StartAction>
+    <ApplicationURL>http://localhost:5050</ApplicationURL>
+    <LaunchBrowser>false</LaunchBrowser>
+  </PropertyGroup>
 </Project>

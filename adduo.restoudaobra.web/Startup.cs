@@ -3,10 +3,12 @@ using adduo.restoudaobra.ie.model;
 using adduo.restoudaobra.service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 
 namespace adduo.restoudaobra.web
 {
@@ -41,6 +43,11 @@ namespace adduo.restoudaobra.web
                 app.UseDeveloperExceptionPage();
             }
 
+            var x = new DefaultFilesOptions();
+            x.DefaultFileNames = new List<string> { "index.html" };
+
+            app.UseDefaultFiles(x);
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
@@ -61,33 +68,40 @@ namespace adduo.restoudaobra.web
                     template: "",
                     defaults: new { controller = "Home", action = "Index" });
 
-
-                var urlSpa = new[]
-                {
-                    "identificacao",
-                    "quero-doar",
-                    "quero-vender",
-                    "quero-vender/pagamento",
-                    "cadastro/confirmacao/{guid}",
-                    "cadastro/redefinir-senha/",
-                    "cadastro/redefinir-senha/{key}",
-                    "meus-dados",
-                    "meus-anuncios",
-                    "meus-anuncios/anuncio/{id}",
-                    "contato",
-                    "politica-de-privacidade",
-                    "termos-de-uso"
-                };
-
-                foreach (var url in urlSpa)
-                {
-                    routes.MapRoute(
-                        name: $"spa-{url}",
-                        template: url,
-                        defaults: new { controller = "SPA", action = "Index" });
-                }
-
+                ConfigureRoutes(routes);
             });
+        }
+
+
+        private void ConfigureRoutes(IRouteBuilder routes)
+        {
+            var routesSpa = new[] {
+                new {  template = "/conta", name = "app-conta" },
+                new {  template = "/conta/sucesso", name = "app-conta-sucesso"},
+                new {  template = "/conta/confirmacao/:id", name = "app-conta-confirmacao"},
+                new {  template = "/conta/redefinir-senha", name = "app-conta-redefinir-senha"},
+                new {  template = "/conta/redefinir-senha/solicitada", name = "app-conta-redefinir-senha-solicitada"},
+                new {  template = "/conta/redefinir-senha/sucesso", name = "app-conta-redefinir-senha-sucesso"},
+                new {  template = "/conta/redefinir-senha/:key", name = "app-conta-redefinir-senha-key"},
+                new {  template = "/conta/meus-dados", name = "app-conta-meus-dados"},
+                new {  template = "/conta/meus-anuncios", name = "app-conta-meus-anuncios"},
+                new {  template = "/conta/meus-anuncios/quero-doar/{id}", name = "app-conta-meus-anuncios-quero-doar"},
+                new {  template = "/conta/meus-anuncios/quero-vender/{id}", name = "app-conta-meus-anuncios-quero-vender"},
+                new {  template = "/quero-doar", name = "app-quero-doar"},
+                new {  template = "/quero-vender", name = "app-quero-vender"},
+                new {  template = "/quero-vender/pagamento/{id}", name = "app-quero-vender-pagamento"},
+                new {  template = "/contato", name="app-contato"},
+                new {  template = "/contato/enviado", name = "app-contato-enviado"}
+            };
+
+            foreach (var spa in routesSpa)
+            {
+                routes.MapRoute(
+                    name: spa.name,
+                    template: spa.template,
+                    defaults: new { controller = "SPA", action = "Index" });
+
+            }
         }
     }
 }

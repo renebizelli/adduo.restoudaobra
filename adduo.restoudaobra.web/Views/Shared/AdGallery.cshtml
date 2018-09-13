@@ -1,10 +1,8 @@
 ﻿@model CardDetailDTO
-
 @using adduo.restoudaobra.dto
 @using adduo.restoudaobra.web.model
 @using System.Collections.Generic
 @using System.Linq;
-
 @{
 
     var card = Model;
@@ -61,23 +59,22 @@
     }
 }
 
-
-<div id="ad-detail-gallery" style="width:@(galerryWidth)px" ng-controller="adGalleryController">
-
-    @{
-
-        var selectedIndex = 0;
-
-        foreach (var row in gallery.Values)
+@foreach (var row in gallery.Values)
+{
+    <div class="photos only-desk" style="width:@(row.Count * 261)px">
+        @foreach (var image in row)
         {
-            <ul>
-                @foreach (var image in row)
-                {
-                    <li style="background-image:url(@(image))" title="Foto de @(card.Ad.Name) - @(card.Ad.Brand)" ng-click="open('@(selectedIndex++)')"></li>
-                }
-            </ul>
+            <div style="background-image:url(@(image))" title="Foto de @(card.Ad.Name) - @(card.Ad.Brand)"></div>
+        }
+    </div>
+}
+
+<div class="photos only-mobile">
+    @foreach (var row in gallery.Values)
+    {
+        @foreach (var image in row)
+        {
+            <div style="background-image:url(@(image))" title="Foto de @(card.Ad.Name) - @(card.Ad.Brand)"></div>
         }
     }
-
 </div>
-

@@ -1,20 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { Configs } from './app.configs'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
-import { StorageServiceModule } from 'angular-webstorage-service';
+import { SharedModule } from "./module/shared.module"
+import { AuthModule } from "./module/auth.module"
+import { RouterModule } from '@angular/router';
+import { HTTP_INTERCEPTORS } from '@angular/common/http'
+import { ngfModule } from 'angular-file';
 
 import { AppComponent } from './app.component';
 import { AccountPageComponent } from './pages/account-page/account-page.component';
-import { ngfModule } from 'angular-file';
-import { TextMaskModule } from 'angular2-text-mask';
-import { NgxCurrencyModule } from "ngx-currency";
 
-import { HttpService } from './service/http.service'
-import { AuthService } from './service/auth.service';
 import { RegisterFinalizationPageComponent } from './pages/register-finalization-page/register-finalization-page.component';
 import { RegisterConfirmationPageComponent } from './pages/register-confirmation-page/register-confirmation-page.component';
 import { RedefinePasswordSolicitationPageComponent } from './pages/redefine-password-solicitation-page/redefine-password-solicitation-page.component';
@@ -62,12 +58,11 @@ import { ReviewFieldAlreadyComponent } from 'src/app/component/review-field/revi
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { FieldTextareaComponent } from './component/field/field-textarea.component';
 import { ContactFinalizationPageComponent } from './pages/contact-finalization-page/contact-finalization-page.component';
+import { FieldComponent } from './component/field/field.component';
 import { FieldTextComponent } from './component/field/field-text.component';
 import { FieldPasswordComponent } from './component/field/field-password.component';
 import { FieldCurrencyComponent } from './component/field/field-currency.component';
 import { FieldMaskComponent } from './component/field/field-mask.component';
-
-
 
 @NgModule({
   declarations: [
@@ -114,35 +109,28 @@ import { FieldMaskComponent } from './component/field/field-mask.component';
     ContactPageComponent,
     FieldTextareaComponent,
     ContactFinalizationPageComponent,
+    FieldComponent,
     FieldTextComponent,
     FieldPasswordComponent,
     FieldMaskComponent,
     FieldCurrencyComponent
   ],
   imports: [
+    ngfModule,
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    StorageServiceModule,
-    ngfModule,
-    TextMaskModule,
-    NgxCurrencyModule 
-
+    SharedModule,
+    AuthModule
   ],
   providers:
     [
       Configs,
-      HttpService,
-      AuthService,
       DataTransferService,
       { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
       AuthGuard,
       LoginService,
       ViewHelper,
       TypeHelper
-      
     ],
   bootstrap: [AppComponent]
 })

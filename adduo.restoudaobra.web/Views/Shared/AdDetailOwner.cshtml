@@ -1,0 +1,27 @@
+﻿@model CardDetailDTO
+@using adduo.restoudaobra.web.helper
+@using adduo.restoudaobra.web.model
+@using adduo.restoudaobra.dto
+@{
+    var card = Model;
+}
+
+
+<div class="contact">
+    <div>
+        <i class="name"></i>
+        <span title="@(card.Owner.FirstName)">@(card.Owner.FirstName)</span>
+    </div>
+    <div>
+        <i class="contact-info"></i>
+        <span>contato@steveharris.com</span>
+    </div>
+    <div>
+        <i class="phone"></i>
+        <span>12 3922-2222</span>
+    </div>
+    <div>
+        <i class="location"></i>
+        <span  title="@(card.Address.District), @(card.Address.City) - @(card.Address.State)">@(card.Address.District), @(card.Address.City) - @(card.Address.State)</span>
+    </div>
+</div>

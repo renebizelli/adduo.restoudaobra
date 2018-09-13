@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Directive } from '@angular/core';
 import { Response } from '@angular/http'
 import { HttpClient, HttpResponse } from '@angular/common/http'
 import { Observable } from 'rxjs';
@@ -11,6 +11,7 @@ import { AuthService } from './auth.service';
 
 
 @Injectable()
+@Directive({selector:"[app-http-service]"})
 export class HttpService {
 
   constructor(

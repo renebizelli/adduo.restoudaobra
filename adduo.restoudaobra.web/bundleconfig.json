@@ -1,0 +1,41 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/assets/css/styles.css",
+    "inputFiles": [
+      "wwwroot/roApp/src/assets/css/reset.css",
+      "wwwroot/roApp/src/assets/css/style.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/menu.js",
+    "inputFiles": [
+      "wwwroot/assets/js/dist/elements/runtime.*.js",
+      "wwwroot/assets/js/dist/elements/polyfills.*.js",
+      "wwwroot/assets/js/dist/elements/main.*.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/app.js",
+    "inputFiles": [
+      "wwwroot/assets/js/dist/app/runtime.*.js",
+      "wwwroot/assets/js/dist/app/polyfills.*.js",
+      "wwwroot/assets/js/dist/app/scripts.*.js",
+      "wwwroot/assets/js/dist/app/main.*.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, Directive } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 import { SESSION_STORAGE, StorageService } from 'angular-webstorage-service';
@@ -7,6 +7,7 @@ import { HttpService } from './http.service';
 
 
 @Injectable()
+@Directive({ selector: "[app-service-auth]"})
 export class AuthService {
 
   private SESSION_KEY: string = 'RO-AUTH';

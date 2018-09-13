@@ -36,7 +36,8 @@ export const ROUTES: Routes = [
   { path: 'quero-vender/pagamento/:id', component: AdPaymentPageComponent, canActivate: [AuthGuard] },
   { path: 'contato', component: ContactPageComponent },
   { path: 'contato/enviado', component: ContactFinalizationPageComponent },
-
+  { path: '**', redirectTo: '/conta' }
+  
 
 
 

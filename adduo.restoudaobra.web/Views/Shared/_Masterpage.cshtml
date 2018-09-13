@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ROApp" ng-controller="mainController" esc-trigger>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>
 
@@ -28,11 +28,16 @@
     <base href="/">
     @RenderSection("script", false)
 
-    <link href="/assets/css/reset.css" rel="stylesheet" />
-    <link href="/assets/css/style.css" rel="stylesheet" />
+    <environment include="Development">
+        <link href="/roApp/src/assets/css/reset.css" rel="stylesheet" />
+        <link href="/roApp/src/assets/css/style.css" rel="stylesheet" />
+    </environment>
 
+    <environment include="Production">
+        <link href="/assets/css/styles.css" rel="stylesheet" />
+    </environment>
 </head>
-<body scroll>
+<body>
     <partial name="Menu" />
     <main>
         @RenderBody()

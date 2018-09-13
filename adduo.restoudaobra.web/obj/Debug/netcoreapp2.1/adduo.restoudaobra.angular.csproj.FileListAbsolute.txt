@@ -137,7 +137,6 @@ C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreap
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/bin/Debug/netcoreapp2.1/adduo.restoudaobra.ie.dal.pdb
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/bin/Debug/netcoreapp2.1/adduo.restoudaobra.ie.service.pdb
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/bin/Debug/netcoreapp2.1/adduo.restoudaobra.parser.pdb
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/adduo.restoudaobra.angular.csprojAssemblyReference.cache
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/adduo.restoudaobra.angular.csproj.CoreCompileInputs.cache
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/adduo.restoudaobra.angular.RazorAssemblyInfo.cache
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/adduo.restoudaobra.angular.RazorAssemblyInfo.cs
@@ -150,6 +149,7 @@ C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreap
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Shared/AdCarousel.g.cshtml.cs
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Shared/AdDetailInfo.g.cshtml.cs
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Shared/AdDetailOwner.g.cshtml.cs
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Shared/AdGallery.g.cshtml.cs
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Shared/AdMetaTag.g.cshtml.cs
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Shared/AdRichCard.g.cshtml.cs
