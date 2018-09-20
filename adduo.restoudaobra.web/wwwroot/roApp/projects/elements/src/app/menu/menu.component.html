@@ -1,29 +1,31 @@
-<nav class="menu-nav">
-  <b>teste</b>   
-  <ul>
-    <li>
-      <a *ngIf="isAuth" [title]="'Olá ' + name" [innerText]="'Olá ' + name"></a>
-    </li>
-    <li>
-      <a href="" title="Quero doar">QUERO DOAR</a>
-    </li>
-    <li>
-      <a href="" title="Quero vender">QUERO VENDER</a>
-    </li>
-    <li *ngIf="isAuth">
-      <a href="/conta/meus-anuncios" title="Meus anúncios">MEUS ANÚNCIOS</a>
-    </li>
-    <li *ngIf="isAuth">
-      <a href="/conta/meus-dados" title="Meus dados">MEUS DADOS</a>
-    </li>
-    <li *ngIf="!isAuth">
-      <a href="/conta" title="Entrar">ENTRAR</a>
-    </li>
-    <li>
-      <a href="/contato" title="Contato">CONTATO</a>
-    </li>
-    <li *ngIf="isAuth">
-      <a *ngIf="isAuth" title="Sair" (click)="logout()">SAIR</a>
-    </li>
-  </ul>
+<span class="button-menu-mobile" *ngIf="!isOpen" (click)="toggle()" [class.open]="isOpen">Button</span>
+<nav [class.open]="isOpen">
+    <b>{{isOpen}}</b>
+    <div class="close" id="btn-menu-mobile-close" (click)="toggle()" *ngIf="isOpen">close</div>
+    <ul>
+        <li>
+            <a *ngIf="isAuth" [title]="'Olá ' + name" [innerText]="'Olá ' + name"></a>
+        </li>
+        <li>
+            <a href="" title="Quero doar">QUERO DOAR</a>
+        </li>
+        <li>
+            <a href="" title="Quero vender">QUERO VENDER</a>
+        </li>
+        <li *ngIf="isAuth">
+            <a href="/conta/meus-anuncios" title="Meus anúncios">MEUS ANÚNCIOS</a>
+        </li>
+        <li *ngIf="isAuth">
+            <a href="/conta/meus-dados" title="Meus dados">MEUS DADOS</a>
+        </li>
+        <li *ngIf="!isAuth">
+            <a href="/conta" title="Entrar">ENTRAR</a>
+        </li>
+        <li>
+            <a href="/contato" title="Contato">CONTATO</a>
+        </li>
+        <li *ngIf="isAuth">
+            <a *ngIf="isAuth" title="Sair" (click)="logout()">SAIR</a>
+        </li>
+    </ul>
 </nav>

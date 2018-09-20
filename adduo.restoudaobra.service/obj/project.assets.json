@@ -11806,13 +11806,13 @@
       "projectName": "adduo.restoudaobra.service",
       "projectPath": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.service/adduo.restoudaobra.service.csproj",
       "packagesPath": "/Users/rene/.nuget/packages/",
-      "outputPath": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.service/obj",
+      "outputPath": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.service/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/rene/.config/NuGet/NuGet.Config"
+        "/Users/rene/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -11849,17 +11849,17 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": {
             "target": "Package",
-            "version": "2.1.0"
-          },
-          "System.IdentityModel.Tokens.Jwt": {
-            "target": "Package",
-            "version": "5.2.4"
+            "version": "[2.1.0, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.1",
+            "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "System.IdentityModel.Tokens.Jwt": {
+            "target": "Package",
+            "version": "[5.2.4, )"
           }
         },
         "imports": [

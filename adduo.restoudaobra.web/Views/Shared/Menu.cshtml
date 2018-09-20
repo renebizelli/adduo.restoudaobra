@@ -1,21 +1,38 @@
 ﻿<header>
     <div class="break-point">
-        <a href="/" title="Pagina inicial - Restou da Obra" class="logo">
+        <a href="/" title="Pagina inicial - Restou da Obra" class="logo" id="menu-logo">
             <img src="/assets/img/restou-da-obra-logo-3.png" alt="Restou da Obra" title="Restou da Obra" />
         </a>
-        <span class="button-menu-mobile">Button</span>
-        <menu-element class="blue">
-
-
-            <style>
-                :host(blue) {
-                            background-color: #ff0000 !important;
-                }
-
-
-            </style>
-
-        </menu-element>
+        <span class="button-menu-mobile" id="menu-btn-open">Button</span>
+        <nav id="menu-nav">
+            <div class="close menu-close" id="menu-btn-close"></div>
+            <ul>
+                <li class="menu-only-auth">
+                    <a id="menu-name-owner" title=""></a>
+                </li>
+                <li>
+                    <a href="" title="Quero doar">QUERO DOAR</a>
+                </li>
+                <li>
+                    <a href="" title="Quero vender">QUERO VENDER</a>
+                </li>
+                <li class="menu-only-auth">
+                    <a href="/conta/meus-anuncios" title="Meus anúncios">MEUS ANÚNCIOS</a>
+                </li>
+                <li class="menu-only-auth">
+                    <a href="/conta/meus-dados" title="Meus dados">MEUS DADOS</a>
+                </li>
+                <li  class="menu-only-anonimous">
+                    <a href="/conta" title="Entrar">ENTRAR</a>
+                </li>
+                <li>
+                    <a href="/contato" title="Contato">CONTATO</a>
+                </li>
+                <li class="menu-only-auth">
+                    <a id="menu-btn-logoff" title="Sair">SAIR</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>
 
