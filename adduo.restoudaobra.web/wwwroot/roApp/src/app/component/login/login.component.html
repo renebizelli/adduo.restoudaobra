@@ -4,39 +4,32 @@
 
   <app-summary-error [items]="summaryItens"></app-summary-error>
 
-  <form [formGroup]="form" novalidate (ngSubmit)="login()">
+  <form novalidate (ngSubmit)="login()">
 
-    <ul class="input-line">
-      <li>
+    <app-field-text [property]="model.email"
+                    name="emaillogin"
+                    floatlabel="true"
+                    label="Seu e-mail"
+                    maxlength="128"
+                    placeholder="Seu e-mail"></app-field-text>
 
-        <input type="text"
-               formControlName="email"
-               placeholder="Seu e-mail"
-               title="Seu e-mail" />
-      </li>
-      <li>
+    <app-field-password [property]="model.password"
+                        name="passwordlogin"
+                        floatlabel="true"
+                        label="Senha"
+                        maxlength="8"
+                        placeholder="Sua senha"></app-field-password>
 
-        <input type="password"
-               formControlName="password"
-               maxlength="8"
-               placeholder="Sua senha"
-               title="Sua senha" />
-      </li>
-    </ul>
-
-    <div class="button-area">
-
+        <div class="button-area">
       <input type="submit"
              *ngIf="!isProcessRunning"
              value="Entrar" />
-
       <app-loader [show]="isProcessRunning"></app-loader>
     </div>
     <div class="pos-button-area">
       <p class="forgot">Esqueceu sua senha?</p>
       <a [routerLink]="['/conta/redefinir-senha']">Clique aqui</a>
     </div>
-
   </form>
 
 </section>

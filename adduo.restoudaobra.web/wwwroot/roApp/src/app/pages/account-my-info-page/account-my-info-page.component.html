@@ -4,23 +4,24 @@
 
       <app-page-title title="Meus Dados"></app-page-title>
 
-
       <form novalidate (ngSubmit)="update()" #f="ngForm" *ngIf="isAlready">
 
-          <div>
-            <span>{{model.cpf.formatted}}</span>
-            <label for="cpf">CPF</label>
-          </div>
+        <div class="label-float-static">
+          <label for="cpf">CPF</label>
+          <span>{{model.cpf.formatted}}</span>
+        </div>
 
           <app-field-text [property]="model.firstname"
                           name="firstname"
                           label="Seu primeiro nome"
                           maxlength="32"
+                          floatlabel="true"
                           placeholder="Seu primeiro nome"></app-field-text>
 
 
           <app-field-text [property]="model.lastname"
                           name="lastname"
+                          floatlabel="true"
                           label="Seu sobrenome"
                           maxlength="64"
                           placeholder="Seu sobrenome"></app-field-text>
@@ -28,6 +29,7 @@
 
           <app-field-text [property]="model.email"
                           name="email"
+                          floatlabel="true"
                           label="E-mail"
                           maxlength="128"
                           placeholder="e-mail"
@@ -36,6 +38,7 @@
 
           <app-field-mask [property]="model.phone"
                           name="phone"
+                          floatlabel="true"
                           label="Telefone"
                           placeholder="Telefone"
                           mask="phone"
@@ -43,6 +46,7 @@
 
           <app-field-mask [property]="model.cellphone"
                           name="cellphone"
+                          floatlabel="true"
                           label="Celular"
                           placeholder="Celular"
                           mask="cellphone"

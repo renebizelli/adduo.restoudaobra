@@ -24,11 +24,7 @@ import { DataTransferService } from '../../service/data-transfer.service';
 })
 export class LoginComponent extends BaseComponent implements OnInit {
 
-  public form: FormGroup = new FormGroup(
-    {
-      "email": new FormControl('renebizelli@gmail.com', [Validators.required, Validators.email]),
-      "password": new FormControl('321', [Validators.required]),
-    });
+  public model: LoginModel =  LoginModel._new();
 
   constructor(
     private loginService: LoginService,
@@ -68,7 +64,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
 
     this.processRunningStart();
 
-    this.loginService.login(this.form)
+    this.loginService.login(this.model)
       .pipe(
         map((m) => m.body),
         catchError((response: HttpErrorResponse) => {

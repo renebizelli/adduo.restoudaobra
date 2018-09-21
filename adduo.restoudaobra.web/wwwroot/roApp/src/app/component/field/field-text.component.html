@@ -1,14 +1,21 @@
 
-<label>{{label}}</label>
-<input type="text"
-       [(ngModel)]="property.value"
-       maxlength="{{maxlength}}"
-       title="{{placeholder}}"
-       placeholder="{{placeholder}}">
+<div [class.label-float]="floatlabel">
 
-<app-review-field-container [property]="property"
-                            [invalidText]="invalidText"
-                            [emptyText]="emptyText"
-                            [differentText]="differentText"
-                            [notfoundText]="notfoundText"
-                            [alreadyText]="alreadyText"></app-review-field-container>
+  <label [for]="label" *ngIf="!floatlabel">{{label}}</label>
+
+  <input type="text"
+         [id]="name"
+         [(ngModel)]="property.value"
+         maxlength="{{maxlength}}"
+         title="{{placeholder}}"
+         placeholder="{{placeholder}}" />
+
+  <label [for]="name" *ngIf="floatlabel">{{placeholder}}</label>
+
+  <app-review-field-container [property]="property"
+                              [invalidText]="invalidText"
+                              [emptyText]="emptyText"
+                              [differentText]="differentText"
+                              [notfoundText]="notfoundText"
+                              [alreadyText]="alreadyText"></app-review-field-container>
+</div>

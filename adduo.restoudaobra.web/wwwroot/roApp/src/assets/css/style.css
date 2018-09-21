@@ -772,14 +772,6 @@ input {
   }
 
 
-label {
-  font-size: 23px;
-  display: block;
-}
-
-
-.label-fixed label {
-}
 
 
 .review-field {
@@ -924,8 +916,106 @@ label {
 }
 
 
-@media only screen and (max-width: 1400px) {
-  .box, .ladder {
+label {
+    font-size: 23px;
+    display: block;
+}
+
+
+/** ******** */
+
+.label-float {
+  position:relative;
+  height: 105px;
+}
+
+    .label-float ::-webkit-input-placeholder {
+        opacity: 0;
+    }
+
+    .label-float ::-moz-placeholder {
+        opacity: 0;
+    }
+
+    .label-float :-moz-placeholder {
+        opacity: 0;
+    }
+
+    .label-float :-ms-input-placeholder {
+        opacity: 0;
+    }
+
+
+    .label-float label,
+    .label-float input {
+        position: absolute;
+        top: 25px;
+        background-color: transparent;
+        display: block;
+        padding: 10px;
+    }
+
+    .label-float label {
+        -moz-transition: top 0.3s, font-size 0.3s;
+        -o-transition: top 0.3s, font-size 0.3s;
+        -webkit-transition: top 0.3s, font-size 0.3s;
+        transition: top 0.3s, font-size 0.3s;
+        cursor:text;
+        color:#999;
+    }
+
+      .label-float-static,
+      .label-float textarea:not(:placeholder-shown) + label,
+      .label-float textarea:focus + label,
+      .label-float input:not(:placeholder-shown) + label,
+      .label-float input:focus + label {
+        color: #999;
+        top: 0;
+        font-size: 13px;
+        display: block;
+      }
+
+
+
+  .label-float .review-container {
+    position: absolute;
+    right:0;
+    bottom:0;
+    height: 18px;
+    padding: 3px 0;
+  }
+
+
+
+.label-float-static {
+  position: relative;
+  height: 100px;
+  display: block;
+}
+
+.label-float-static label {
+  color: #999;
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  font-size: 13px;
+  display: block;
+}
+
+  .label-float-static span {
+    padding: 10px;
+    position: absolute;
+    display: block;
+    top: 25px;
+    width: 100%;
+    font-size: 22px;
+    border-bottom: 1px solid #ddd;
+  }
+
+    /** ******** */
+
+    @media only screen and (max-width: 1400px) {
+        .box, .ladder {
       background: none;
     }
 

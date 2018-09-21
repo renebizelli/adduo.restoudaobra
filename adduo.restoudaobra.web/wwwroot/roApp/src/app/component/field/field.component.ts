@@ -18,6 +18,7 @@ export class FieldComponent {
   @Input() public maxlength: number = 256;
   @Input() public placeholder: string = TypeHelper.stringEmpty;
   @Input() public name: string = TypeHelper.stringEmpty;
+  @Input() public floatlabel: boolean = false;
 
   constructor() {
   }

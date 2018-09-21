@@ -16,6 +16,7 @@
 
     <app-field-mask [property]="model.cpf"
                name="cpf"
+               floatlabel="true"
                label="CPF"
                maxlength="16"
                placeholder="Seu CPF"
@@ -24,18 +25,21 @@
 
     <app-field-text [property]="model.firstname"
                name="name"
+               floatlabel="true"
                label="Nome"
                maxlength="32"
                placeholder="Seu primeiro nome"></app-field-text>
 
     <app-field-text [property]="model.lastname"
                name="lastname"
+               floatlabel="true"
                label="Sobrenome"
                maxlength="64"
                placeholder="Seu sobrenome"></app-field-text>
 
     <app-field-text [property]="model.email"
                name="email"
+               floatlabel="true"
                label="E-mail"
                maxlength="128"
                placeholder="Seu e-mail"
@@ -43,6 +47,7 @@
 
     <app-field-text [property]="model.emailconfirm"
                name="emailconfirm"
+               floatlabel="true"
                label="Confirme o e-mail"
                maxlength="128"
                placeholder="Confirme o e-mail"
@@ -51,6 +56,7 @@
 
     <app-field-text [property]="model.phone"
                name="phone"
+               floatlabel="true"
                label="Telefone"
                maxlength="16"
                mask="(99) 9999-9999"
@@ -59,6 +65,7 @@
 
     <app-field-text [property]="model.cellphone"
                name="cellphone"
+               floatlabel="true"
                label="Celular"
                maxlength="16"
                mask="(99) 99999-9999"
@@ -68,12 +75,14 @@
 
     <app-field-password [property]="model.password"
                name="password"
+               floatlabel="true"
                label="Senha"
                maxlength="8"
                placeholder="Sua senha"></app-field-password>
 
     <app-field-password [property]="model.passwordconfirm"
                name="passwordconfirm"
+               floatlabel="true"
                label="Confirme sua senha"
                maxlength="8"
                placeholder="Confirme sua senha"

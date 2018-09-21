@@ -38,22 +38,8 @@ export class LoginService {
     });
   }
 
-
-  public login(f: FormGroup): Observable<HttpResponse<ResponseEnvelope<AuthenticatedModel>>> {
-    var model = this.parser(f)
+  public login(model: LoginModel): Observable<HttpResponse<ResponseEnvelope<AuthenticatedModel>>> {
     return this.http.post<AuthenticatedModel>('login', model);
   }
 
-  public parser(f: FormGroup): LoginModel {
-
-    let email = new PropertyStringModel();
-    email.value = f.get('email').value;
-
-    let password = new PropertyStringModel();
-    password.value = f.get('password').value;
-
-    var model = new LoginModel(email, password);
-
-    return model;
-  }
 }

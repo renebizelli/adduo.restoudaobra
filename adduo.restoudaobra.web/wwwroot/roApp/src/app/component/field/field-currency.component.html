@@ -1,15 +1,22 @@
+<div [class.label-float]="floatlabel">
 
-<label>{{label}}</label>
-<input type="text"
-       [(ngModel)]="property.value"
-       maxlength="{{maxlength}}"
-       title="{{placeholder}}"
-       placeholder="{{placeholder}}"
-       currencyMask [options]="{prefix: 'R$', thousands:'.', decimal:',', align:'left'}" />
+  <label [for]="label" *ngIf="!floatlabel">{{label}}</label>
 
-<app-review-field-container [property]="property"
-                            [invalidText]="invalidText"
-                            [emptyText]="emptyText"
-                            [differentText]="differentText"
-                            [notfoundText]="notfoundText"
-                            [alreadyText]="alreadyText"></app-review-field-container>
+  <input type="text"
+         [id]="name"
+         [(ngModel)]="property.value"
+         maxlength="{{maxlength}}"
+         title="{{placeholder}}"
+         placeholder="{{placeholder}}"
+         currencyMask [options]="{prefix: 'R$', thousands:'.', decimal:',', align:'left'}" />
+
+  <label [for]="name" *ngIf="floatlabel">{{placeholder}}</label>
+
+  <app-review-field-container [property]="property"
+                              [invalidText]="invalidText"
+                              [emptyText]="emptyText"
+                              [differentText]="differentText"
+                              [notfoundText]="notfoundText"
+                              [alreadyText]="alreadyText"></app-review-field-container>
+
+</div>

@@ -7,20 +7,30 @@
       <app-field-text [property]="model.name"
                  name="name"
                  label="Nome"
+                 floatlabel="true"
+                 placeholder="Nome"
                  maxlength="128"></app-field-text>
 
       <app-field-text [property]="model.email"
                  name="email"
                  label="E-mail"
+                 floatlabel="true"
+                 placeholder="E-mail"
                  maxlength="128"></app-field-text>
 
       <app-field-mask [property]="model.phone"
                  name="phone"
                  mask="cellphone"
                  label="Telefone"
+                 floatlabel="true"
+                 placeholder="Telefone"
                  maxlength="16"></app-field-mask>
 
-      <app-field-textarea [property]="model.message"
+      <app-field-textarea 
+                          label="Mensagem"
+                          name="message"
+                          floatlabel="true"
+                          [property]="model.message"
                           placeholder="Deixe aqui sua mensagem"></app-field-textarea>
 
       <div class="button-area">
