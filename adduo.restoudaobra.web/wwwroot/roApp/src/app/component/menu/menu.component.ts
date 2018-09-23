@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class MenuComponent extends BaseComponent implements OnInit {
 
   public isAuth: boolean = false;
+  public isOpen : boolean = false;
 
   public name: string = '';
 
@@ -37,4 +38,9 @@ export class MenuComponent extends BaseComponent implements OnInit {
   public logout(): void {
     this.authService.logout().subscribe(() => this.redirect('conta'));
   }
+  
+  public toogle() : void {
+    this.isOpen = !this.isOpen;
+  }
+  
 }

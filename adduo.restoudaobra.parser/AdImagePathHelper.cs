@@ -40,12 +40,10 @@ namespace adduo.restoudaobra.service.ad
 
             if (this.hostingEnvironment.IsDevelopment())
             {
-                root = "C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.web/wwwroot/";
+                root = settings.PathRootDevelopment;
             }
             else {
-                root = hostingEnvironment.ContentRootPath
-                        .Replace("adduo.restoudaobra.api", string.Empty)
-                        .Replace("api", string.Empty);
+                root = settings.PathRootProduction;
             }
 
             return root;

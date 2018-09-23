@@ -5,6 +5,8 @@
         string EmailContact { get; set; }
         string PathHost { get; set; }
         string PathAdImage { get; set; }
+        string PathRootDevelopment { get; set; }
+        string PathRootProduction { get; set; }
     }
 
     public interface ISettingsEmailModel

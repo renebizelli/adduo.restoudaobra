@@ -3,8 +3,9 @@
     <a href="/" title="Pagina inicial - Restou da Obra" class="logo">
       <img src="/assets/img/restou-da-obra-logo-3.png" alt="Restou da Obra" title="Restou da Obra"  />
     </a>
-    <span class="button-menu-mobile">Button</span>
-    <nav>
+    <span class="button-menu-mobile" (click)="toogle()">Button</span>
+    <nav [class.open]="isOpen">
+      <div class="close menu-close" id="menu-btn-close"  (click)="toogle()" [style.display]="isOpen ? 'block' : 'none'"></div> 
       <ul>
         <li>
           <a *ngIf="isAuth" [title]="'Olá ' + name" [innerText]="'Olá ' + name"></a>

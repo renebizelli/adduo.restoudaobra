@@ -7,5 +7,7 @@ namespace adduo.restoudaobra.dto.model
         public string EmailContact { get; set; }
         public string PathHost { get; set; }
         public string PathAdImage { get; set; }
+        public string PathRootDevelopment { get; set; }
+        public string PathRootProduction { get; set; }
     }
 }

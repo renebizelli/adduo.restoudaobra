@@ -9,6 +9,8 @@
 <a class="item @(helper.Type.ToString().ToLower())" href="/@(helper.URL)/@Model.Ad.URL/@Model.Ad.Guid" title="@Model.Ad.Name">
     <div class="item-thumb" style="background-image:url(@Model.Image)"></div>
     <i>@(helper.Name)</i>
-    <h2>@Model.Ad.Name</h2>
+    <h2 class="item-name">@Model.Ad.Name</h2>
+    <h2>@Model.Ad.Brand</h2>
+    <h2>@Model.Ad.Option</h2>
     <span>Estou @(helper.Name)</span>
 </a>
