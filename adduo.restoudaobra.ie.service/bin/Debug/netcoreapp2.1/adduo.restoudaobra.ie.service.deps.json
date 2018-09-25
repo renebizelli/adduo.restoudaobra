@@ -36,12 +36,12 @@
           "runtimes/win7-x64/native/Magick.NET-Q16-x64.Native.dll": {
             "rid": "win7-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "7.5.0.0"
           },
           "runtimes/win7-x86/native/Magick.NET-Q16-x86.Native.dll": {
             "rid": "win7-x86",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "7.5.0.0"
           }
         }
       },
@@ -401,7 +401,7 @@
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "assemblyVersion": "4.0.4.0",
-            "fileVersion": "4.0.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },

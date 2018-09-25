@@ -266,6 +266,10 @@ footer {
   margin-top: -65px;
 }
 
+h3 {
+  font-size: 32px;
+}
+
 
 .number {
   width: 18px;
@@ -338,6 +342,10 @@ footer {
   float: left;
   margin-top: 30px;
   width: 430px;
+}
+
+.about p {
+  margin-bottom: 15px;
 }
 
 
@@ -488,9 +496,24 @@ header nav.open li {
   text-align: center;
 }
 
-  .photos img {
+  .photos div {
     margin: 20px 30px;
+    width:100px;
+    height:100px;
   }
+
+
+.description span,
+.description h1 {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 10px;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+  margin:0;
+}
+
 
 .contact {
   margin-top: 20px;
@@ -543,7 +566,7 @@ section h1 {
   margin: 0 10px 10px;
 }
 
-section h2 {
+section .title-level-2 {
   text-align: center;
   color: #f36d2e;
   margin-bottom: 15px;
@@ -551,7 +574,7 @@ section h2 {
   font-size: 25px;
 }
 
-section h3 {
+section .title-level-3 {
   font-weight: bold;
   text-align: center;
   color: #f36d2e;
