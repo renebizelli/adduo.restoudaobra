@@ -20,9 +20,15 @@ export class MenuComponent extends BaseComponent implements OnInit {
     public dataTransferService: DataTransferService,
     public router: Router) {
     super(dataTransferService, router);
+    
+        this.router.events.subscribe((val) => {
+          this.isOpen = false;
+        });
+
   }
 
   ngOnInit() {
+  
 
     this.authService.currentState.subscribe(auth => {
 

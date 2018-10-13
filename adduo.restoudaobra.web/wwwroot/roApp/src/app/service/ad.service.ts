@@ -40,5 +40,4 @@ export class AdService {
   public get(guid: string): Observable<HttpResponse<ResponseEnvelope<CardRegisterModel>>> {
     return this.http.get<CardRegisterModel>('ad/' + guid);
   }
-
 }

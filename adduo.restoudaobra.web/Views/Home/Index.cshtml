@@ -38,7 +38,15 @@
 }
 
 @section script {
-    <script src="/assets/js/menu.js"></script>
+
+    <script>
+
+        $(function() {
+            $("#menu-logo").addClass("menu-logo-scroll")
+        });
+
+    </script>
+
 }
 
 <section class="main">
@@ -48,7 +56,7 @@
         </div>
         <div class="text">
 
-            <img src="/assets/img/restou-da-obra-logo-1.png" title="Restou da Obra" alt="Restou da Obra" />
+            <img src="/assets/img/restou-da-obra-logo-1.png" title="Restou da Obra" alt="Restou da Obra" id="home-logo" />
 
             <p>
                 Acreditamos que ajudar é o melhor caminho para construir o bem. Acreditamos no relacionamento entre pessoas,
@@ -77,9 +85,19 @@
         }
     </div>
 
+
+</section>
+
+<div class="home-icon">
+    <hr />
+    <i>Home</i>
+</div>
+
+<section class="how-info">
+
     <div class="break-point">
-        <div class="how-info">
-            <i class="home-icon">Home</i>
+
+
             <h3 class="h3-home">Como Funciona</h3>
             <article>
                 <i class="bar">bar</i>
@@ -105,9 +123,9 @@
                     <img src="/assets/img/step3.png" />
                 </div>
             </div>
-        </div>
     </div>
 </section>
+
 
 <section class="about">
     <div class="box">

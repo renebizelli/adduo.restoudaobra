@@ -54,7 +54,7 @@ import { ReviewFieldDifferentComponent } from './component/review-field/review-f
 import { ReviewFieldValidComponent } from './component/review-field/review-field-valid.component';
 import { ReviewFieldNotFoundComponent } from './component/review-field/review-field-notfound.component';
 import { ReviewFieldContainerComponent } from './component/review-field-container/review-field-container.component';
-import { ReviewFieldAlreadyComponent } from 'src/app/component/review-field/review-field-already.component';
+import { ReviewFieldAlreadyComponent } from './component/review-field/review-field-already.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { FieldTextareaComponent } from './component/field/field-textarea.component';
 import { ContactFinalizationPageComponent } from './pages/contact-finalization-page/contact-finalization-page.component';
@@ -63,6 +63,17 @@ import { FieldTextComponent } from './component/field/field-text.component';
 import { FieldPasswordComponent } from './component/field/field-password.component';
 import { FieldCurrencyComponent } from './component/field/field-currency.component';
 import { FieldMaskComponent } from './component/field/field-mask.component';
+import { AdListPageComponent } from './pages/ad-list-page/ad-list-page.component';
+import { SearchService  } from './service/search.service';
+import { CardComponent } from './component/card/card.component';
+import { AdDetailPageComponent } from './pages/ad-detail-page/ad-detail-page.component';
+import { FotoramaDirective } from './directive/fotorama.directive';
+
+import * as $ from 'jquery';
+import { PrivacyPageComponent } from './pages/privacy-page/privacy-page.component';
+import { TermPageComponent } from './pages/term-page/term-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+
 
 @NgModule({
   declarations: [
@@ -113,11 +124,18 @@ import { FieldMaskComponent } from './component/field/field-mask.component';
     FieldTextComponent,
     FieldPasswordComponent,
     FieldMaskComponent,
-    FieldCurrencyComponent
+    FieldCurrencyComponent,
+    AdListPageComponent,
+    CardComponent,
+    AdDetailPageComponent,
+    FotoramaDirective,
+    PrivacyPageComponent,
+    TermPageComponent,
+    LoginPageComponent
   ],
-  imports: [
-    ngfModule,
+  imports:[
     BrowserModule,
+    ngfModule,
     RouterModule.forRoot(ROUTES),
     SharedModule,
     AuthModule
@@ -130,8 +148,9 @@ import { FieldMaskComponent } from './component/field/field-mask.component';
       AuthGuard,
       LoginService,
       ViewHelper,
-      TypeHelper
+      TypeHelper,
+      SearchService
     ],
-  bootstrap: [AppComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -34,6 +34,13 @@ namespace adduo.restoudaobra.api.Controllers
             this.imageHelper = imageHelper;
         }
 
+        [HttpGet]
+        public ObjectResult Get() {
+            return new ObjectResult( adImagePath.PhysicalPath());
+
+
+        }
+
         [HttpPost]
         public ObjectResult Post()
         {

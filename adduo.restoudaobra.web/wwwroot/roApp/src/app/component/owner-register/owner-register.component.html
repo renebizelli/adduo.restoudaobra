@@ -28,21 +28,21 @@
                floatlabel="true"
                label="Nome"
                maxlength="32"
-               placeholder="Seu primeiro nome"></app-field-text>
+               placeholder="Primeiro nome"></app-field-text>
 
     <app-field-text [property]="model.lastname"
                name="lastname"
                floatlabel="true"
                label="Sobrenome"
                maxlength="64"
-               placeholder="Seu sobrenome"></app-field-text>
+               placeholder="Sobrenome"></app-field-text>
 
     <app-field-text [property]="model.email"
                name="email"
                floatlabel="true"
                label="E-mail"
                maxlength="128"
-               placeholder="Seu e-mail"
+               placeholder="E-mail"
                invalidText="e-mail inválido"></app-field-text>
 
     <app-field-text [property]="model.emailconfirm"
@@ -54,24 +54,24 @@
                invalidText="e-mail inválido"
                differentText="os e-mail não estão iguais"></app-field-text>
 
-    <app-field-text [property]="model.phone"
+    <app-field-mask [property]="model.phone"
                name="phone"
                floatlabel="true"
                label="Telefone"
                maxlength="16"
-               mask="(99) 9999-9999"
-               placeholder="Seu telefone"
-               invalidText="telefone inválido"></app-field-text>
+               mask="phone"
+               placeholder="Telefone"
+               invalidText="telefone inválido"></app-field-mask>
 
-    <app-field-text [property]="model.cellphone"
+    <app-field-mask [property]="model.cellphone"
                name="cellphone"
                floatlabel="true"
                label="Celular"
                maxlength="16"
-               mask="(99) 99999-9999"
-               placeholder="Seu celular"
+               mask="cellphone"
+               placeholder="Celular"
                invalidText="celular inválido"
-               emptyText="Informe pelo menos um dos telefones"></app-field-text>
+               emptyText="Informe pelo menos um dos telefones"></app-field-mask>
 
     <app-field-password [property]="model.password"
                name="password"

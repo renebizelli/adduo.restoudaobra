@@ -8,7 +8,10 @@
       <div class="close menu-close" id="menu-btn-close"  (click)="toogle()" [style.display]="isOpen ? 'block' : 'none'"></div> 
       <ul>
         <li>
-          <a *ngIf="isAuth" [title]="'Olá ' + name" [innerText]="'Olá ' + name"></a>
+          <a [routerLink]="['/conta/meus-dados']" *ngIf="isAuth" [title]="'Olá ' + name" [innerText]="'Olá ' + name"></a>
+        </li>
+        <li>
+          <a [routerLink]="['anuncios']" title="Anúncios">ANÚNCIOS</a>
         </li>
         <li>
           <a [routerLink]="['quero-doar']" title="Quero doar">QUERO DOAR</a>
@@ -19,11 +22,9 @@
         <li *ngIf="isAuth">
           <a [routerLink]="['conta/meus-anuncios']" title="Meus anúncios">MEUS ANÚNCIOS</a>
         </li>
-        <li *ngIf="isAuth">
-          <a [routerLink]="['/conta/meus-dados']" title="Meus dados">MEUS DADOS</a>
-        </li>
         <li *ngIf="!isAuth">
-          <a [routerLink]="['conta']" title="Entrar">ENTRAR</a>
+          <a [routerLink]="['conta']" title="Entrar" class="only-desktop">ENTRAR</a>
+          <a [routerLink]="['login']" title="Entrar" class="only-mobile">ENTRAR</a>
         </li>
         <li>
           <a [routerLink]="['contato']" title="Contato">CONTATO</a>

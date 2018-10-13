@@ -4805,13 +4805,13 @@
       "projectName": "adduo.restoudaobra.ie.dal",
       "projectPath": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie.dal/adduo.restoudaobra.ie.dal.csproj",
       "packagesPath": "/Users/rene/.nuget/packages/",
-      "outputPath": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie.dal/obj",
+      "outputPath": "/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie.dal/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/rene/.config/NuGet/NuGet.Config"
+        "/Users/rene/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -4843,7 +4843,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.1",
+            "version": "[2.1.0, )",
             "autoReferenced": true
           }
         },

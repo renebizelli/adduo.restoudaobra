@@ -1,0 +1,61 @@
+  <div class="break-point sc"  *ngIf="isAlready">
+    <section class="one ads">
+
+      <div class="ad-detail-title">
+        <h1 title="{{model.ad.name}}">{{model.ad.name}}</h1>
+        <span class="{{getTitleClass()}}">{{getTypeText()}}</span>
+      </div>
+
+      <div id="fotorama" data-nav="thumbs" fotorama [images]="model.images">
+      </div>
+
+      <div class="description">
+        <span class="line-info" title="{{model.ad.option}}" *ngIf="isShowLine(model.ad.option)">{{model.ad.option}}</span>
+        <span class="line-info" title="{{model.ad.brand}}" *ngIf="isShowLine(model.ad.brand)">{{model.ad.brand}}</span>
+        <span class="line-info" title="{{unidade}}" *ngIf="isShowLine(unidade)">{{unidade}}</span>
+        <span class="line-info price" title="{{model.ad.price}}" *ngIf="isAdTypeSale()">{{model.ad.price | currency : 'BRL'}}</span>
+      </div>
+
+      <div class="contact">
+        <div>
+          <i class="name"></i>
+          <span title="{{model.owner.firstname}}">{{model.owner.firstname}}</span>
+        </div>
+
+        <div *ngIf="!isContactShow" (click)="contactShow()">
+          <i class="phone"></i>
+          <p  class="contact-btn">ver dados de contato</p>
+        </div>
+
+
+
+        <ul id="contact-owner">
+          <li>
+            <i class="contact-info"></i>
+            <span>{{contact.email}}</span>
+          </li>
+
+          <li *ngIf="isShowLine(contact.phoneFormat)">
+            <i class="phone"></i>
+            <span>{{contact.phoneFormat}}</span>
+          </li>
+
+          <li *ngIf="isShowLine(contact.cellphoneFormat)">
+            <i class="phone"></i>
+            <span>{{contact.cellphoneFormat}}</span>
+          </li>
+
+        </ul>
+
+        <div>
+          <i class="location"></i>
+          <span title="{{addressFormat}}">{{addressFormat}}</span>
+        </div>
+      </div>
+
+
+
+    </section>
+  </div>
+
+

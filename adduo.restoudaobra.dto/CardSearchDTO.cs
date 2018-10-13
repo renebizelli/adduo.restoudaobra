@@ -6,7 +6,7 @@ namespace adduo.restoudaobra.dto
     [JsonObject]
     public class CardSearchDTO: BaseDto
     {
-        [JsonProperty("product")]
+        [JsonProperty("ad")]
         public AdDetailDTO Ad { get; set; }
 
         [JsonProperty("address")]

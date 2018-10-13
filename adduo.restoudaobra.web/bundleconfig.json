@@ -3,24 +3,12 @@
     "outputFileName": "wwwroot/assets/css/styles.css",
     "inputFiles": [
       "wwwroot/roApp/src/assets/css/reset.css",
+      "wwwroot/assets/js/vendor/fotorama/fotorama.css",
       "wwwroot/roApp/src/assets/css/style.css"
     ],
     "minify": {
       "enabled": false,
       "renameLocals": false
-    },
-    "sourceMap": false
-  },
-  {
-    "outputFileName": "wwwroot/assets/js/menu.js",
-    "inputFiles": [
-      "wwwroot/assets/js/dist/elements/runtime.*.js",
-      "wwwroot/assets/js/dist/elements/polyfills.*.js",
-      "wwwroot/assets/js/dist/elements/main.*.js"
-    ],
-    "minify": {
-      "enabled": false,
-      "renameLocals": true
     },
     "sourceMap": false
   },
@@ -37,5 +25,19 @@
       "renameLocals": true
     },
     "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/jquery.js",
+    "inputFiles": [
+      "wwwroot/assets/js/jquery-3.3.1.min.js",
+      "wwwroot/assets/js/vendor/fotorama/fotorama.js",
+      "wwwroot/assets/js/jquery.app.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": true
+    },
+    "sourceMap": false
   }
+
 ]

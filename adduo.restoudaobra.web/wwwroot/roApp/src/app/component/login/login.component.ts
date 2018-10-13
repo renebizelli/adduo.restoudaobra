@@ -80,7 +80,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
         this.authService.login(response.dto)
           .subscribe(s =>
           {
-            let urlNextLogin = s ? s : '/';
+            let urlNextLogin = s ? s : '/conta/meus-anuncios';
             this.redirect(urlNextLogin)
           });
       });

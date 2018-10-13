@@ -5,7 +5,7 @@ export class AddressDetailModel {
   constructor(
     public district: string,
     public city: string,
-    public State: string,
+    public state: string,
     public id: number) { }
 
 

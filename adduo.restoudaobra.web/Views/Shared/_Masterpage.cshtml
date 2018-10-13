@@ -26,10 +26,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <base href="/">
-    @RenderSection("script", false)
 
     <environment include="Development">
         <link href="/roApp/src/assets/css/reset.css" rel="stylesheet" />
+        <link href="/assets/js/vendor/fotorama/fotorama.css" rel="stylesheet" />
         <link href="/roApp/src/assets/css/style.css" rel="stylesheet" />
     </environment>
 
@@ -44,8 +44,18 @@
     </main>
     <partial name="Footer" />
     <partial name="GoogleAnalytics" />
-    <script src="/assets/js/jquery-3.3.1.min.js"></script>
-    <script src="/assets/js/jquery.app.js"></script>
+
+    <environment include="Development">
+        <script src="/assets/js/jquery-3.3.1.min.js"></script>
+        <script src="/assets/js/vendor/fotorama/fotorama.js"></script>
+        <script src="/assets/js/jquery.app.js"></script>
+    </environment>
+
+    <environment include="Production">
+        <script src="/assets/js/jquery.js"></script>
+    </environment>
+    @RenderSection("script", false)
+
 
 </body>
 

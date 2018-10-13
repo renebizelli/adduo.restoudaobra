@@ -43,6 +43,31 @@
     <Content Remove="wwwroot\roApp\projects\elements\src\app\app.component.spec.ts" />
     <Content Remove="wwwroot\assets\css\reset.css" />
     <Content Remove="wwwroot\assets\.DS_Store" />
+    <Content Remove="wwwroot\roApp\projects\.DS_Store" />
+    <Content Remove="wwwroot\assets\js\dist\.DS_Store" />
+    <Content Remove="wwwroot\assets\js\dist\app\3rdpartylicenses.txt" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\css\reset.css" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\css\style.css" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\ad-photo.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\bg.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\box.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\couple.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\item.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\ladder.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\loader.gif" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\main.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\min-photos.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\product.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\restou-da-obra-logo-1.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\restou-da-obra-logo-2.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\restou-da-obra-logo-3.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\sprite.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\step1.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\step2.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\img\step3.png" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\upload\ad\0384511d-8b69-4f3d-893e-fa38da5cda08\b1bc9e56.JPG" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\upload\ad\13f478f3-056c-4775-ac25-4057d9c6b43f\09ef51fb.jpg" />
+    <Content Remove="wwwroot\assets\js\dist\app\assets\upload\ad\13f478f3-056c-4775-ac25-4057d9c6b43f\168760e7.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -146,6 +171,10 @@
     <Folder Include="wwwroot\roApp\src\app\component\field-password\" />
     <Folder Include="wwwroot\roApp\src\app\component\field-textarea\" />
     <Folder Include="wwwroot\roApp\src\app\module\" />
+    <Folder Include="wwwroot\roApp\src\assets\js\" />
+    <Folder Include="wwwroot\roApp\src\assets\js\vendor\" />
+    <Folder Include="wwwroot\roApp\src\assets\js\vendor\fotorama\" />
+    <Folder Include="wwwroot\roApp\src\app\directive\" />
   </ItemGroup>
 
 </Project>

@@ -23,7 +23,6 @@ export class AuthService {
 
   public login(auth: AuthenticatedModel): Observable<string> {
 
-    console.log(auth)
     this.storage.set(this.SESSION_KEY, auth);
     this.state.next(auth);
 

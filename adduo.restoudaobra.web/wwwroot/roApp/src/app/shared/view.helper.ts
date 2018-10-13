@@ -45,6 +45,25 @@ export class ViewHelper {
   public isAdTypeDonation(type: AdTypeEnum): boolean {
     return type == AdTypeEnum.donation;
   }
+  
+  public getTypeToClass(type: AdTypeEnum) : String {
+    return this.getByTypeIfIsSale(type, 'sale' , 'donation');
+  }
+  
+   public getTypeToUrl(type: AdTypeEnum) : String {
+     return  this.getByTypeIfIsSale(type, 'venda', 'doacao')
+  }
+ 
+  public getTypeToText(type: AdTypeEnum) : string {
+    return this.getByTypeIfIsSale(type, 'Vendendo' , 'Doando');
+  }
+
+  public getByTypeIfIsSale(type: AdTypeEnum, sale:string, donation: string) : string {
+    return this.isAdTypeSale(type) ? sale : donation;
+  }
+
+  
+  
 }
 
 

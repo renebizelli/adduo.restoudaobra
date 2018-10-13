@@ -18,9 +18,18 @@ import { AdUpdateSalePageComponent } from './pages/ad-update-page/ad-update-sale
 import { AdTypeEnum } from './enum/ad-type.enum';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ContactFinalizationPageComponent } from './pages/contact-finalization-page/contact-finalization-page.component';
+import { AdListPageComponent } from './pages/ad-list-page/ad-list-page.component';
+import { AdDetailPageComponent } from './pages/ad-detail-page/ad-detail-page.component';
+import { PrivacyPageComponent } from './pages/privacy-page/privacy-page.component';
+import { TermPageComponent } from './pages/term-page/term-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 export const ROUTES: Routes = [
+  { path: 'doacao/:id/:url', component: AdDetailPageComponent },
+  { path: 'venda/:id/:url', component: AdDetailPageComponent },
+  { path: 'anuncios', component: AdListPageComponent },
   { path: 'conta', component: AccountPageComponent },
+  { path: 'login', component: LoginPageComponent },
   { path: 'conta/sucesso', component: RegisterFinalizationPageComponent },
   { path: 'conta/confirmacao/:id', component: RegisterConfirmationPageComponent },
   { path: 'conta/redefinir-senha', component: RedefinePasswordSolicitationPageComponent },
@@ -36,6 +45,8 @@ export const ROUTES: Routes = [
   { path: 'quero-vender/pagamento/:id', component: AdPaymentPageComponent, canActivate: [AuthGuard] },
   { path: 'contato', component: ContactPageComponent },
   { path: 'contato/enviado', component: ContactFinalizationPageComponent },
+  { path: 'politica-de-privacidade', component: PrivacyPageComponent },
+  { path: 'termos-de-uso', component: TermPageComponent },
   { path: '**', redirectTo: '/conta' }
   
 

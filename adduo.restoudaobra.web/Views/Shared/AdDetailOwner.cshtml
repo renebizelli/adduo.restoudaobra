@@ -14,14 +14,29 @@
     </div>
     <div>
         <i class="contact-info"></i>
-        <span>contato@steveharris.com</span>
+        <span>@(card.Owner.Email)</span>
     </div>
-    <div>
-        <i class="phone"></i>
-        <span>12 3922-2222</span>
-    </div>
+
+    @if (!card.Owner.Phone.Equals(string.Empty))
+    {
+        <div>
+            <i class="phone"></i>
+            <span>@(card.Owner.PhoneFormat)</span>
+        </div>
+
+    }
+
+        @if (!card.Owner.CellPhone.Equals(string.Empty))
+    {
+        <div>
+            <i class="phone"></i>
+            <span>@(card.Owner.CellPoneFormat)</span>
+        </div>
+
+    }
+
     <div>
         <i class="location"></i>
-        <span  title="@(card.Address.District), @(card.Address.City) - @(card.Address.State)">@(card.Address.District), @(card.Address.City) - @(card.Address.State)</span>
+        <span title="@(card.Address.District), @(card.Address.City) - @(card.Address.State)">@(card.Address.District), @(card.Address.City) - @(card.Address.State)</span>
     </div>
 </div>
