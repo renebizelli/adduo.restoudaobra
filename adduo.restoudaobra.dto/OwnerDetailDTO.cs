@@ -1,4 +1,5 @@
-﻿using adduo.basetype.dto;
+﻿using System;
+using adduo.basetype.dto;
 using adduo.methodextension;
 using Newtonsoft.Json;
 
@@ -7,6 +8,9 @@ namespace adduo.restoudaobra.dto
     [JsonObject]
     public class OwnerDetailDTO : BaseDto
     {
+        [JsonProperty("guid")]
+        public Guid Guid { get; set; }
+
         [JsonProperty("firstname")]
         public string FirstName { get; set; }
 

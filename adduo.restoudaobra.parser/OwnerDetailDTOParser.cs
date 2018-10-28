@@ -16,6 +16,7 @@ namespace adduo.restoudaobra.parser
 
                 var ownerResult = (OwnerResult)result;
 
+                ownerDetailDTO.Guid = ownerResult.Guid;
                 ownerDetailDTO.FirstName = ownerResult.FirstName;
                 ownerDetailDTO.Email = ownerResult.Email;
                 ownerDetailDTO.Phone = ownerResult.Phone;

@@ -14,6 +14,10 @@ header {
   z-index: 1000;
 }
 
+header a.logo {
+  float:left;
+}
+
 .break-point {
   max-width: 1000px;
   min-width: 320px;
@@ -25,23 +29,6 @@ header {
   display: none;
 }
 
-    nav {
-        float: right;
-        font-size: 12px;
-        margin-top: 22px;
-    }
-
-    nav li {
-        float: left;
-    }
-
-        nav li a {
-            display: block;
-            color: white;
-            text-align: center;
-            text-transform: uppercase;
-            padding: 14px 16px;
-        }
 
 .main,
 .how-info,
@@ -102,6 +89,7 @@ header {
 
 .main p {
   line-height: 2;
+  margin:10px 0 20px 0;
 }
 
 .orange {
@@ -133,11 +121,13 @@ header {
   margin: 30px;
   text-align: center;
   position: relative;
+  padding-bottom: 10px;
+  height: 350px;
 }
 
   .item h2 {
     color: #424242;
-    margin: 0 20px;
+    margin: 7px 20px;
   }
 
   .item h2.item-name {
@@ -146,7 +136,7 @@ header {
 
 
   .item span {
-    margin: 20px 0 10px 0;
+    margin: 20px 0 0 0;
     display: block;
     text-align:center;
   }
@@ -196,11 +186,31 @@ footer {
   min-height: 75px;
 }
 
-  footer nav li a {
-    padding: 10px 16px;
-  }
+    footer ul {
+        float: left;
+    }
 
-  footer nav li:first-child {
+    footer nav {
+        font-size: 12px;
+        margin-top: 22px;
+    }
+
+    footer nav li {
+        float: left;
+    }
+
+
+    footer nav li a {
+        padding: 10px 16px;
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+  footer nav ul:first-child li:first-child {
     border-left: 1px solid #fff;
   }
 
@@ -212,12 +222,9 @@ footer {
 }
 
 .social {
-  padding: 10px 5px;
+  padding: 10px;
 }
 
-  .social:hover {
-    
-  }
 
 .facebook {
   display: inline-block;
@@ -396,8 +403,60 @@ header nav.open {
 }
 
 
+header #menu-container {
+    float: right;
+}
+
+header nav {
+    font-size: 12px;
+}
+
+    header nav ul {
+        overflow: hidden;
+    }
+
+
+    header nav li {
+        float: left;
+    }
+
+header nav a {
+    display: block;
+    text-align: center;
+}
+
+
+header #menu-nav  a {
+    color: white;
+    text-transform: uppercase;
+}
+
+header #menu-auth a {
+    padding: 0 10px;
+}
+
+header #menu-nav li a {
+    padding: 14px 16px;
+}
+
+
+header #menu-auth {
+    min-height: 25px;
+    padding: 5px;
+}
+
+header #menu-auth ul {
+    float: right;
+}
+
+
+header #menu-only-auth,
+header #menu-login {
+    display: none;
+}
+
 #menu-btn-close {
-  display:none;
+    display: none;
 }
 
 header nav.open li {
@@ -434,14 +493,9 @@ header nav.open li {
     right: 15px;
 }
 
-.image-mobile {
-    display: none;
-}
-
 .one {
   background: #fff;
   margin: 0 auto;
-  min-height: 800px;
   max-width: 880px;
 }
 
@@ -513,8 +567,23 @@ header nav.open li {
   margin-top: 20px;
 }
 
-#contact-owner {
-  display:none;
+
+  .contact h2 {
+    margin: 30px 0 0 0;
+    font-size: 20px;
+  }
+
+  .contact h2.sale {
+    xcolor: #53AE8B;
+  }
+
+    .contact h2.donation {
+      xcolor: #537daf;
+    }
+
+
+#owner-contact {
+  display: none;
 }
 
   .contact div,
@@ -540,13 +609,21 @@ header nav.open li {
     word-wrap: break-word;
   }
 
-.contact-btn {
+#contact-btn {
   cursor: pointer;
-  font-size:16px;
 }
 
+#contact-data {
+  display: none;
+}
+
+#contact-loader {
+  display: none;
+}
+
+
 .name {
-  background-position: -59px 0;
+    background-position: -59px 0;
 }
 
 .contact-info {
@@ -640,13 +717,10 @@ section .title-level-3 {
 
 
 
-.text-page h1 {
-  color: #000;
+.text-page h3 {
   font-weight: bold;
-  font-size: 30px;
-  text-align: center;
   text-transform: uppercase;
-  margin: 15px 10px 10px;
+  margin:30px 0 0 0;
 }
 
 .text-page p {
@@ -682,7 +756,6 @@ form ul.input-line li {
 
 .one-min {
   max-width: 600px;
-  min-height: 600px;
 }
 
 .finalization {
@@ -690,6 +763,9 @@ form ul.input-line li {
   min-height: 200px;
 }
 
+.finalization h2 {
+  text-align: center;
+}
 
 input::placeholder {
   color: #ccc;
@@ -944,8 +1020,7 @@ input {
 }
 
 #address-exists li {
-  padding: 10px 0;
-  font-size:23px;
+  padding: 10px 5px;
   display: block;
   cursor:pointer;
 }
@@ -1105,11 +1180,22 @@ label {
   margin: 10px 0 40px 0;
 }
 
+#accept {
+  cursor: pointer;
+  overflow: hidden;
+}
 
+#accept * {
+  float: left;
+}
 
+  #accept p {
+    padding: 5px;
+    color: #999;
+  }
 
 @media only screen and (min-width: 1024px) {
-    .only-mobile {
+  .only-mobile {
         display: none;
     }
 
@@ -1191,6 +1277,20 @@ label {
   }
 
 
+  .text-page h3 {
+    font-size: 20px;
+  }
+
+  #address-exists li {
+    font-size: 18px;
+  }
+
+
+    footer nav {
+        float: right;
+    }
+
+
 }
 
 
@@ -1248,26 +1348,14 @@ label {
                 display: none;
             }
 
-                header nav ul {
-                    margin: 30px 0 0 0;
-                }
-
 
         .button-menu-mobile {
             display: block
         }
 
-        .main .image-mobile {
-            display: block;
-        }
-
-            .main .image-mobile img {
-                width: 100%;
-            }
-
-        .main .image {
-            display: none;
-        }
+      .main .image-mobile {
+        width:100%;
+      }
 
         .main {
             padding-top: 150px;
@@ -1292,7 +1380,6 @@ label {
 
         .item h2 {
           font-size: 18px;
-          margin: 5px 0;
         }
 
           .item h2.item-name {
@@ -1309,12 +1396,12 @@ label {
       .contact div,
       .contact ul li,
       #ad-title-register h2,
-      label {
+      label,
+      .text-page h3 {
         font-size: 17px;
       }
 
       .two {
-        margin: 20px 0 0 0;
         padding: 20px 10px;
       }
 
@@ -1334,13 +1421,24 @@ label {
 
 
       .sc {
-        padding: 100px 30px 50px;
+        padding: 100px 10px 50px;
       }
 
       .ad-list {
         padding-top: 80px;
       }
 
+      .one-min {
+      }
+
+      #address-exists li {
+        font-size: 16px;
+        padding: 20px 10px;
+      }
+
+        footer nav ul.footer-socialmedia {
+            float: left;
+        }
 
     }
 
@@ -1381,9 +1479,6 @@ label {
             min-height: 200px;
         }
 
-            footer nav {
-                float: left;
-            }
 
                 footer nav li {
                     float: none;
@@ -1394,27 +1489,12 @@ label {
                     padding-left: 0 !important;
                 }
 
-                footer nav ul li:nth-child(4) {
-                    display: none;
-                }
-
-                footer nav li:first-child {
-                    border: none;
-                }
-
-                footer nav ul li:nth-child(5) {
+                footer nav ul.footer-socialmedia  {
                     float: right;
-                    position: absolute;
                     right: 50px;
                     margin-top: -90px;
                 }
 
-                footer nav ul li:nth-child(6) {
-                    float: right;
-                    position: absolute;
-                    right: 10px;
-                    margin-top: -90px;
-                }
 
         .copyright {
             float: left;
@@ -1429,6 +1509,18 @@ label {
             border-bottom: 1px solid #fff;
             padding-bottom: 10px;
         }
+
+
+      #account-create  {
+        overflow: hidden;
+        padding: 5px;
+      }
+
+      #account-create a {
+        float: right;
+        font-size: 15px;
+      }
+
     }
 
     @media only screen and (max-width: 450px) {
@@ -1462,7 +1554,6 @@ label {
         }
 
          #home-logo {
-             max-width:379px;
             width: 100%;
         }
 

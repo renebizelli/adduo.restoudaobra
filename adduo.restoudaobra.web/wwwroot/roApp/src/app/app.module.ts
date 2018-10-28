@@ -72,7 +72,8 @@ import { FotoramaDirective } from './directive/fotorama.directive';
 import * as $ from 'jquery';
 import { PrivacyPageComponent } from './pages/privacy-page/privacy-page.component';
 import { TermPageComponent } from './pages/term-page/term-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { AccountRegisterPageComponent } from './pages/account-register-page/account-register-page.component';
+import { AdCacheService } from './service/ad-cache.service';
 
 
 @NgModule({
@@ -131,12 +132,15 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     FotoramaDirective,
     PrivacyPageComponent,
     TermPageComponent,
-    LoginPageComponent
+    AccountRegisterPageComponent
   ],
   imports:[
     BrowserModule,
     ngfModule,
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(ROUTES, { 
+      scrollPositionRestoration: 'enabled',  
+      anchorScrolling: 'enabled', 
+      scrollOffset: [0, 200] } ),
     SharedModule,
     AuthModule
   ],
@@ -149,7 +153,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
       LoginService,
       ViewHelper,
       TypeHelper,
-      SearchService
+      SearchService,
+      AdCacheService
     ],
     bootstrap: [AppComponent]
 })

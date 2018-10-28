@@ -1,5 +1,6 @@
 ﻿using adduo.basetype.envelope;
 using adduo.restoudaobra.dto;
+using adduo.restoudaobra.service.ad;
 using adduo.restoudaobra.service.owner;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -9,21 +10,55 @@ using System;
 namespace adduo.restoudaobra.api.Controllers
 
 {
-    [Route("owner")]
     public class OwnerController : AuthenticatedController
     {
         private OwnerManager ownerManager { get; set; }
+        private AdManager adManager { get; set; }
 
         public OwnerController(
             OwnerManager ownerManager,
+            AdManager adManager,
             IHttpContextAccessor httpContextAccessor) : base(httpContextAccessor)
         {
             this.ownerManager = ownerManager;
+            this.adManager = adManager;
         }
 
-        #region AUTHORIZE
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("owner/contact/{guid}")]
+        public ObjectResult GetContactOwner(Guid guid)
+        {
+            var response = new BaseResponse<OwnerDetailDTO>();
+
+            try
+            {
+                adManager.IncrementContactView(guid);
+
+                var dto = ownerManager.GetContact(guid);
+
+                response.Dto = dto;
+
+                base.PrepareResult<BaseResponse<OwnerDetailDTO>>(response);
+
+            }
+            catch (ArgumentNullException nex)
+            {
+                base.PrepareUnauthorizedResult();
+            }
+            catch (Exception ex)
+            {
+                base.PrepareBadRequestResult<BaseResponse<OwnerDetailDTO>>(response);
+            }
+
+            return base.result;
+
+        }
+
+
 
         [HttpGet]
+        [Route("owner")]
         public ObjectResult Get()
         {
             var response = new BaseResponse<OwnerDTO>();
@@ -52,6 +87,7 @@ namespace adduo.restoudaobra.api.Controllers
         }
 
         [HttpPut]
+        [Route("owner")]
         public ObjectResult Put([FromBody] BaseRequest<OwnerUpdateDTO> request)
         {
             var response = new BaseResponse<OwnerUpdateDTO>();
@@ -74,12 +110,10 @@ namespace adduo.restoudaobra.api.Controllers
             return base.result;
         }
 
-        #endregion
-
-        #region AllowAnonymous
 
         [HttpPost]
         [AllowAnonymous]
+        [Route("owner")]
         public ObjectResult Post([FromBody] BaseRequest<OwnerRegisterDTO> request)
         {
             var response = new BaseResponse<OwnerRegisterDTO>(request.Dto);
@@ -99,7 +133,6 @@ namespace adduo.restoudaobra.api.Controllers
             return base.result;
         }
 
-        #endregion
 
     }
 }

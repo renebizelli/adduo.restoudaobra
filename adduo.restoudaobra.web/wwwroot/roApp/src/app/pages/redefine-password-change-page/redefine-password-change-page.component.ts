@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { RedefinePasswordChangeModel } from '../../model/redefine-password-change.model';
 import { PropertyStringModel } from '../../shared/propertystring.model';
 import { RedefinePasswordService } from '../../service/redefine-password.service';
@@ -11,6 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ViewHelper } from '../../shared/view.helper';
 import { AuthService } from '../../service/auth.service';
 import { DataTransferService } from '../../service/data-transfer.service';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-redefine-password-change-page',
@@ -30,12 +31,14 @@ export class RedefinePasswordChangePageComponent extends BaseComponent implement
     private viewHelper: ViewHelper,
     private authService: AuthService,
     public dataTransferService: DataTransferService,
-    public router: Router
+    public router: Router,
+    public title: Title
   ) {
-    super(dataTransferService, router);
+    super(dataTransferService, router, title);
   }
 
   ngOnInit() {
+  this.setTitle('Redefinir senha')
     this.getRedefine();
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+﻿import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { AddressRegisterModel } from '../../model/address-register.model';
 import { AddressDetailModel } from '../../model/address-detail.model';
 import { AddressRegisterTypeEnum } from '../../enum/address-register-type.enum';
@@ -6,6 +6,7 @@ import { ActionTypeEnum } from '../../enum/action-type.enum';
 import { DataTransferService } from '../../service/data-transfer.service';
 import { Router } from '@angular/router';
 import { BaseComponent } from '../../base.component';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-address-register',
@@ -22,8 +23,9 @@ export class AddressRegisterComponent extends BaseComponent implements OnInit  {
 
   constructor(
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(dataTransferService, router);
+    public router: Router, 
+    public title: Title) {
+    super(dataTransferService, router, title);
   }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '../../base.component';
 import { Router } from '@angular/router';
 import { DataTransferService } from '../../service/data-transfer.service';
@@ -10,6 +10,7 @@ import { CardDetailModel } from '../../model/card-detail.model';
 import { throwError } from 'rxjs';
 import { ItemModel } from '../../model/item.model';
 import { MyAdModel } from '../../model/myad.model';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-account-my-ad-page',
@@ -28,11 +29,14 @@ export class AccountMyAdPageComponent extends BaseComponent implements OnInit {
     public myAdService: MyAdService,
     public router: Router,
     public dataTransferService: DataTransferService,
+    public title: Title
+    
   ) {
-    super(dataTransferService, router);
+    super(dataTransferService, router, title);
   }
 
   ngOnInit() {
+    super.setTitle('Meus anúncios')
     this.init();
   }
 

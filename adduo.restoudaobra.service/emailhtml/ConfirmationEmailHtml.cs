@@ -16,7 +16,7 @@ namespace adduo.restoudaobra.service.emailhtml
             AddHeader();
             AddName(dto.FirstName.Value);
             AddText(@"Seu cadastro está quase concluído. Você precisa apenas clicar no link ""Confirmar"" e pronto :)");
-            AddLink("Confirmar", string.Format("{0}/cadastro/confirmacao/{1}", settings.PathHost, dto.Guid.Value));
+            AddLink("Confirmar", string.Format("{0}/conta/confirmacao/{1}", settings.PathHost, dto.Guid.Value));
             Signature();
         }
 

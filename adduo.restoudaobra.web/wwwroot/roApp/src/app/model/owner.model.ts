@@ -12,7 +12,8 @@ export class OwnerModel {
     public phone: PropertyStringModel,
     public cellphone: PropertyStringModel,
     public password: PropertyStringModel,
-    public passwordconfirm: PropertyStringModel) { }
+    public passwordconfirm: PropertyStringModel,
+    public emailAccept: boolean) { }
 
   static _new(): OwnerModel {
 
@@ -26,7 +27,8 @@ export class OwnerModel {
       new PropertyStringModel(),
       new PropertyStringModel(),
       new PropertyStringModel(),
-      new PropertyStringModel()
+      new PropertyStringModel(),
+      true
     );
 
   }

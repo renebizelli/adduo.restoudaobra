@@ -12,6 +12,7 @@ import { throwError } from 'rxjs';
 import { CardRegisterModel } from '../../model/card-register.model';
 import { ActionTypeEnum } from '../../enum/action-type.enum';
 import { ViewHelper } from '../../shared/view.helper';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Directive({
   selector: 'app-ad-update'
@@ -24,11 +25,13 @@ export class AdUpdateComponent extends AdComponent implements OnInit {
     public authService: AuthService,
     public adService: AdService,
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(viewHelper, authService, adService, dataTransferService, router); 
+    public router: Router, 
+    public title : Title) {
+    super(viewHelper, authService, adService, dataTransferService, router, title); 
   }
 
   ngOnInit() {
+    super.setTitle('Editar anúncio')
     super.ngOnInit();
   }
 

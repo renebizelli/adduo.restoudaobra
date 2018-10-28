@@ -15,6 +15,7 @@ import { PropertyListModel } from '../../shared/propertylist.model';
 import { CardRegisterModel } from '../../model/card-register.model';
 import { StatusPropertyEnum } from '../../enum/status-property.enum';
 import { AdRegisterInitialModel } from '../../model/ad-register-initial.model';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-ad-images-register',
@@ -44,8 +45,9 @@ export class AdImagesRegisterComponent extends BaseComponent
   constructor(
     private adImageService: AdImageService,
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(dataTransferService, router);
+    public router: Router, 
+    public title: Title ) {
+    super(dataTransferService, router, title);
   }
 
   ngOnInit() {
@@ -103,6 +105,10 @@ export class AdImagesRegisterComponent extends BaseComponent
 
   public showLoaderDelete(id: number): boolean {
     return this.deleteLoader[id];
+  }
+  
+  public lastInvalids(error:any) : void {
+    console.log(error)
   }
 
   public delete(image: AdImageRegisterModel): void {

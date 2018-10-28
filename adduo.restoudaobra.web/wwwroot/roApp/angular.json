@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "../assets/js/",
+            "outputPath": "../dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -21,13 +21,14 @@
             "assets": [
               "src/assets"
             ],
-            "styles": [],
+            "styles": [
+            ],
             "scripts": [
               {
                 "input": "../roApp/node_modules/jquery/dist/jquery.js"
               },
               {
-                "input": "../roApp/src/assets/js/vendor/fotorama/fotorama.js"
+                "input": "../jquery/vendor/fotorama/fotorama.js"
               }
             ]
           },

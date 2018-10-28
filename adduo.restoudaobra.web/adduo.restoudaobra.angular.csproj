@@ -111,9 +111,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Views\Ad\Index.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
     <Content Update="Views\Home\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
@@ -168,13 +165,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\roApp\src\app\component\field-password\" />
-    <Folder Include="wwwroot\roApp\src\app\component\field-textarea\" />
     <Folder Include="wwwroot\roApp\src\app\module\" />
-    <Folder Include="wwwroot\roApp\src\assets\js\" />
-    <Folder Include="wwwroot\roApp\src\assets\js\vendor\" />
-    <Folder Include="wwwroot\roApp\src\assets\js\vendor\fotorama\" />
     <Folder Include="wwwroot\roApp\src\app\directive\" />
+    <Folder Include="wwwroot\jquery\" />
+    <Folder Include="Views\Ad\" />
   </ItemGroup>
 
 </Project>

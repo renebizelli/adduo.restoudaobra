@@ -51,6 +51,10 @@ namespace adduo.restoudaobra.dto
         [JsonProperty("url")]
         public string URL { get; set; }
 
+        [JsonProperty("viewcontact")]
+        public int ViewContact { get; set; }
+
+
         public AdRegisterDTO()
         {
             Guid = Guid.Empty;

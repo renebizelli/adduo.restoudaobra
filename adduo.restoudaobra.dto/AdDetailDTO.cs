@@ -43,5 +43,10 @@ namespace adduo.restoudaobra.dto
 
         [JsonProperty("created")]
         public DateTime Created { get; set; }
+
+        [JsonProperty("viewcontact")]
+        public int ViewContact { get; set; }
+
+
     }
 }

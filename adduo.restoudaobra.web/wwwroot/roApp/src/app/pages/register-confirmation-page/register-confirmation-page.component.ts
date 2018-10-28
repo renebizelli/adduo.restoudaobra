@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { throwError } from 'rxjs';
 import { catchError, finalize, map } from 'rxjs/operators';
@@ -11,6 +11,7 @@ import { AuthService } from '../../service/auth.service';
 import { AuthenticatedModel } from '../../model/authenticated.model';
 import { ErrorCodeEnum } from '../../enum/error-code.enum';
 import { DataTransferService } from '../../service/data-transfer.service';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 
 @Component({
@@ -26,8 +27,9 @@ export class RegisterConfirmationPageComponent extends BaseComponent implements 
     private ownerService: OwnerService,
     private authService: AuthService,
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(dataTransferService, router);
+    public router: Router, 
+    public title: Title) {
+    super(dataTransferService, router, title);
 
     this.id = activatedRoute.snapshot.params.id;
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { ContactModel } from '../../model/contact.model';
 import { BaseComponent } from '../../base.component';
 import { DataTransferService } from '../../service/data-transfer.service';
@@ -8,6 +8,7 @@ import { map, catchError, finalize } from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ResponseEnvelope } from '../../envelope/response.envelope';
 import { throwError } from 'rxjs';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-contact-page',
@@ -23,12 +24,14 @@ export class ContactPageComponent
   constructor(
     public contactService: ContactService, 
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(dataTransferService, router);
+    public router: Router, 
+    public title: Title) {
+    super(dataTransferService, router, title);
   }
 
 
   ngOnInit() {
+    this.setTitle('Contato')
   }
 
   public contact(): void {

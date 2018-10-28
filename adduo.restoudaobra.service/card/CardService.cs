@@ -1,4 +1,5 @@
-﻿using adduo.methodextension;
+﻿using System;
+using adduo.methodextension;
 using adduo.restoudaobra.dto;
 using adduo.restoudaobra.dto.filter;
 using adduo.restoudaobra.ie.dal;
@@ -29,6 +30,11 @@ namespace adduo.restoudaobra.service.card
         {
             ad.Owner.CellPhone = ad.Owner.CellPhone.PhoneFormat();
             ad.Owner.Phone = ad.Owner.Phone.PhoneFormat();
+        }
+
+        public void IncrementContactView(Guid guid)
+        {
+            cardDAL.IncrementContactView(guid);
         }
     }
 }

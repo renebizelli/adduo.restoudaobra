@@ -2,9 +2,9 @@
   {
     "outputFileName": "wwwroot/assets/css/styles.css",
     "inputFiles": [
-      "wwwroot/roApp/src/assets/css/reset.css",
-      "wwwroot/assets/js/vendor/fotorama/fotorama.css",
-      "wwwroot/roApp/src/assets/css/style.css"
+      "wwwroot/dist/assets/css/reset.css",
+      "wwwroot/jquery/vendor/fotorama/fotorama.css",
+      "wwwroot/dist/assets/css/style.css"
     ],
     "minify": {
       "enabled": false,
@@ -13,12 +13,12 @@
     "sourceMap": false
   },
   {
-    "outputFileName": "wwwroot/assets/js/app.js",
+    "outputFileName": "wwwroot/assets/js/app.js", 
     "inputFiles": [
-      "wwwroot/assets/js/dist/app/runtime.*.js",
-      "wwwroot/assets/js/dist/app/polyfills.*.js",
-      "wwwroot/assets/js/dist/app/scripts.*.js",
-      "wwwroot/assets/js/dist/app/main.*.js"
+      "wwwroot/dist/runtime.*.js",
+      "wwwroot/dist/polyfills.*.js",
+      "wwwroot/dist/scripts.*.js",
+      "wwwroot/dist/main.*.js"
     ],
     "minify": {
       "enabled": false,
@@ -27,17 +27,17 @@
     "sourceMap": false
   },
   {
-    "outputFileName": "wwwroot/assets/js/jquery.js",
+    "outputFileName": "wwwroot/assets/js/jquery-app.js",
     "inputFiles": [
-      "wwwroot/assets/js/jquery-3.3.1.min.js",
-      "wwwroot/assets/js/vendor/fotorama/fotorama.js",
-      "wwwroot/assets/js/jquery.app.js"
+      "wwwroot/jquery/jquery-3.3.1.min.js",
+      "wwwroot/jquery/vendor/fotorama/fotorama.js",
+      "wwwroot/jquery/jquery-app.js"
     ],
     "minify": {
       "enabled": false,
       "renameLocals": true
     },
     "sourceMap": false
-  }
+  },
 
 ]

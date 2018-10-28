@@ -22,14 +22,11 @@ import { AdListPageComponent } from './pages/ad-list-page/ad-list-page.component
 import { AdDetailPageComponent } from './pages/ad-detail-page/ad-detail-page.component';
 import { PrivacyPageComponent } from './pages/privacy-page/privacy-page.component';
 import { TermPageComponent } from './pages/term-page/term-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { AccountRegisterPageComponent } from './pages/account-register-page/account-register-page.component';
 
 export const ROUTES: Routes = [
-  { path: 'doacao/:id/:url', component: AdDetailPageComponent },
-  { path: 'venda/:id/:url', component: AdDetailPageComponent },
-  { path: 'anuncios', component: AdListPageComponent },
   { path: 'conta', component: AccountPageComponent },
-  { path: 'login', component: LoginPageComponent },
+  { path: 'conta/criar', component: AccountRegisterPageComponent },
   { path: 'conta/sucesso', component: RegisterFinalizationPageComponent },
   { path: 'conta/confirmacao/:id', component: RegisterConfirmationPageComponent },
   { path: 'conta/redefinir-senha', component: RedefinePasswordSolicitationPageComponent },
@@ -50,6 +47,9 @@ export const ROUTES: Routes = [
   { path: '**', redirectTo: '/conta' }
   
 
+  // { path: 'doacao/:id/:url', component: AdDetailPageComponent, data : { noresetadcache:true } },
+  // { path: 'venda/:id/:url', component: AdDetailPageComponent, data : { noresetadcache:true } },
+  // { path: 'anuncios', component: AdListPageComponent, data : { noscroll : true, noresetadcache:true } },
 
 
 ]

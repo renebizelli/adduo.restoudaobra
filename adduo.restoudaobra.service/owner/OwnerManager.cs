@@ -47,6 +47,23 @@ namespace adduo.restoudaobra.service.owner
             return Get(filter);
         }
 
+        public OwnerDetailDTO GetContact(Guid guid)
+        {
+            var filter = new OwnerFilter()
+            {
+                GuidAd = guid
+            };
+
+            var parser = new OwnerDetailDTOParser();
+
+            ownerService.Get(filter, parser);
+
+            var owner = (OwnerDetailDTO)parser.Get();
+
+            return owner;
+
+        }
+
         public OwnerDTO Get(string email, string password)
         {
             var filter = new OwnerFilter { Email = email, Password = password };

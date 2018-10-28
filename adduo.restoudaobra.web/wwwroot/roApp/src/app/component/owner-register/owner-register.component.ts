@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+﻿import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { throwError } from 'rxjs';
 import { catchError, finalize, map } from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -12,6 +12,7 @@ import { PropertyStringModel } from '../../shared/propertystring.model';
 import { ViewHelper } from '../../shared/view.helper';
 import { DataTransferService } from '../../service/data-transfer.service';
 import { SummaryItemModel } from '../../model/summary-item.model';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-owner-register',
@@ -23,25 +24,15 @@ export class OwnerRegisterComponent
   implements OnInit {
 
 
-  public model: OwnerModel = new OwnerModel(
-    0,
-    new PropertyStringModel(),
-    new PropertyStringModel(),
-    new PropertyStringModel(),
-    new PropertyStringModel(),
-    new PropertyStringModel(),
-    new PropertyStringModel(),
-    new PropertyStringModel(),
-    new PropertyStringModel(),
-    new PropertyStringModel()
-  )
-
+  public model: OwnerModel =  OwnerModel._new()
+    
   constructor(
     private ownerService: OwnerService,
     public viewHelper: ViewHelper,
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(dataTransferService, router);
+    public router: Router, 
+    public title: Title) {
+    super(dataTransferService, router, title);
   }
 
 
@@ -91,6 +82,10 @@ export class OwnerRegisterComponent
       this.addSummaryItem('Esse CPF e e-mail já estão cadastrados!');
     }
   }
+  
+  public emailAccept() : void {
+    this.model.emailAccept = !this.model.emailAccept;
+  }
 
   public register(): void {
 
@@ -107,6 +102,7 @@ export class OwnerRegisterComponent
         }),
         finalize(() => {
           this.processRunningStop();
+          this.scrollToTop()
         }))
       .subscribe((response) => {
         this.redirect('/conta/sucesso');

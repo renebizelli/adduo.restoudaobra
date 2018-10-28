@@ -1,38 +1,62 @@
 <header>
-  <div class="break-point">
-    <a href="/" title="Pagina inicial - Restou da Obra" class="logo">
-      <img src="/assets/img/restou-da-obra-logo-3.png" alt="Restou da Obra" title="Restou da Obra"  />
-    </a>
-    <span class="button-menu-mobile" (click)="toogle()">Button</span>
-    <nav [class.open]="isOpen">
-      <div class="close menu-close" id="menu-btn-close"  (click)="toogle()" [style.display]="isOpen ? 'block' : 'none'"></div> 
-      <ul>
-        <li>
-          <a [routerLink]="['/conta/meus-dados']" *ngIf="isAuth" [title]="'Olá ' + name" [innerText]="'Olá ' + name"></a>
-        </li>
-        <li>
-          <a [routerLink]="['anuncios']" title="Anúncios">ANÚNCIOS</a>
-        </li>
-        <li>
-          <a [routerLink]="['quero-doar']" title="Quero doar">QUERO DOAR</a>
-        </li>
-        <li>
-          <a [routerLink]="['quero-vender']" title="Quero vender">QUERO VENDER</a>
-        </li>
-        <li *ngIf="isAuth">
-          <a [routerLink]="['conta/meus-anuncios']" title="Meus anúncios">MEUS ANÚNCIOS</a>
-        </li>
-        <li *ngIf="!isAuth">
-          <a [routerLink]="['conta']" title="Entrar" class="only-desktop">ENTRAR</a>
-          <a [routerLink]="['login']" title="Entrar" class="only-mobile">ENTRAR</a>
-        </li>
-        <li>
-          <a [routerLink]="['contato']" title="Contato">CONTATO</a>
-        </li>
-        <li *ngIf="isAuth">
-          <a *ngIf="isAuth" title="Sair" (click)="logout()">SAIR</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+    <div class="break-point">
+        <a href="/" title="Pagina inicial - Restou da Obra" class="logo">
+            <img src="/assets/img/restou-da-obra-logo-3.png" alt="Restou da Obra" title="Restou da Obra" class="only-desktop" />
+            <img src="/assets/img/restou-da-obra-logo-4.png" alt="Restou da Obra" title="Restou da Obra" class="only-mobile" />
+        </a>
+        <span class="button-menu-mobile" (click)="toogle()">Button</span>
+        <div id="menu-container">
+            <nav id="menu-auth" class="only-desktop">
+                <ul  *ngIf="isAuth">
+                    <li>
+                        <a [routerLink]="['/conta/meus-dados']" *ngIf="isAuth" [title]="'Olá ' + name" [innerText]="'Olá ' + name"></a>
+                    </li>
+                    <li>
+                        <a href="/conta/meus-anuncios" title="Meus anúncios">Meus anúncios</a>
+                    </li>
+                    <li>
+                        <a title="Sair" (click)="logout()">Sair</a>
+                    </li>
+                </ul>
+                <ul *ngIf="!isAuth">
+                    <li>
+                        <a href="/conta" title="Sair">Entrar</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav  id="menu-nav" [class.open]="isOpen">
+                <div class="close menu-close" id="menu-btn-close" (click)="toogle()" [style.display]="isOpen ? 'block' : 'none'"></div>
+                <ul>
+                    <li>
+                        <a href="/anuncios" title="Anúncios">ANÚNCIOS</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['quero-doar']" title="Quero doar">QUERO DOAR</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['quero-vender']" title="Quero vender">QUERO VENDER</a>
+                    </li>
+                    <li *ngIf="!isAuth" class="only-mobile">
+                        <a [routerLink]="['conta/criar']" title="Criar conta">CRIAR CONTA</a>
+                    </li>
+                    <li *ngIf="!isAuth" class="only-mobile">
+                        <a [routerLink]="['conta']" title="Entrar">ENTRAR</a>
+                    </li>
+                    <li  class="only-mobile" *ngIf="isAuth">
+                        <a [routerLink]="['conta/meus-anuncios']" title="Meus anúncios">MEUS ANÚNCIOS</a>
+                    </li>
+                    <li  class="only-mobile"  *ngIf="isAuth">
+                        <a [routerLink]="['conta/meus-dados']"title="Minha conta">MINHA CONTA</a>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="['contato']" title="Contato">CONTATO</a>
+                    </li>
+                    <li *ngIf="isAuth" class="only-mobile">
+                        <a title="Sair" (click)="logout()">SAIR</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>

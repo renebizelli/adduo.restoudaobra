@@ -16,6 +16,7 @@ import { DataTransferService } from '../../service/data-transfer.service';
 import { AdComponent } from './ad.component';
 import { ActionTypeEnum } from '../../enum/action-type.enum';
 import { ViewHelper } from '../../shared/view.helper';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Directive({
   selector: 'app-ad-register',
@@ -28,8 +29,9 @@ export class AdRegisterComponent extends AdComponent implements OnInit {
     public authService: AuthService,
     public adService: AdService,
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(viewHelper, authService, adService, dataTransferService, router);
+    public router: Router, 
+    public title: Title) {
+    super(viewHelper, authService, adService, dataTransferService, router, title);
   }
 
   ngOnInit() {
@@ -38,6 +40,10 @@ export class AdRegisterComponent extends AdComponent implements OnInit {
 
   protected setActionType() {
     this.actionType = ActionTypeEnum.new;
+  }
+  
+  public setTitle(text:string) : void {
+    super.setTitle(text)
   }
 
   public init(): void {
@@ -82,6 +88,7 @@ export class AdRegisterComponent extends AdComponent implements OnInit {
         finalize(() => {
           this.isAlready = true;
           this.processRunningStop();
+          this.scrollToTop()
         }))
       .subscribe((response) => {
         this.nextStep();

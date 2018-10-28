@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace adduo.restoudaobra.web
 {
@@ -43,25 +45,31 @@ namespace adduo.restoudaobra.web
                 app.UseDeveloperExceptionPage();
             }
 
-            var x = new DefaultFilesOptions();
-            x.DefaultFileNames = new List<string> { "index.html" };
+            var defaultFilesOptions = new DefaultFilesOptions
+            {
+                DefaultFileNames = new List<string> { "index.html" }
+            };
 
-            app.UseDefaultFiles(x);
+            app.UseDefaultFiles(defaultFilesOptions);
 
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(   
+                    name: "ads",
+                    template: "anuncios",
+                    defaults: new { controller = "Ad", action = "Index" });
+
                 routes.MapRoute(
                     name: "ad-doacao",
                     template: "doacao/{name}/{guid}",
-                    defaults: new { controller = "Ad", action = "Index" });
+                    defaults: new { controller = "Ad", action = "Detail" });
 
                 routes.MapRoute(
                     name: "ad-venda",
                     template: "venda/{name}/{guid}",
-                    defaults: new { controller = "Ad", action = "Index" });
-
+                    defaults: new { controller = "Ad", action = "Detail" });
 
                 routes.MapRoute(
                     name: "home",
@@ -69,9 +77,11 @@ namespace adduo.restoudaobra.web
                     defaults: new { controller = "Home", action = "Index" });
 
                 ConfigureRoutes(routes);
-            });
-        }
 
+            });
+
+            ConfigureCulture(app);
+        }
 
         private void ConfigureRoutes(IRouteBuilder routes)
         {
@@ -91,7 +101,12 @@ namespace adduo.restoudaobra.web
                 new {  template = "/quero-vender", name = "app-quero-vender"},
                 new {  template = "/quero-vender/pagamento/{id}", name = "app-quero-vender-pagamento"},
                 new {  template = "/contato", name="app-contato"},
-                new {  template = "/contato/enviado", name = "app-contato-enviado"}
+                new {  template = "/contato/enviado", name = "app-contato-enviado"},
+                new {  template = "/anuncios", name = "app-anuncios"},
+                new {  template = "/politica-de-privacidade", name = "app-politica-de-privacidade"},
+                new {  template = "/termos-de-uso", name = "app-termos-de-uso"},
+                new {  template = "/venda/{guid}/{url}", name = "app-anuncio-venda"},
+                new {  template = "/doacao/{guid}/{url}", name = "app-anuncio-doacao"}   
             };
 
             foreach (var spa in routesSpa)
@@ -102,6 +117,11 @@ namespace adduo.restoudaobra.web
                     defaults: new { controller = "SPA", action = "Index" });
 
             }
+
+        }
+
+        private void ConfigureCulture(IApplicationBuilder app) {
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
         }
     }
 }

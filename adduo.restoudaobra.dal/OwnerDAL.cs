@@ -43,6 +43,7 @@ namespace adduo.restoudaobra.dal
                 .AddParameter("@Created", ownerDTO.Created)
                 .AddParameter("@Confirmated", ownerDTO.Confirmated)
                 .AddParameter("@idStatus", (int)ownerDTO.Status)
+                .AddParameter("@emailAccept", ownerDTO.EmailAccept)
                 .ExecuteWithOneResult<OwnerResult>("owner_register");
 
             var parser = new OwnerDTOParser();
@@ -109,6 +110,7 @@ namespace adduo.restoudaobra.dal
                     dapper
                     .ResetParameter()
                     .AddParameter("@idOwner", filter.idOwner)
+                    .AddParameter("@GuidAd", filter.GuidAd)
                     .AddParameter("@Guid", filter.Guid)
                     .AddParameter("@Email", filter.Email)
                     .AddParameter("@CPF", filter.CPF)

@@ -28,9 +28,7 @@ namespace adduo.restoudaobra.web.controller
 
         protected BaseViewModel<T> CreateViewModel<T>(T value)
         {
-            var host = httpContextAccessor.HttpContext.Request.Host;
-
-            var viewModel = new BaseViewModel<T>(value, $"{host}");
+            var viewModel = new BaseViewModel<T>(value, httpContextAccessor);
 
             return viewModel;
         }

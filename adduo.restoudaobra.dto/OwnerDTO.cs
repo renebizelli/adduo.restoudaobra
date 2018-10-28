@@ -44,6 +44,9 @@ namespace adduo.restoudaobra.dto
         [JsonProperty("token")]
         public string Token { get; set; }
 
+        [JsonProperty("emailAccept")]
+        public bool EmailAccept { get; set; }
+
         [JsonIgnore]
         public OWNER_STATUS Status { get; set; }
 

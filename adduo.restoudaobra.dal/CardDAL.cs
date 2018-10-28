@@ -6,6 +6,7 @@ using adduo.restoudaobra.dto.result;
 using adduo.restoudaobra.ie.dal;
 using adduo.restoudaobra.ie.parser;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,6 +23,14 @@ namespace adduo.restoudaobra.dal
         public void Get(AdFilter filter, IParser parser)
         {
             List(filter, parser);
+        }
+
+        public void IncrementContactView(Guid guid)
+        {
+            dapper
+                .ResetParameter()
+                .AddParameter("@guid", guid)
+                .Execute("card_view");
         }
 
         public void List(AdFilter filter, IParser parser)

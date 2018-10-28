@@ -1,4 +1,5 @@
-﻿using adduo.restoudaobra.dto;
+﻿using System;
+using adduo.restoudaobra.dto;
 
 namespace adduo.restoudaobra.ie.dal
 {

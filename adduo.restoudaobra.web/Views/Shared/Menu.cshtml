@@ -1,38 +1,74 @@
 ﻿<header>
     <div class="break-point">
-        <a href="/" title="Pagina inicial - Restou da Obra" class="logo" id="menu-logo">
+        <a href="/" title="Pagina inicial - Restou da Obra" class="logo only-desktop" id="menu-logo">
             <img src="/assets/img/restou-da-obra-logo-3.png" alt="Restou da Obra" title="Restou da Obra" />
         </a>
+        <a href="/" class="logo only-mobile">
+            <img src="/assets/img/restou-da-obra-logo-4.png" alt="Restou da Obra" title="Restou da Obra" />
+        </a>
         <span class="button-menu-mobile" id="menu-btn-open">Button</span>
-        <nav id="menu-nav">
-            <div class="close menu-close" id="menu-btn-close"></div>
-            <ul>
-                <li class="menu-only-auth">
-                    <a id="menu-name-owner" title=""></a>
-                </li>
-                <li>
-                    <a href="/quero-doar" title="Quero doar">QUERO DOAR</a>
-                </li>
-                <li>
-                    <a href="/quero-vender" title="Quero vender">QUERO VENDER</a>
-                </li>
-                <li class="menu-only-auth">
-                    <a href="/conta/meus-anuncios" title="Meus anúncios">MEUS ANÚNCIOS</a>
-                </li>
-                <li class="menu-only-auth">
-                    <a href="/conta/meus-dados" title="Meus dados">MEUS DADOS</a>
-                </li>
-                <li  class="menu-only-anonimous">
-                    <a href="/conta" title="Entrar">ENTRAR</a>
-                </li>
-                <li>
-                    <a href="/contato" title="Contato">CONTATO</a>
-                </li>
-                <li class="menu-only-auth">
-                    <a id="menu-btn-logoff" title="Sair">SAIR</a>
-                </li>
-            </ul>
-        </nav>
+
+        <div id="menu-container">
+
+            <nav id="menu-auth"  class="only-desktop">
+                <ul id="menu-only-auth">
+                    <li>
+                        <a href="/conta/meus-dados" id="menu-name-owner" title="Meus dados"></a>
+                    </li>
+                    <li>
+                        <a href="/conta/meus-anuncios" title="Meus anúncios">Meus anúncios</a>
+                    </li>
+                    <li>
+                        <a class="menu-logoff" title="Sair">Sair</a>
+                    </li>
+                </ul>
+                <ul id="menu-login" >
+                    <li>
+                        <a href="/conta" title="Sair">Entrar</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="menu-nav">
+                <div class="close menu-close" id="menu-btn-close"></div>
+                <ul>
+                    <li>
+                        <a href="/anuncios" title="Anúncios">ANÚNCIOS</a>
+                    </li>
+                    <li>
+                        <a href="/quero-doar" title="Quero doar">QUERO DOAR</a>
+                    </li>
+                    <li>
+                        <a href="/quero-vender" title="Quero vender">QUERO VENDER</a>
+                    </li>
+                    <li class="only-mobile">
+                        <a href="/conta/criar" title="Criar conta">CRIAR CONTA</a>
+                    </li>
+
+                    <li class="only-mobile">
+                        <a href="/conta" title="Entrar">ENTRAR</a>
+                    </li>
+
+                    <li class="only-mobile menu-only-auth">
+                        <a href="/conta/meus-anuncios" title="Meus anúncios">MEUS ANÚNCIOS</a>
+                    </li>
+                    <li class="only-mobile menu-only-auth">
+                        <a href="/conta/meus-dados" title="Minha conta">MINHA CONTA</a>
+                    </li>
+
+                    <li>
+                        <a href="/contato" title="Contato">CONTATO</a>
+                    </li>
+
+                    <li class="only-mobile menu-only-auth">
+                        <a href="/conta/meus-anuncios" class="menu-logoff" title="Sair">SAIR</a>
+                    </li>
+
+
+                </ul>
+            </nav>
+
+        </div>
     </div>
 </header>
 

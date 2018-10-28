@@ -17,7 +17,7 @@ export class FotoramaDirective {
     let div = $(this.el.nativeElement).fotorama();
     let fotorama = div.data('fotorama')
     this.images.forEach((img, index, a) => {
-      fotorama.push({ img: 'http://www.restoudaobra.com.br'+img})
+      fotorama.push({ img: img})
     })
  }
 }

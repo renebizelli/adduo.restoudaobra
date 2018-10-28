@@ -32,6 +32,7 @@ namespace adduo.restoudaobra.parser
                 adRegisterDTO.Type = (AD_TYPE)addressResult.idType;
 
                 adRegisterDTO.idOwner = addressResult.idOwner;
+                adRegisterDTO.ViewContact = addressResult.ViewContact;
 
                 adRegisterDTO.Created = addressResult.Created;
             }

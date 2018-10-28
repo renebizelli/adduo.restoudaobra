@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { BaseComponent } from '../../base.component';
 import { SearchService  } from '../../service/search.service';
 import { map, catchError, finalize } from 'rxjs/operators';
@@ -8,6 +8,9 @@ import { DataTransferService } from '../../service/data-transfer.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ResponseEnvelope } from '../../envelope/response.envelope';
 import { CardDetailModel } from '../../model/card-detail.model';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
+import { ScrollService } from '../../service/scroll.service';
+import { AdCacheService } from '../../service/ad-cache.service';
 
 @Component({
   selector: 'app-ad-list-page',
@@ -15,40 +18,48 @@ import { CardDetailModel } from '../../model/card-detail.model';
 })
 export class AdListPageComponent extends BaseComponent  implements OnInit {
 
-  public cards: CardDetailModel[] = [];
+@HostListener("window:scroll", []) 
+onWindowScroll() {
+  this.scrollService.set('app-ad-list-page', window, document)
+}
+ 
+  public cards: CardDetailModel[] = []
 
   constructor(
     public searchService: SearchService,
     public router: Router,
     public dataTransferService: DataTransferService,
-    public activatedRoute: ActivatedRoute) {
-    super(dataTransferService, router);
+    public activatedRoute: ActivatedRoute,
+    public title : Title,
+    public scrollService: ScrollService,
+    public adCacheService: AdCacheService 
+) {
+    super(dataTransferService, router, title);
+     
   }
-
 
   ngOnInit() {
+    this.setTitle('Anúncios')
     this.init();
   }
-
+  
   private init(): void {
 
-    this.processRunningStart();
+      this.processRunningStart();
 
-    this.searchService.list('')
-      .pipe(
-        map((m) => m.body),
-        catchError((response: HttpErrorResponse) => {
-          let e: ResponseEnvelope<CardDetailModel[]> = response.error as ResponseEnvelope<CardDetailModel[]>;
-          super.processHttpErrorResponse(response)
-          return throwError(response);
-        }),
-        finalize(() => {
-          this.processRunningStop();
-          this.isAlready = true;
-        }))
-      .subscribe((response) => {
-        this.cards = response.dtos;
-      });
-  }
+      this.searchService.list('')
+        .subscribe((response) => {
+        
+            this.cards = this.adCacheService.get();
+            
+            setTimeout(() => {
+            
+               this.scrollService.scroll('app-ad-list-page');
+                this.processRunningStop();
+               
+            }, 1)
+            
+        });
+    }
 
 }

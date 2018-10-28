@@ -1,42 +1,67 @@
-﻿@model CardDetailDTO
+﻿@model BaseViewModel<CardDetailDTO>
+
 @using adduo.restoudaobra.web.helper
 @using adduo.restoudaobra.web.model
 @using adduo.restoudaobra.dto
+@using adduo.restoudaobra.constants
+@using adduo.methodextension
 @{
-    var card = Model;
+    var card = Model.Value;
 }
 
 
 <div class="contact">
-    <div>
-        <i class="name"></i>
-        <span title="@(card.Owner.FirstName)">@(card.Owner.FirstName)</span>
-    </div>
-    <div>
-        <i class="contact-info"></i>
-        <span>@(card.Owner.Email)</span>
-    </div>
 
-    @if (!card.Owner.Phone.Equals(string.Empty))
+    <img src="/assets/img/loader.gif" id="contact-loader" />
+
+    <ul id="contact-data">
+
+        <li>
+            <i class="name"></i>
+            <span id="contact-info-name"></span>
+        </li>
+
+
+        <li>
+            <i class="contact-info"></i>
+            <span id="contact-info-email"></span>
+        </li>
+
+        @if (card.Owner.Phone.NotIsNullOrEmpty())
     {
-        <div>
+        <li>
             <i class="phone"></i>
-            <span>@(card.Owner.PhoneFormat)</span>
-        </div>
+            <span id="contact-info-phone"></span>
+        </li>
+}
 
-    }
-
-        @if (!card.Owner.CellPhone.Equals(string.Empty))
+        @if (card.Owner.CellPhone.NotIsNullOrEmpty())
     {
-        <div>
+        <li>
             <i class="phone"></i>
-            <span>@(card.Owner.CellPoneFormat)</span>
-        </div>
+            <span id="contact-info-cellphone"></span>
+        </li>
+}
 
-    }
+    </ul>
 
     <div>
         <i class="location"></i>
         <span title="@(card.Address.District), @(card.Address.City) - @(card.Address.State)">@(card.Address.District), @(card.Address.City) - @(card.Address.State)</span>
     </div>
+
+    <div id="contact-btn" data-ad="@(card.Ad.Guid)">
+        <i class="phone"></i>
+
+        @if (card.Ad.Type.Equals(AD_TYPE.DONATION))
+        {
+            <span>Veja os dados de contato do doador</span>
+        }
+        else
+        {
+            <span>Veja os dados de contato do vendedor</span>
+        }
+
+    </div>
+
 </div>

@@ -1,19 +1,18 @@
-<p *ngIf="isAlready">
-  <app-finalization title="Cadastro confirmado com sucesso :)"
-                    [subtitle]="['Agora você pode criar seus anúncios!']" *ngIf="ok()">
-  </app-finalization>
 
-  <app-finalization title="Ops, não conseguimos confirmar seu cadastro."
-                    [subtitle]="['Por favor, tente novamente daqui a uns minutos!']"  *ngIf="error()"> 
-  </app-finalization>
+<div class="break-point sc">
 
-  <app-finalization title="Seu cadastro foi confirmado anteriormente."
-                    [subtitle]="['Você já pode anúnciar suas coisas. boa sorte :)']"  *ngIf="already()">
-  </app-finalization>
+  <p *ngIf="isAlready">
+    <app-finalization title="Cadastro confirmado com sucesso :)"
+                      [subtitle]="['Agora você pode criar seus anúncios!']" *ngIf="ok()">
+    </app-finalization>
+    <app-finalization title="Ops, não conseguimos confirmar seu cadastro."
+                      [subtitle]="['Por favor, tente novamente daqui a uns minutos!']" *ngIf="error()">
+    </app-finalization>
+    <app-finalization title="Seu cadastro foi confirmado anteriormente."
+                      [subtitle]="['Você já pode anúnciar suas coisas. boa sorte :)']" *ngIf="already()">
+    </app-finalization>
+    <app-finalization title="Seu cadastro não foi encontrado." *ngIf="empty()">
+    </app-finalization>
+  </p>
 
-  <app-finalization title="Seu cadastro não foi encontrado."  *ngIf="empty()">
-  </app-finalization>
-
-</p>
-
-
+  </div>

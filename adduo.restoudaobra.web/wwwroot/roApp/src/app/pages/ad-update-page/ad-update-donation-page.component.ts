@@ -6,6 +6,7 @@ import { AuthService } from '../../service/auth.service';
 import { AdTypeEnum } from '../../enum/ad-type.enum';
 import { DataTransferService } from '../../service/data-transfer.service';
 import { ViewHelper } from '../../shared/view.helper';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-ad-update-donation',
@@ -19,8 +20,9 @@ export class AdUpdateDonationPageComponent extends AdUpdateComponent implements 
     public authService: AuthService,
     public adService: AdService,
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(viewHelper, activatedRoute, authService, adService, dataTransferService, router);
+    public router: Router,
+    public title: Title) {
+    super(viewHelper, activatedRoute, authService, adService, dataTransferService, router, title);
   }
 
   protected setType() {

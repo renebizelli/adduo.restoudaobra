@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { validateConfig } from '@angular/router/src/config';
 import { Observable, throwError } from 'rxjs'
@@ -16,6 +16,7 @@ import { AuthService } from '../../service/auth.service';
 import { AuthenticatedModel } from '../../model/authenticated.model';
 import { Router } from '@angular/router';
 import { DataTransferService } from '../../service/data-transfer.service';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -30,9 +31,10 @@ export class LoginComponent extends BaseComponent implements OnInit {
     private loginService: LoginService,
     private authService: AuthService,
     public dataTransferService: DataTransferService,
-    public router: Router
+    public router: Router,
+    public title: Title
   ) {
-    super(dataTransferService, router);
+    super(dataTransferService, router, title);
   }
 
   ngOnInit() {

@@ -1,18 +1,18 @@
-﻿@model CardDetailDTO
-
+﻿@model BaseViewModel<CardDetailDTO>
 @using adduo.restoudaobra.dto
+@using adduo.restoudaobra.web.model
+@using adduo.restoudaobra.web.helper
 
 @{
-    var card = Model;
+    var card = Model.Value;
 }
-
 
 <script type="application/ld+json">
     {
     @Html.Raw("\"@context\" : \"http://schema.org/\""),
     @Html.Raw("\"@type\": \"Product\""),
     "name": "@(card.Ad.Name)",
-    "image": [ "http://www.restoudaobra.com.br@(card.Images.First())" ],
+    "image": [ "@(Model.Helper.Host)@(card.Images.First())" ],
     "brand": {
     @Html.Raw("\"@type\": \"Thing\""),
     "name": "@(card.Ad.Brand)"

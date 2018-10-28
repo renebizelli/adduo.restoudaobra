@@ -107,7 +107,7 @@ namespace adduo.restoudaobra.api
             app.UseAuthentication();
 
             app.UseCors(build =>
-                    build
+                        build.WithOrigins("*")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowAnyOrigin()

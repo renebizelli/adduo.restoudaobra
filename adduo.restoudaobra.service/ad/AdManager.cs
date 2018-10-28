@@ -81,6 +81,11 @@ namespace adduo.restoudaobra.service.ad
                 .Finally();
         }
 
+        public void IncrementContactView(Guid guid)
+        {
+            cardService.IncrementContactView(guid);
+        }
+
         public CardDetailDTO Detail(Guid guid)
         {
             cardService.Get(new AdFilter

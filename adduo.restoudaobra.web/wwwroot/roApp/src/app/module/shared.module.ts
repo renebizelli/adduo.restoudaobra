@@ -6,9 +6,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
 import { NgxCurrencyModule } from "ngx-currency";
 import { HttpService } from "../service/http.service";
+import { ScrollService } from "../service/scroll.service";
 
 @NgModule({
-  declarations: [HttpService],
+  declarations: [HttpService, ScrollService],
   imports : [
     CommonModule, 
     HttpClientModule, 
@@ -26,9 +27,10 @@ import { HttpService } from "../service/http.service";
       ReactiveFormsModule, 
       TextMaskModule, 
       NgxCurrencyModule,
-      HttpService
+      HttpService,
+      ScrollService
     ],
-    providers : [ HttpService ]
+    providers : [ HttpService, ScrollService ]
 })
 export class  SharedModule {
 

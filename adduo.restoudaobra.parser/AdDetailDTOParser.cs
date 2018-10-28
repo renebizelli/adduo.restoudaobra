@@ -23,19 +23,20 @@ namespace adduo.restoudaobra.parser
             }
         }
 
-        private void Parse(AdResult addressResult, AdDetailDTO adDetailDTO)
+        private void Parse(AdResult adResult, AdDetailDTO adDetailDTO)
         {
-            adDetailDTO.id = addressResult.id;
-            adDetailDTO.Guid = addressResult.Guid;
-            adDetailDTO.Name = addressResult.Name;
-            adDetailDTO.Option = addressResult.Option;
-            adDetailDTO.Brand = addressResult.Brand;
-            adDetailDTO.Quantity = addressResult.Quantity;
-            adDetailDTO.Price = addressResult.Price;
-            adDetailDTO.Type = (AD_TYPE)addressResult.idType;
-            adDetailDTO.Status = (AD_STATUS)addressResult.idStatus;
-            adDetailDTO.StatusName = addressResult.StatusName;
-            adDetailDTO.Created = addressResult.Created;
+            adDetailDTO.id = adResult.id;
+            adDetailDTO.Guid = adResult.Guid;
+            adDetailDTO.Name = adResult.Name;
+            adDetailDTO.Option = adResult.Option;
+            adDetailDTO.Brand = adResult.Brand;
+            adDetailDTO.Quantity = adResult.Quantity;
+            adDetailDTO.Price = adResult.Price;
+            adDetailDTO.Type = (AD_TYPE)adResult.idType;
+            adDetailDTO.Status = (AD_STATUS)adResult.idStatus;
+            adDetailDTO.StatusName = adResult.StatusName;
+            adDetailDTO.Created = adResult.Created;
+            adDetailDTO.ViewContact = adResult.ViewContact;
         }
 
         private void Parse(SearchResult searchResult, AdDetailDTO adDetailDTO)
@@ -47,6 +48,9 @@ namespace adduo.restoudaobra.parser
             adDetailDTO.Price = searchResult.ProductPrice;
             adDetailDTO.Type = (AD_TYPE)searchResult.ProductType;
             adDetailDTO.URL = searchResult.ProductName.CreateUrlFriendly();
+            adDetailDTO.ViewContact = searchResult.ProductViewContact;
+
+
         }
     }
 }

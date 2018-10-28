@@ -1,38 +1,34 @@
-﻿@model BaseViewModel<CardDetailDTO>
+﻿@model BaseViewModel<List<CardSearchDTO>>
 @using adduo.restoudaobra.web.helper
 @using adduo.restoudaobra.web.model
 @using adduo.restoudaobra.dto
 @using adduo.restoudaobra.constants
+
 @{
     Layout = "~/Views/Shared/_Masterpage.cshtml";
-
-    var card = Model.Value;
-
-    /* cria um objeto para evitar ficar fazendo IFs pelo type */
-
-    var type = AdTypeHelper.Get(card);
-}
-@section titlePrefix { @string.Concat(card.Ad.Name, " - ", card.Ad.Brand, " - ", type.Name, " - ")  }
-@section meta
-    {
-    <partial name="AdMetaTag" model="Model" />
-}
-@section richcards
-    {
-    <partial name="AdRichCard" model="card" />
 }
 
 @section script {
+
+
+    <environment include="Development">
+        <script src="/jquery/jquery-3.3.1.min.js"></script>
+        <script src="/jquery/vendor/fotorama/fotorama.js" "></script>
+        <script src="/jquery/jquery-app.js"></script>
+    </environment>
+
+    <environment include="Production">
+        <script src="/assets/js/jquery-app.js"></script>
+    </environment>
+
 }
 
 
-<div class="break-point sc">
-    <section class="one ads">
-        <span class="@(type.ProductTypeClass)-header">Donation</span>
-
-        <partial name="AdGallery" model="card" />
-        <partial name="AdDetailInfo" model="card" />
-        <partial name="AdDetailOwner" model="card" />
-
-    </section>
-</div>
+<section class="ad-list">
+    <div class="break-point line">
+        @foreach (var card in Model.Value)
+        {
+            <partial name="HomeCard" model="card" />
+        }
+    </div>
+</section>

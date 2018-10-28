@@ -30,5 +30,8 @@ namespace adduo.restoudaobra.dto.result
         public int idOwner { get; set; }
 
         public int idAddress { get; set; }
+
+        public int ViewContact { get; set; }
+
     }
 }

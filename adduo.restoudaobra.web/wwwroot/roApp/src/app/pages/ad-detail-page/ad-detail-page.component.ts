@@ -11,6 +11,7 @@ import { throwError } from 'rxjs';
 import { ViewHelper } from '../../shared/view.helper';
 import { TypeHelper } from '../../shared/type.helper';
 import { ContactOwner } from '../../model/contact-owner-model';
+import { Title } from "../../../../node_modules/@angular/platform-browser";
 
 declare var $: any;
 
@@ -33,8 +34,9 @@ export class AdDetailPageComponent extends BaseComponent implements OnInit {
     public searchService: SearchService,
     public router: Router,
     public dataTransferService: DataTransferService,
+    public title: Title
   ) {
-    super(dataTransferService, router);
+    super(dataTransferService, router, title);
   }
 
   ngOnInit() {
@@ -55,6 +57,8 @@ export class AdDetailPageComponent extends BaseComponent implements OnInit {
       .subscribe((response) => {
         this.model = response.dto;
         this.address()
+        
+        this.setTitle(this.model.ad.name + ' - ' + this.model.ad.brand)
       });
   }
   
@@ -87,8 +91,7 @@ export class AdDetailPageComponent extends BaseComponent implements OnInit {
     this.contact.phoneFormat = this.model.owner.phoneFormat;
     this.contact.cellphoneFormat = this.model.owner.cellphoneFormat;
     
-    $("#contact-owner").fadeIn();
-    
+    $("#owner-contact").fadeIn();
   }
 
 }

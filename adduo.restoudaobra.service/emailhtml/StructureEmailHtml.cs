@@ -27,7 +27,7 @@ namespace adduo.restoudaobra.service.emailhtml
             headerHtml = new StringBuilder();
             headerHtml.Append("<tr>");
             headerHtml.Append("<td>");
-            headerHtml.AppendFormat("<img src='{0}/_img/logo/restou-da-obra-logo-1.png' border='0' />", settings.PathHost);
+            headerHtml.AppendFormat("<img src='{0}/assets/_img/restou-da-obra-logo-1.png' border='0' />", settings.PathHost);
             headerHtml.Append("</td>");
             headerHtml.Append("</tr>");
         }

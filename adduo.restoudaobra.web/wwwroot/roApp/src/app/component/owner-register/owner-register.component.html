@@ -19,7 +19,7 @@
                floatlabel="true"
                label="CPF"
                maxlength="16"
-               placeholder="Seu CPF"
+               placeholder="CPF"
                mask="cpf"
                invalidText="cpf inválido"></app-field-mask>
 
@@ -88,6 +88,12 @@
                placeholder="Confirme sua senha"
                differentText="as senhas não estão iguais"></app-field-password>
 
+
+    <div id="accept" (click)="emailAccept()">
+      <img src="/assets/img/check-off.gif" *ngIf="!model.emailAccept" width="25" />
+      <img src="/assets/img/check-on.gif" *ngIf="model.emailAccept"  width="25" />
+      <p>Aceito receber e-mails do Restou da Obra</p>
+    </div>
 
     <div class="button-area">
 

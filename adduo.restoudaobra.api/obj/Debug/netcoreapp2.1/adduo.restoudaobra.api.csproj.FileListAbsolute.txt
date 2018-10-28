@@ -87,6 +87,7 @@ C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreap
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/bin/Debug/netcoreapp2.1/adduo.restoudaobra.ie.dal.pdb
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/bin/Debug/netcoreapp2.1/adduo.restoudaobra.ie.service.pdb
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/bin/Debug/netcoreapp2.1/adduo.restoudaobra.parser.pdb
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreapp2.1/adduo.restoudaobra.api.csprojAssemblyReference.cache
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreapp2.1/adduo.restoudaobra.api.csproj.CoreCompileInputs.cache
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreapp2.1/adduo.restoudaobra.api.RazorAssemblyInfo.cache
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreapp2.1/adduo.restoudaobra.api.RazorAssemblyInfo.cs
@@ -96,4 +97,3 @@ C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreap
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreapp2.1/adduo.restoudaobra.api.csproj.CopyComplete
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreapp2.1/adduo.restoudaobra.api.dll
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreapp2.1/adduo.restoudaobra.api.pdb
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.api/obj/Debug/netcoreapp2.1/adduo.restoudaobra.api.csprojAssemblyReference.cache

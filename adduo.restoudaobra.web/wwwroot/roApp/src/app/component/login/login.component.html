@@ -1,3 +1,7 @@
+<div class="only-mobile" id="account-create">
+    <a [routerLink]="['criar']" title="Criar conta">CRIAR MINHA CONTA</a>
+</div>
+
 <section class="two">
 
   <app-page-title title="Já tenho cadastro" subtitleH3="Vamos entrar"></app-page-title>
@@ -9,16 +13,16 @@
     <app-field-text [property]="model.email"
                     name="emaillogin"
                     floatlabel="true"
-                    label="Seu e-mail"
+                    label="E-mail"
                     maxlength="128"
-                    placeholder="Seu e-mail"></app-field-text>
+                    placeholder="E-mail"></app-field-text>
 
     <app-field-password [property]="model.password"
                         name="passwordlogin"
                         floatlabel="true"
                         label="Senha"
                         maxlength="8"
-                        placeholder="Sua senha"></app-field-password>
+                        placeholder="Senha"></app-field-password>
 
         <div class="button-area">
       <input type="submit"

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { throwError, Observable, timer } from 'rxjs';
 import { catchError, finalize, map } from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -12,6 +12,7 @@ import { PropertyStringModel } from '../../shared/propertystring.model';
 import { ViewHelper } from '../../shared/view.helper';
 import { AuthService } from '../../service/auth.service';
 import { DataTransferService } from '../../service/data-transfer.service';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 
 @Component({
@@ -32,8 +33,9 @@ export class AccountMyInfoPageComponent
     private authService: AuthService,
     public viewHelper: ViewHelper,
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(dataTransferService, router);
+    public router: Router,
+    public title: Title) {
+    super(dataTransferService, router, title);
   }
 
   public onChange(o: any) {
@@ -41,6 +43,7 @@ export class AccountMyInfoPageComponent
   }
 
   ngOnInit() {
+    this.setTitle('Meus dados')
     this.get();
   }
 

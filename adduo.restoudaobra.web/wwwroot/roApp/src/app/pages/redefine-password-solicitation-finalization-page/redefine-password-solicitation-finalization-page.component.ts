@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '../../base.component';
 import { DataTransferService } from '../../service/data-transfer.service';
 import { Router } from '@angular/router';
 import { TypeHelper } from '../../shared/type.helper';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-redefine-password-solicitation-finalization-page',
@@ -14,17 +15,14 @@ export class RedefinePasswordSolicitationFinalizationPageComponent extends BaseC
 
   constructor(
     public dataTransferService: DataTransferService,
-    public router: Router) {
-    super(dataTransferService, router);
-    console.log(this.dataTransferService.get("data"));
+    public router: Router, 
+    public title: Title) {
+    super(dataTransferService, router, title);
   }
-
-
-
-  ngOnInit() {
+ 
+ ngOnInit() {
+  this.setTitle('Redefinir senha')
     this.email = this.dataTransferService.get("data");
-
-    console.log(this.dataTransferService.get("data"));
   }
 
 }

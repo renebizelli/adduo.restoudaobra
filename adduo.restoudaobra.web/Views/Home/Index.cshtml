@@ -39,10 +39,21 @@
 
 @section script {
 
+    <environment include="Development">
+        <script src="/jquery/jquery-3.3.1.min.js"></script>
+        <script src="/jquery/jquery-app.js"></script>
+    </environment>
+
+    <environment include="Production">
+        <script src="/assets/js/jquery-app.js"></script>
+    </environment>
+
+
     <script>
 
         $(function() {
             $("#menu-logo").addClass("menu-logo-scroll")
+            $("#menu-logo").hide()
         });
 
     </script>
@@ -51,12 +62,12 @@
 
 <section class="main">
     <div class="break-point line">
-        <div class="image">
+        <div class="image only-desktop">
             <img src="assets/img/main.png" title="Restou da Obra" alt="Restou da Obra" />
         </div>
         <div class="text">
 
-            <img src="/assets/img/restou-da-obra-logo-1.png" title="Restou da Obra" alt="Restou da Obra" id="home-logo" />
+            <img src="/assets/img/restou-da-obra-logo-1.png" title="Restou da Obra" alt="Restou da Obra" class="only-desktop" id="home-logo" />
 
             <p>
                 Acreditamos que ajudar é o melhor caminho para construir o bem. Acreditamos no relacionamento entre pessoas,
@@ -64,7 +75,7 @@
                 <span class="orange">:)</span>
             </p>
         </div>
-        <div class="image-mobile">
+        <div class="image-mobile only-mobile">
             <img src="/assets/img/main.png" alt="main" />
         </div>
     </div>
@@ -88,6 +99,7 @@
 
 </section>
 
+
 <div class="home-icon">
     <hr />
     <i>Home</i>
@@ -98,31 +110,31 @@
     <div class="break-point">
 
 
-            <h3 class="h3-home">Como Funciona</h3>
-            <article>
-                <i class="bar">bar</i>
-                <p>
-                    Basta seguir esses passos para você poder compartilhar o que sobrou da sua obra ou comprar o que precisa
-                    para terminá-la!
-                </p>
-            </article>
-            <div class="line">
-                <div class="step-1">
-                    <i class="number">1</i>
-                    Faça um cadastro e crie seu anúncio de venda ou doação
-                    <img src="/assets/img/step1.png" />
-                </div>
-                <div class="step-2">
-                    <i class="number">2</i>
-                    Adicione fotos do produto e o descreva em detalhes
-                    <img src="/assets/img/step2.png" />
-                </div>
-                <div class="step-3">
-                    <i class="number">3</i>
-                    Negocie diretamente com a pessoa interessada a forma de pagamento e a retirada do produto
-                    <img src="/assets/img/step3.png" />
-                </div>
+        <h3 class="h3-home">Como Funciona</h3>
+        <article>
+            <i class="bar">bar</i>
+            <p>
+                Basta seguir esses passos para você poder compartilhar o que sobrou da sua obra ou comprar o que precisa
+                para terminá-la!
+            </p>
+        </article>
+        <div class="line">
+            <div class="step-1">
+                <i class="number">1</i>
+                Faça um cadastro e crie seu anúncio de venda ou doação
+                <img src="/assets/img/step1.png" />
             </div>
+            <div class="step-2">
+                <i class="number">2</i>
+                Adicione fotos do produto e o descreva em detalhes
+                <img src="/assets/img/step2.png" />
+            </div>
+            <div class="step-3">
+                <i class="number">3</i>
+                Negocie diretamente com a pessoa interessada a forma de pagamento e a retirada do produto
+                <img src="/assets/img/step3.png" />
+            </div>
+        </div>
     </div>
 </section>
 

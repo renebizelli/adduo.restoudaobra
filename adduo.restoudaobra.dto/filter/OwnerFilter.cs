@@ -16,6 +16,7 @@ namespace adduo.restoudaobra.dto.filter
         public string Email { get; set; }
         public string Password { get; set; }
         public Guid RedefinePasswordKey { get; set; }
+        public Guid GuidAd { get; set; }
 
         public string PasswordHash
         {
@@ -36,7 +37,8 @@ namespace adduo.restoudaobra.dto.filter
                    Password.IsNullOrEmpty() &&
                    Guid.IsEmpty() &&
                    Status.Equals(OWNER_STATUS.NONE) &&
-                   RedefinePasswordKey.IsEmpty();
+                   RedefinePasswordKey.IsEmpty() &&
+                    GuidAd.IsEmpty();
 
         }
     }

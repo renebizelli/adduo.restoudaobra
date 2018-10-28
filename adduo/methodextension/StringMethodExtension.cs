@@ -1,5 +1,7 @@
 ﻿using adduo.basetype.enums;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace adduo.methodextension
 {
@@ -49,5 +51,40 @@ namespace adduo.methodextension
         {
             return _string;
         }
+
+        public static bool SQLInjection(this string text)
+        {
+            var sql = new List<string>();
+            var injection = false;
+            sql.Add("--");
+            sql.Add("SELECT");
+            sql.Add("DELETE");
+            sql.Add("INSERT");
+            sql.Add("UPDATE");
+            sql.Add("DROP");
+            sql.Add("ALTER");
+            sql.Add("ANALYZE");
+            sql.Add("BEGIN");
+            sql.Add("COMMIT");
+            sql.Add("CREATE");
+            sql.Add("DEALLOCATE");
+            sql.Add("DECLARE");
+            sql.Add("EXECUTE");
+            sql.Add("EXPLAIN");
+            sql.Add("GRANT");
+            sql.Add("ROLLBACK");
+            sql.Add("TRANSACTION");
+            sql.Add("TRUNCATE");
+            sql.Add("<");
+            sql.Add(">");
+
+            injection = (from c in sql
+                         where text.ToUpper().Contains(c)
+                         select c).Any();
+
+            return injection;
+        }
+
+
     }
 }

@@ -25,7 +25,7 @@ namespace adduo.restoudaobra.service.emailhtml
             AddHeader();
             AddName(dto.FirstName.Value);
             AddText(@"Você solicitou a redefinição da senha. Para continuar, clique no link ""Redefinir Senha"" a seguir.");
-            AddLink("Redefinir Senha", string.Format("{0}/cadastro/redefinir-senha/{1}", settings.PathHost, key.ToString()));
+            AddLink("Redefinir Senha", string.Format("{0}/conta/redefinir-senha/{1}", settings.PathHost, key.ToString()));
             Signature();
         }
 

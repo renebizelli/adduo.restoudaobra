@@ -17,6 +17,11 @@
       </div>
 
       <div class="contact">
+
+        <h2 *ngIf="isAdTypeSale()" class="sale">Entre em contato o vendedor</h2>
+        <h2 *ngIf="!isAdTypeSale()" class="donation">Entre em contato o doador</h2>
+
+
         <div>
           <i class="name"></i>
           <span title="{{model.owner.firstname}}">{{model.owner.firstname}}</span>
@@ -24,12 +29,11 @@
 
         <div *ngIf="!isContactShow" (click)="contactShow()">
           <i class="phone"></i>
-          <p  class="contact-btn">ver dados de contato</p>
+          <p class="contact-btn">ver dados de contato</p>
         </div>
 
 
-
-        <ul id="contact-owner">
+        <ul id="owner-contact">
           <li>
             <i class="contact-info"></i>
             <span>{{contact.email}}</span>

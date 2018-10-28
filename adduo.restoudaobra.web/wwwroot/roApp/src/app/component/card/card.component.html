@@ -1,12 +1,12 @@
+
 <a
     class="item" 
     [ngClass]="getClass()"  
-    [href]="getUrl()" 
+    [routerLink]="getUrl()" 
     [title]="card.ad.name">
   <div class="item-thumb" [style.backgroundImage]="'url(' + card.image + ')'"></div>
   <i></i>
-  <h2 class="item-name">{{card.ad.name}}</h2>
+  <h2 class="item-name">{{card.ad.name | slice:0:20 }}</h2>
   <h2>{{card.ad.brand}}</h2>
-  <h2>{{card.ad.option}}</h2>
   <span>Estou {{getTypeText()}}</span>
 </a>

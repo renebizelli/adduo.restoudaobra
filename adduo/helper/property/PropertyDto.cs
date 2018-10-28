@@ -100,6 +100,7 @@ namespace adduo.helper.property
         {
             MaxLength = maxlength;
             AddValidation(new PropertyDtoNotEmptyValidation());
+            AddValidation(new PropertyDtoSQLInjectionValidation());
         }
     }
 

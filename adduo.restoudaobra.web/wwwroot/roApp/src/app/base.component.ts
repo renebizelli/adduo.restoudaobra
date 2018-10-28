@@ -1,21 +1,31 @@
-import { Component, Directive } from "@angular/core";
+import { Component, Directive, OnInit } from "@angular/core";
 import { ErrorCodeEnum } from "./enum/error-code.enum";
 import { HttpErrorResponse } from "@angular/common/http";
 import { HttpStatusEnum } from "./enum/http-status.enum";
 import { Router } from "@angular/router";
 import { DataTransferService } from "./service/data-transfer.service";
 import { SummaryItemModel } from "./model/summary-item.model";
+import { Title } from "../../node_modules/@angular/platform-browser";
+
 
 @Directive({ selector: 'app-base-component' })
-export class BaseComponent {
+export class BaseComponent implements OnInit {
 
   public isProcessRunning: boolean = false;
   public isAlready: boolean = false;
   public summaryItens: SummaryItemModel[] = [];
+  
+  titleRO : string = 'Restou da Obra'
 
   constructor(
     public dataTransferService: DataTransferService,
-    public router: Router) { }
+    public router: Router,
+    public title: Title) { 
+    }
+    
+    ngOnInit() {
+      this.title.setTitle(this.titleRO)
+    }
 
   public processRunningStart(): void {
     this.isProcessRunning = true;
@@ -57,5 +67,18 @@ export class BaseComponent {
     }
 
   }
+  
+  public scrollToTop() : void {
+    window.scrollTo(0, 50);
+  }
+
+  public setTitle(text: string) : void {
+  
+    let title = text +  ' - ' + this.titleRO
+  
+    this.title.setTitle(title)
+  }
+  
+  
 }
 

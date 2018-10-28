@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { map, catchError, finalize } from 'rxjs/operators';
@@ -13,6 +13,7 @@ import { ResponseEnvelope } from '../../envelope/response.envelope';
 import { OwnerModel } from '../../model/owner.model';
 import { DataTransferService } from '../../service/data-transfer.service';
 import { TypeHelper } from '../../shared/type.helper';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-redefine-password-solicitation-page',
@@ -27,12 +28,14 @@ export class RedefinePasswordSolicitationPageComponent extends BaseComponent imp
     private redefinePasswordService: RedefinePasswordService,
     public dataTransferService: DataTransferService,
     public viewHelper: ViewHelper,
-    public router: Router) {
-    super(dataTransferService, router);
+    public router: Router, 
+    public title: Title) {
+    super(dataTransferService, router, title);
   }
 
 
   ngOnInit() {
+  this.setTitle('Redefinir senha')
     let value = this.dataTransferService.get('data');
     console.log('solicitation', this.dataTransferService.get("data"));
     if (value) {

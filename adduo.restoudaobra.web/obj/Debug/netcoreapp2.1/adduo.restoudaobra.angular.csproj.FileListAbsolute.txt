@@ -146,6 +146,7 @@ C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreap
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/adduo.restoudaobra.angular.TagHelpers.input.cache
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/adduo.restoudaobra.angular.TagHelpers.output.cache
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/adduo.restoudaobra.angular.RazorCoreGenerate.cache
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Ad/Detail.g.cshtml.cs
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Ad/Index.g.cshtml.cs
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
 /Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.web/obj/Debug/netcoreapp2.1/Razor/Views/Shared/AdCarousel.g.cshtml.cs

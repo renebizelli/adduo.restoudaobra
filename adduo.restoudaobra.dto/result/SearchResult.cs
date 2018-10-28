@@ -17,6 +17,8 @@ namespace adduo.restoudaobra.dto.result
 
         public int ProductType { get; set; }
 
+        public int ProductViewContact { get; set; }
+
         public string AddressDistrict { get; set; }
         public string AddressCity { get; set; }
         public string AddressStateName { get; set; }
