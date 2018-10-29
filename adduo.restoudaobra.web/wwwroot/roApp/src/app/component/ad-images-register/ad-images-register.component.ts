@@ -37,7 +37,7 @@ export class AdImagesRegisterComponent extends BaseComponent
   private deleteLoader: boolean[] = [];
   public loader: boolean = false;
 
-  public maxSize: number = 2048000;
+  public maxSize: number = 4096000;
   public validComboDrag: any;
 
   public invalidClear: boolean = false;

@@ -16,12 +16,3 @@ C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/net
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.AssemblyInfo.cs
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.dll
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.pdb
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/bin/Debug/netcoreapp2.1/adduo.restoudaobra.constants.deps.json
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/bin/Debug/netcoreapp2.1/adduo.restoudaobra.constants.dll
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/bin/Debug/netcoreapp2.1/adduo.restoudaobra.constants.pdb
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.csproj.CoreCompileInputs.cache
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.AssemblyInfoInputs.cache
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.AssemblyInfo.cs
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.dll
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.pdb
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.constants/obj/Debug/netcoreapp2.1/adduo.restoudaobra.constants.csprojAssemblyReference.cache

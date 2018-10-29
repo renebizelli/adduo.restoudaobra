@@ -12,17 +12,3 @@ C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcorea
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.RazorTargetAssemblyInfo.cache
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.dll
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.pdb
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/bin/Debug/netcoreapp2.1/adduo.restoudaobra.html.deps.json
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/bin/Debug/netcoreapp2.1/adduo.restoudaobra.html.runtimeconfig.json
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/bin/Debug/netcoreapp2.1/adduo.restoudaobra.html.runtimeconfig.dev.json
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/bin/Debug/netcoreapp2.1/adduo.restoudaobra.html.dll
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/bin/Debug/netcoreapp2.1/adduo.restoudaobra.html.pdb
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.csprojAssemblyReference.cache
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.csproj.CoreCompileInputs.cache
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.RazorAssemblyInfo.cache
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.RazorAssemblyInfo.cs
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.AssemblyInfoInputs.cache
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.AssemblyInfo.cs
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.RazorTargetAssemblyInfo.cache
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.dll
-/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.html/obj/Debug/netcoreapp2.1/adduo.restoudaobra.html.pdb

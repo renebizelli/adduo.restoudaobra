@@ -87,12 +87,13 @@ namespace adduo.restoudaobra.web
         {
             var routesSpa = new[] {
                 new {  template = "/conta", name = "app-conta" },
+                new {  template = "/conta/criar", name = "app-conta-criar"},
                 new {  template = "/conta/sucesso", name = "app-conta-sucesso"},
-                new {  template = "/conta/confirmacao/:id", name = "app-conta-confirmacao"},
+                new {  template = "/conta/confirmacao/{id}", name = "app-conta-confirmacao"},
                 new {  template = "/conta/redefinir-senha", name = "app-conta-redefinir-senha"},
                 new {  template = "/conta/redefinir-senha/solicitada", name = "app-conta-redefinir-senha-solicitada"},
                 new {  template = "/conta/redefinir-senha/sucesso", name = "app-conta-redefinir-senha-sucesso"},
-                new {  template = "/conta/redefinir-senha/:key", name = "app-conta-redefinir-senha-key"},
+                new {  template = "/conta/redefinir-senha/{key}", name = "app-conta-redefinir-senha-key"},
                 new {  template = "/conta/meus-dados", name = "app-conta-meus-dados"},
                 new {  template = "/conta/meus-anuncios", name = "app-conta-meus-anuncios"},
                 new {  template = "/conta/meus-anuncios/quero-doar/{id}", name = "app-conta-meus-anuncios-quero-doar"},
