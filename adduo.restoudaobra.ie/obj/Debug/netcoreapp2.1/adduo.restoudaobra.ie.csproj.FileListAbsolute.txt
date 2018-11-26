@@ -22,3 +22,15 @@ C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.csproj.CopyComplete
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.dll
 C:/inetpub/wwwroot/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.pdb
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/bin/Debug/netcoreapp2.1/adduo.restoudaobra.ie.deps.json
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/bin/Debug/netcoreapp2.1/adduo.restoudaobra.ie.dll
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/bin/Debug/netcoreapp2.1/adduo.restoudaobra.ie.pdb
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/bin/Debug/netcoreapp2.1/adduo.dll
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/bin/Debug/netcoreapp2.1/adduo.pdb
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.csprojAssemblyReference.cache
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.csproj.CoreCompileInputs.cache
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.AssemblyInfoInputs.cache
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.AssemblyInfo.cs
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.csproj.CopyComplete
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.dll
+/Users/rene/Desktop/GIT/adduo.restoudaobra/adduo.restoudaobra.ie/obj/Debug/netcoreapp2.1/adduo.restoudaobra.ie.pdb
